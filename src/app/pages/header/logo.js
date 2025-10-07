@@ -19,14 +19,14 @@ export default Logo
 
 export const SmallLogo = () => {
     return (
-        <div className="z-20 rounded-2xl bg-white p-1 shadow">
+        <div className="z-20">
                          <Image
                            src="/logo.webp"
                            alt="logo"
-                           width={0}
-                           height={0}
+                           width={150}
+                           height={150}
                            sizes="100vw"
-                           className="w-[56px] h-[56px] object-contain"
+                           className="w-[100px] h-[100px] object-contain"
                            priority
                          />
                        </div>

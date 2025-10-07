@@ -28,13 +28,13 @@ export default function Header() {
       <div>
   {/* desktop navbar */}
       <div className="hidden lg:block">
-        <nav className="relative bg-[#262163] text-white flex justify-between items-center px-12 py-1">
+        <nav className="relative bg-[#262163] text-white flex justify-between items-center px-8 py-1">
 
           <div className="flex">
             <Logo />
           </div>
 
-          <ul className="flex gap-3 text-lg font-medium">
+          <ul className="flex gap-2 text-lg font-medium">
 <li onClick={() => setActive('home')}  className={`${liBase} ${
                 active === 'home'
                 ? "text-white" 
@@ -103,12 +103,12 @@ export default function Header() {
             <div>
               {isNavbarVisible ? (
                 <MdOutlineCancelPresentation
-                  className="text-2xl mt-1 cursor-pointer text-[#028E81]"
+                  className="text-2xl mt-1 cursor-pointer text-[#DFC96D]"
                   onClick={toggleNavbar}
                 />
               ) : (
                 <HiViewList
-                  className="text-2xl mt-1 cursor-pointer text-[#028E81]"
+                  className="text-2xl mt-1 cursor-pointer text-[#DFC96D]"
                   onClick={toggleNavbar}
                 />
               )}
@@ -141,7 +141,7 @@ export default function Header() {
             onClick={toggleNavbar}
           />
 
-          <div className="absolute right-0 top-0 z-50 w-full bg-white shadow-2xl overflow-y-auto transform transition-transform">
+          <div className="absolute right-0 top-0 z-50 w-full bg-[#262163] shadow-2xl overflow-y-auto transform transition-transform">
             <div className="flex items-center justify-between p-4">
               <div className="flex items-center gap-3">
                <SmallLogo/>
@@ -150,7 +150,7 @@ export default function Header() {
               <button
                 onClick={toggleNavbar}
                 aria-label="close menu"
-                className="p-2 rounded-md text-[#028E81] hover:bg-gray-100"
+                className="p-2 rounded-md text-[#DFC96D] hover:bg-gray-100"
               >
                 <MdOutlineCancelPresentation className="text-2xl" />
               </button>
@@ -158,30 +158,36 @@ export default function Header() {
 
             <nav className="px-4 z-20">
               <ul className="flex flex-col">
-                <li className="text-center text-[#28b896] font-semibold mb-4 text-lg" onClick={toggleNavbar}>
+                <li className="text-center text-[#DFC96D] font-semibold mb-4 text-lg" onClick={toggleNavbar}>
                 <Link href="/">الرئيسية</Link></li>
 
                 <li className="border-t border-gray-500 py-4">
-                  <Link href="/about" onClick={toggleNavbar} className="block text-center text-gray-700">
-                    منصه تقريب
+                  <Link href="/about" onClick={toggleNavbar} className="block text-center text-white">
+                    من نحن
                   </Link>
                 </li>
 
                 <li className="border-t border-gray-500 py-4">
-                  <Link href="/associations" onClick={toggleNavbar} className="block text-center text-gray-700">
-                    دليل الجمعيات
+                  <Link href="/services" onClick={toggleNavbar} className="block text-center text-white">
+                    خدماتنا
                   </Link>
                 </li>
 
                 <li className="border-t border-gray-500 py-4">
-                  <Link href="/blog" onClick={toggleNavbar} className="block text-center text-gray-700">
-                    مدونة تقريب
+                  <Link href="/blog" onClick={toggleNavbar} className="block text-center text-white">
+                    مدونة تدبير
                   </Link>
                 </li>
 
                 <li className="border-t border-gray-500 py-4">
-                  <Link href="/contact" onClick={toggleNavbar} className="block text-center text-gray-700">
-                    تواصل معنا
+                  <Link href="/teamWork" onClick={toggleNavbar} className="block text-center text-white">
+                    فريق العمل
+                  </Link>
+                </li>
+
+                 <li className="border-t border-gray-500 py-4">
+                  <Link href="/contact" onClick={toggleNavbar} className="block text-center text-white">
+                    انضم إلينا
                   </Link>
                 </li>
               </ul>
