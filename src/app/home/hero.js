@@ -29,7 +29,7 @@ const tiltRef = useRef(null);
 
 
     return (
-        <div  className="flex flex-col w-screen  bg-[#262163] text-white">
+        <div  className="flex flex-col w-screen py-8  bg-[#262163] text-white">
             <div  className="flex flex-col gap-4 text-center py-20 w-full">
                 <h1 className="text-7xl font-extrabold">شركة تدبير المتخصصة</h1>
                 <p className="text-3xl text-gray-400">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
