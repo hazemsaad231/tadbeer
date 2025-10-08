@@ -1,13 +1,15 @@
 import AboutContent from "./aboutpage";
-import Hero from "./hero";
-import ServicesContent from "./services";
+import HeroContent from "./hero";
+import ProfileContent from "./profile";
+import ServicesContent from "./services/services";
 
 const HomePage = () => {
     return (
         <div>
-            <Hero/>
+            <HeroContent/>
             <AboutContent/>
             <ServicesContent/>
+            {/* <ProfileContent/> */}
             
         </div>
     );

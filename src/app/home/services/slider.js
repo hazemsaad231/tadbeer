@@ -1,0 +1,119 @@
+
+
+
+
+'use client';
+
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {FreeMode} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function BigCenterCarousel({ items = [] }) {
+  const slides = items.length
+    ? items
+    : [
+        { id: 1, image: '/slide1.webp', title: 'خدمه الرقابه الداخليه' },
+        { id: 2, image: '/slide2.webp', title: 'الموزانات المالية' },
+        { id: 3, image: '/slide3.webp', title: 'السلامه الماليه للقطاع الخيري' },
+        { id: 4, image: '/slide4.webp', title: 'بناء وتطوير اللوائح المالية' },
+        { id: 5, image: '/slide5.webp', title: 'تسجيل الحسابات (مسك الدفاتر)' },
+        { id: 6, image: '/slide6.webp', title: 'دراسات الجدوي' },
+      ];
+
+  return (
+    <div className="w-full flex justify-center items-center py-10  overflow-hidden">
+      <div className=" w-full max-w-8xl">
+        <Swiper
+          modules={[FreeMode]}
+          slidesPerView={4}
+          spaceBetween={4}
+          loop
+          allowTouchMove={true}
+          freeMode={{
+            enabled: true,
+            momentum: false,
+          }}
+           breakpoints={{
+        // أقل من 480px -> موبايل صغير
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 8,
+        },
+        // موبايل عادي
+        480: {
+          slidesPerView: 1.3, // fractional علشان يبان جزء من اللي بعده (peek)
+          spaceBetween: 8,
+        },
+        // تابليت عمودي / موبايل أكبر
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        // تابليت أفقي / لابتوب صغير
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 12,
+        },
+        // لابتوب
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 12,
+        },
+        // ديسكتوب عادي
+        1280: {
+          slidesPerView: 4,
+          spaceBetween: 14,
+        },
+        // شاشة كبيرة جداً
+        1600: {
+          slidesPerView: 5,
+          spaceBetween: 16,
+        },
+      }}
+        >
+
+{slides.concat(slides).map((item, idx) => (
+  <SwiperSlide key={`${item.id}-${idx}`}>
+      
+   <div className="relative w-68 h-full z-20 brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+
+  <Image
+    src={item.image}
+    alt={item.title}
+    fill
+    className="rounded-xl object-cover"
+    loading="lazy"
+  />
+
+  {/* طبقة تغميق */}
+  <div className="absolute inset-0 bg-black/15 group-hover:bg-white/50 transition-all duration-500 z-[5]"></div>
+
+  {/* النص الأول */}
+  <div className="absolute left-4 right-4 bottom-4 z-10 text-center font-extrabold text-white py-2 cursor-pointer 
+  transition-all duration-500 transform group-hover:opacity-0 group-hover:translate-y-4">
+    {item.title}
+  </div>
+
+  {/* النص التاني */}
+  <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-4 opacity-0
+  transition-all duration-500 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+    <h1 className='text-black text-xl font-extrabold'>{item.title}</h1>
+    <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href="/services">تعرف اكثر </Link></button>
+
+  </div>
+
+</div>
+
+  </SwiperSlide>
+))}
+
+
+        </Swiper>
+      </div>
+    </div>
+  );
+}

@@ -11,7 +11,7 @@ import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 
 
-const Hero = () => {
+const HeroContent = () => {
 
 
 
@@ -37,7 +37,7 @@ const tiltRef = useRef(null);
     {/* dots */}
     <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
     <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" priority />
-    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" priority />
+    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block" priority />
 </div>
 {/* hero */}
             <div  className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
@@ -71,4 +71,4 @@ const tiltRef = useRef(null);
     );
 }
 
-export default Hero
+export default HeroContent
