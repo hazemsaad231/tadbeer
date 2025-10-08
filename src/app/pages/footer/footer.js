@@ -1,83 +1,134 @@
+'use client';
 import Image from "next/image";
-import { IoLogoYoutube } from "react-icons/io";
-import { IoLogoLinkedin } from "react-icons/io";
-import { FaTwitter } from "react-icons/fa";
-import { FaPhone } from "react-icons/fa";
+import { IoLogoYoutube, IoLogoLinkedin } from "react-icons/io5";
+import { FaTwitter, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-
-
 const Footer = () => {
-    return (
-        <footer className="flex flex-col justify-center items-center bg-white">
+  return (
+    <footer className="w-full bg-white text-indigo-900">
+      {/* Newsletter */}
+      <div className="w-full bg-[#262163] text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-6 justify-between">
+          <h2 className="text-2xl md:text-4xl font-extrabold text-center md:text-left">
+            إشترك في النشرة البريدية
+          </h2>
 
-            <div className="flex flex-col gap-6 w-full py-20 bg-[#262163] text-white justify-center items-center">
-<h1 className="text-4xl font-extrabold">إشترك في النشرة البريدية</h1>
+          <form
+            className="w-full md:w-auto flex flex-col sm:flex-row gap-3 items-stretch"
+            onSubmit={(e) => e.preventDefault()}
+            aria-label="newsletter form"
+          >
+            <label htmlFor="email" className="sr-only">
+              البريد الإلكتروني
+            </label>
 
-<div className="flex gap-4 justify-center items-center h-full">
+            <input
+              id="email"
+              type="email"
+              placeholder="البريد الإلكتروني"
+              className="w-full md:w-80 h-12 px-4 rounded-xl outline-none bg-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#DFC96D]"
+              required
+            />
 
-    <div className="flex flex-col text-gray-400">
-        <label htmlFor="email">البريد الألكتروني</label>
-        <input type="email" placeholder="البريد الألكتروني" className="bg-white rounded-xl w-80 h-12 outline-none" />
-    </div>
+            <button
+              type="submit"
+              className="w-full sm:w-44 h-12 rounded-xl bg-[#DFC96D] text-[#262163] font-bold hover:bg-[#c9b25a] transition-colors duration-200"
+            >
+              اشتراك
+            </button>
+          </form>
+        </div>
+      </div>
 
-    <div>
-         <button className="cursor-pointer relative top-3 bg-[#DFC96D] rounded-xl text-indigo-900 w-80 h-12 font-bold hover:bg-transparent hover:text-white transation-all duration-500 ease-in-out">اشتراك</button>
-    </div>
-   
-</div>
+      {/* Main footer content */}
+      <div className="w-full bg-white text-indigo-900 py-10">
+        <div className="max-w-8xl mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center">
+            {/* Logo */}
+            <div className="flex justify-center items-center p-4 border-b md:border-b-0 border-[#DFC96D]/30 h-full">
+              <Image
+                src="/logo2.jpeg"
+                alt="Tadbeer logo"
+                width={140}
+                height={140}
+                className="object-contain"
+                priority
+              />
             </div>
 
-            <div className="flex flex-col gap-2 w-full bg-white text-indigo-900 h-full justify-center items-center">
-
-                <div className="grid grid-cols-4 w-full h-full place-content-center place-items-center pb-4">
-                    <div className="border-l border-[#DFC96D] flex justify-center items-center w-full h-full p-6">
-                        <Image src="/logo2.jpeg" alt="logo" width={150} height={150} className="object-contain" priority />
-                    </div>
- <div className="border-l border-[#DFC96D] flex justify-center items-center gap-3 w-full h-full p-6">
-    <div className="p-3 rounded-lg bg-[#DFC96D] cursor-pointer">
-<IoLogoYoutube size={28} className="text-white" />
-    </div>
-       <div className="p-3 rounded-lg bg-[#DFC96D] cursor-pointer">
-<FaTwitter size={28} className="text-white" />
-    </div>
-          <div className="p-3 rounded-lg bg-[#DFC96D] cursor-pointer">
-<IoLogoLinkedin size={28} className="text-white" />
-    </div>                     
-                  
-                    </div>
-                    <div className="border-l border-[#DFC96D] m-auto flex justify-center items-center w-full h-full p-6">
-                        <h1 className="text-center text-2xl font-bold text-[#262163] cursor-pointer">
-                            العنوان
-6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية السعودية
-                        </h1>
-                    </div>
-                        <div className="flex gap-2 flex-col w-full h-full p-5">
-                       <div className="flex gap-4 h-full cursor-pointer">
-                       <FaPhone size={30} className="text-[#DFC96D]" />
-                       <h1 className="text-center text-lg font-medium text-gray-500">0555144382</h1>
-                       </div>
-                       <div className="flex  gap-4 h-full cursor-pointer">
-                       <FaPhone size={30} className="text-[#DFC96D]" />
-                       <h1 className="text-center text-lg font-medium text-gray-600">0554452877</h1>
-                       </div>
-                       <div className="flex  gap-4 h-full cursor-pointer">
-                       <FaPhone size={30} className="text-[#DFC96D]" />
-                       <h1 className="text-center text-lg font-medium text-gray-600">05511800015</h1>
-                       </div>
-                       <div className="flex gap-4 h-full cursor-pointer">
-                       <MdEmail size={30} className="text-[#DFC96D]" />
-                       <h1 className="text-center text-lg font-medium text-gray-600">info@tadbeer.sa</h1>
-                       </div>
-                    </div>
-    
-                </div>
-
+            {/* Social */}
+            <div className="flex flex-col items-center justify-center p-4 border-b md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
+              <h3 className="mb-3 font-bold text-lg">تابعنا</h3>
+              <div className="flex gap-3">
+                <a
+                  href="#"
+                  aria-label="YouTube"
+                  className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
+                >
+                  <IoLogoYoutube size={22} className="text-white" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
+                >
+                  <FaTwitter size={22} className="text-white" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
+                >
+                  <IoLogoLinkedin size={22} className="text-white" />
+                </a>
+              </div>
             </div>
-            
-            <h1 className="text-center text-md font-light text-gray-600 my-4"> 2025 @ Tadbeer</h1>
-        </footer>
-    );
+
+            {/* Address */}
+            <div className="p-4 border-b md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
+              <h3 className="font-bold text-lg mb-2 text-[#262163]">العنوان</h3>
+              <p className="text-md text-gray-600 leading-relaxed text-center md:text-left">
+                6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
+                السعودية
+              </p>
+            </div>
+
+            {/* Contacts */}
+            <div className="p-4 flex flex-col items-center  gap-3">
+              <h3 className="font-bold text-lg mb-2">تواصل معنا</h3>
+
+              <a href="tel:0555144382" className="flex items-center gap-3">
+                <FaPhone size={20} className="text-[#DFC96D]" />
+                <span className="text-gray-700">0555144382</span>
+              </a>
+
+              <a href="tel:0554452877" className="flex items-center gap-3">
+                <FaPhone size={20} className="text-[#DFC96D]" />
+                <span className="text-gray-700">0554452877</span>
+              </a>
+
+              <a href="tel:05511800015" className="flex items-center gap-3">
+                <FaPhone size={20} className="text-[#DFC96D]" />
+                <span className="text-gray-700">05511800015</span>
+              </a>
+
+              <a href="mailto:info@tadbeer.sa" className="flex items-center gap-3">
+                <MdEmail size={20} className="text-[#DFC96D]" />
+                <span className="text-gray-700">info@tadbeer.sa</span>
+              </a>
+            </div>
+          </div>
+
+          {/* bottom note */}
+          <div className="mt-6 border-t pt-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-3">
+            <p className="text-gray-600 text-sm">2025 © Tadbeer</p>
+            <p className="text-gray-500 text-sm">جميع الحقوق محفوظة</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
-export default Footer; 
+export default Footer;

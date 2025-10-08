@@ -22,7 +22,7 @@ const ServicesContent = () => {
     {/* dots */}
     <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
     <Image src="/dots2.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" priority />
-    <Image src="/dots2.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" priority />
+    <Image src="/dots2.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block" priority />
 </div>
 
 {/* slider */}

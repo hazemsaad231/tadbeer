@@ -23,10 +23,10 @@ export const SmallLogo = () => {
                          <Image
                            src="/logo.webp"
                            alt="logo"
-                           width={150}
-                           height={150}
-                           sizes="100vw"
-                           className="w-[100px] h-[100px] object-contain"
+                           width={200}
+                           height={200}
+                           sizes="150vw"
+                           className="w-[200px] h-[200px] object-contain"
                            priority
                          />
                        </div>

@@ -1,6 +1,6 @@
 import AboutContent from "./aboutpage";
 import HeroContent from "./hero";
-import ProfileContent from "./profile";
+import ProfileContent from "./profile/profile";
 import ServicesContent from "./services/services";
 
 const HomePage = () => {
@@ -9,8 +9,7 @@ const HomePage = () => {
             <HeroContent/>
             <AboutContent/>
             <ServicesContent/>
-            {/* <ProfileContent/> */}
-            
+          {/* <ProfileContent/>             */}
         </div>
     );
 }

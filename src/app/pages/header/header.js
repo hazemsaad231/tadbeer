@@ -119,10 +119,8 @@ export default function Header() {
               <Image
                 src="/logo.webp"
                 alt="logo"
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-[60px] h-[60px] object-contain"
+                width={110}
+                height={110}
               />
             </div>
           </div>
