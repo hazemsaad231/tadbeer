@@ -31,7 +31,8 @@ const ServicesContent = () => {
     </div> 
 
             <div  className="relative z-10 flex flex-col justify-center items-center mt-4 rounded-xl m-auto">
-                    <div className="object-cover w-[90vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[70vw] h-[450px]">
+                    <div className="object-cover w-[95vw] sm:w-[95vw] md:w-[80vw] lg:w-[70vw] xl:w-[70vw] h-[425px] 
+                    md:h-[450px]">
                     <div className="rounded-xl bg-[#23205a] w-full h-full"></div>
                     </div>
 

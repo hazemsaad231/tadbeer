@@ -45,7 +45,7 @@ export default function BigCenterCarousel({ items = [] }) {
         },
         // موبايل عادي
         480: {
-          slidesPerView: 1, // fractional علشان يبان جزء من اللي بعده (peek)
+          slidesPerView: 2, // fractional علشان يبان جزء من اللي بعده (peek)
           spaceBetween: 5,
         },
         // تابليت عمودي / موبايل أكبر
@@ -61,7 +61,7 @@ export default function BigCenterCarousel({ items = [] }) {
         // لابتوب
         1024: {
           slidesPerView: 3,
-          spaceBetween: 8,
+          spaceBetween: 12,
         },
         // ديسكتوب عادي
         1280: {
@@ -79,7 +79,7 @@ export default function BigCenterCarousel({ items = [] }) {
 {slides.concat(slides).map((item, idx) => (
   <SwiperSlide key={`${item.id}-${idx}`}>
       
-   <div className="relative w-68 h-full z-20 brightness-150 md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+   <div className="relative w-80 h-full z-20 brightness-150 md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
 
   <Image
     src={item.image}

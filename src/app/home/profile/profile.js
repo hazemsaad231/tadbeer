@@ -29,7 +29,7 @@ const ProfileContent = () => {
         <div className="flex flex-col bg-[#262163] w-full py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
 
             {/* الجزء الاول */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
 { Data.map((item) => (
         <div key={item.id} >
             <div className="flex flex-col gap-2 justify-center items-center"> 

@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="max-w-8xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center">
             {/* Logo */}
-            <div className="flex justify-center items-center p-4 border-b md:border-b-0 border-[#DFC96D]/30 h-full">
+            <div className="flex justify-center items-center p-4 border-b-2 md:border-b-0 border-[#DFC96D]/30 h-full">
               <Image
                 src="/logo2.jpeg"
                 alt="Tadbeer logo"
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
 
             {/* Social */}
-            <div className="flex flex-col items-center justify-center p-4 border-b md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
+            <div className="flex flex-col items-center justify-center p-4 border-b-2 md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
               <h3 className="mb-3 font-bold text-lg">تابعنا</h3>
               <div className="flex gap-3">
                 <a
@@ -86,7 +86,7 @@ const Footer = () => {
             </div>
 
             {/* Address */}
-            <div className="p-4 border-b md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
+            <div className="p-4 border-b-2 md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
               <h3 className="font-bold text-lg mb-2 text-[#262163]">العنوان</h3>
               <p className="text-md text-gray-600 leading-relaxed text-center lg:text-left">
                 6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
