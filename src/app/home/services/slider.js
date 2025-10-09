@@ -51,17 +51,17 @@ export default function BigCenterCarousel({ items = [] }) {
         // تابليت عمودي / موبايل أكبر
         640: {
           slidesPerView: 2,
-          spaceBetween: 10,
+          spaceBetween: 5,
         },
         // تابليت أفقي / لابتوب صغير
         768: {
           slidesPerView: 2.5,
-          spaceBetween: 12,
+          spaceBetween: 6,
         },
         // لابتوب
         1024: {
           slidesPerView: 3,
-          spaceBetween: 12,
+          spaceBetween: 8,
         },
         // ديسكتوب عادي
         1280: {
