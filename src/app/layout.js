@@ -31,14 +31,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <link rel="preload" as="image" href="/hero.webp" />
-      <link rel="preload" as="image" href="/logo.webp" />
+      <head>
+        <link rel="preload" as="image" href="/hero.webp" />
+        <link rel="preload" as="image" href="/logo.webp" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
       >
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
