@@ -14,7 +14,7 @@ const AboutContent = () => {
                 
                <div className="flex">
                 <div className="flex flex-col gap-1 border-r-[20px] border-b-[20px] border-[#DFC96D] p-4">
-                                    <h1 className="text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold text-[#262163]">من نحن؟</h1>
+                                    <h1 className="text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold text-[#262163]">من نحن؟</h1>
  <p className="text-gray-600 text-xl w-68 sm:w-72 md:w-[300px] lg:w-[350px] xl:w-[400px] mb-2">منشأة احترافية تهدف الى تطوير الاستثمارات والأعمال التجارية والقطاع الخيري، بتقديم استشارات وخدمات مالية وإدارية، بمعايير عالمية، وتقنيات متقدمة ، ملتزمة بقيمها الأصيلة.</p>
                     <div className="flex gap-1">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
