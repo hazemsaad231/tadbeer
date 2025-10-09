@@ -26,15 +26,15 @@ const Data = [
 ]
 const ProfileContent = () => {
     return (
-        <div className="flex flex-col bg-[#262163] w-full py-20 px-12">
+        <div className="flex flex-col bg-[#262163] w-full py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
 
             {/* الجزء الاول */}
-            <div className="flex justify-evenly items-center gap-8 mb-20">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 { Data.map((item) => (
         <div key={item.id} >
             <div className="flex flex-col gap-2 justify-center items-center"> 
-                <h1 className="text-white text-4xl font-bold">{item.num} +</h1>
-            <p className="text-[#DFC96D] text-5xl font-bold">{item.text}</p>
+                <h1 className="text-white text-2xl md:text-3xl lg:text-3xl xl:text-4xl font-bold">{item.num} +</h1>
+            <p className="text-[#DFC96D] text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold">{item.text}</p>
             </div>
            
         </div>
@@ -42,19 +42,22 @@ const ProfileContent = () => {
 }
             </div>
 
-        <hr className="border-t-2 border-[#DFC96D] w-[95%] m-auto my-8"/>
+        <hr className="border-t-2 border-[#DFC96D] w-[90%] m-auto my-8"/>
 
-        <div className="flex flex-col md:flex-row justify-center items-center w-full">
+        {/* الجزء الثاني */}
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-6 w-full">
 
             <div>
                 <Image src="/blog.webp" alt="logo" width={800} height={1200} className="object-cover w-[400px] h-[400px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px]
                 lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px]" priority />
             </div>
         
-        <div className="flex flex-col justify-center items-center gap-5">
-            <h1 className="text-white text-4xl font-bold">بماذا نساعدك في مشروعك؟</h1>
+        <div>
             <MyTimeline/>
         </div>
+
+
         </div>
         </div>
     );

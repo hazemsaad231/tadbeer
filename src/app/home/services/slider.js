@@ -41,12 +41,12 @@ export default function BigCenterCarousel({ items = [] }) {
         // أقل من 480px -> موبايل صغير
         320: {
           slidesPerView: 1,
-          spaceBetween: 8,
+          spaceBetween: 4,
         },
         // موبايل عادي
         480: {
-          slidesPerView: 1.3, // fractional علشان يبان جزء من اللي بعده (peek)
-          spaceBetween: 8,
+          slidesPerView: 1.5, // fractional علشان يبان جزء من اللي بعده (peek)
+          spaceBetween: 4,
         },
         // تابليت عمودي / موبايل أكبر
         640: {
@@ -79,7 +79,7 @@ export default function BigCenterCarousel({ items = [] }) {
 {slides.concat(slides).map((item, idx) => (
   <SwiperSlide key={`${item.id}-${idx}`}>
       
-   <div className="relative w-68 h-full z-20 brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+   <div className="relative w-68 h-full z-20 brightness-150 md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
 
   <Image
     src={item.image}
@@ -93,13 +93,14 @@ export default function BigCenterCarousel({ items = [] }) {
   <div className="absolute inset-0 bg-black/15 group-hover:bg-white/50 transition-all duration-500 z-[5]"></div>
 
   {/* النص الأول */}
-  <div className="absolute left-4 right-4 bottom-4 z-10 text-center font-extrabold text-white py-2 cursor-pointer 
+  <div className="absolute left-4 right-4 bottom-4 z-10 text-center font-extrabold text-white py-2 cursor-pointer opacity-0
+  md:opacity-100
   transition-all duration-500 transform group-hover:opacity-0 group-hover:translate-y-4">
     {item.title}
   </div>
 
   {/* النص التاني */}
-  <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-4 opacity-0
+  <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-8 opacity-100 md:opacity-0
   transition-all duration-500 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
     <h1 className='text-black text-xl font-extrabold'>{item.title}</h1>
     <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href="/services">تعرف اكثر </Link></button>

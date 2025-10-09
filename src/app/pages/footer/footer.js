@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="w-full bg-white text-indigo-900">
       {/* Newsletter */}
       <div className="w-full bg-[#262163] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-6 justify-between">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col xl:flex-row items-center gap-6 justify-between">
           <h2 className="text-2xl md:text-4xl font-extrabold text-center md:text-left">
             إشترك في النشرة البريدية
           </h2>
@@ -88,7 +88,7 @@ const Footer = () => {
             {/* Address */}
             <div className="p-4 border-b md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
               <h3 className="font-bold text-lg mb-2 text-[#262163]">العنوان</h3>
-              <p className="text-md text-gray-600 leading-relaxed text-center md:text-left">
+              <p className="text-md text-gray-600 leading-relaxed text-center lg:text-left">
                 6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
                 السعودية
               </p>

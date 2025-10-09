@@ -99,7 +99,7 @@ export default function Header() {
         {/* mobile bar */}
         <div className="lg:hidden">
 
-          <div className="w-[100vw] flex justify-between items-center p-6">
+          <div className="w-[100vw] flex justify-between items-center p-3">
             <div>
               {isNavbarVisible ? (
                 <MdOutlineCancelPresentation
