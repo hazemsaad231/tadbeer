@@ -41,7 +41,7 @@ const tiltRef = useRef(null);
 </div>
 {/* hero */}
             <div  className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
-                    <Image src="/hero.webp" alt="logo" width={400} height={400} className="object-cover w-full h-96" priority />
+                    <Image src="/hero.webp" alt="logo" width={400} height={400} className="object-cover w-full h-96"  priority />
 {/* buttons */}
                     <div className="flex justify-between items-center w-full">
                         {/* services */}

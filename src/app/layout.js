@@ -31,6 +31,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <link rel="preload" as="image" href="/hero.webp" />
+      <link rel="preload" as="image" href="/logo.webp" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
       >
