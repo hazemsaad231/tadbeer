@@ -41,12 +41,12 @@ export default function BigCenterCarousel({ items = [] }) {
         // أقل من 480px -> موبايل صغير
         320: {
           slidesPerView: 1,
-          spaceBetween: 4,
+          spaceBetween: 3,
         },
         // موبايل عادي
         480: {
-          slidesPerView: 1.5, // fractional علشان يبان جزء من اللي بعده (peek)
-          spaceBetween: 4,
+          slidesPerView: 1, // fractional علشان يبان جزء من اللي بعده (peek)
+          spaceBetween: 5,
         },
         // تابليت عمودي / موبايل أكبر
         640: {
