@@ -24,9 +24,9 @@ export const SmallLogo = () => {
                            src="/logo.webp"
                            alt="logo"
                            width={200}
-                           height={200}
+                           height={100}
                            sizes="150vw"
-                           className="w-[200px] h-[200px] object-contain"
+                           className="w-[200px] h-[120px] object-contain"
                            priority
                          />
                        </div>
