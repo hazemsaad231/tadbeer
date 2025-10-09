@@ -88,7 +88,7 @@ const Footer = () => {
             {/* Address */}
             <div className="p-4 border-b-2 md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
               <h3 className="font-bold text-lg mb-2 text-[#262163]">العنوان</h3>
-              <p className="text-md text-gray-600 leading-relaxed text-center lg:text-left">
+              <p className="text-md text-gray-600 leading-relaxed text-center">
                 6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
                 السعودية
               </p>
