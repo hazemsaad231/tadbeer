@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
 
           {/* bottom note */}
-          <div className="mt-6 border-t pt-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-3">
+          <div className="mt-6 border-t pt-4 flex flex-col md:flex-row items-center justify-between text-center gap-3">
             <p className="text-gray-600 text-sm">2025 © Tadbeer</p>
             <p className="text-gray-500 text-sm">جميع الحقوق محفوظة</p>
           </div>
