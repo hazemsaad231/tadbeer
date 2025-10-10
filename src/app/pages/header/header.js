@@ -66,7 +66,7 @@ export default function Header() {
                 الخدمات
               </Link>
             </li>
-            <li onClick={() => setActive('teamWork')} className={`${liBase} ${
+            {/* <li onClick={() => setActive('teamWork')} className={`${liBase} ${
                 active === 'teamWork'
                 ? "text-white":
                 "text-[#DFC96D] hover:text-white"
@@ -74,7 +74,7 @@ export default function Header() {
               <Link href="/teamWork">
                 فريق العمل 
               </Link>
-            </li>
+            </li> */}
             <li onClick={() => setActive('blog')} className={`${
                 active === 'blog'
                 ? "text-white":
@@ -177,11 +177,11 @@ export default function Header() {
                   </Link>
                 </li>
 
-                <li className="border-t border-gray-500 py-4">
+                {/* <li className="border-t border-gray-500 py-4">
                   <Link href="/teamWork" onClick={toggleNavbar} className="block text-center text-white">
                     فريق العمل
                   </Link>
-                </li>
+                </li> */}
 
                  <li className="border-t border-gray-500 py-4">
                   <Link href="/contact" onClick={toggleNavbar} className="block text-center text-white">

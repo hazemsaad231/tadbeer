@@ -11,18 +11,9 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import Image from 'next/image';
 import Link from 'next/link';
+import {data} from '../../services/Data';
 
-export default function BigCenterCarousel({ items = [] }) {
-  const slides = items.length
-    ? items
-    : [
-        { id: 1, image: '/slide1.webp', title: 'خدمه الرقابه الداخليه' },
-        { id: 2, image: '/slide2.webp', title: 'الموزانات المالية' },
-        { id: 3, image: '/slide3.webp', title: 'السلامه الماليه للقطاع الخيري' },
-        { id: 4, image: '/slide4.webp', title: 'بناء وتطوير اللوائح المالية' },
-        { id: 5, image: '/slide5.webp', title: 'تسجيل الحسابات (مسك الدفاتر)' },
-        { id: 6, image: '/slide6.webp', title: 'دراسات الجدوي' },
-      ];
+export default function BigCenterCarousel() {
 
   return (
     <div className="w-full flex justify-center items-center py-10  overflow-hidden">
@@ -76,13 +67,13 @@ export default function BigCenterCarousel({ items = [] }) {
       }}
         >
 
-{slides.concat(slides).map((item, idx) => (
+{data.map((item, idx) => (
   <SwiperSlide key={`${item.id}-${idx}`}>
-      
+       
    <div className="relative w-80 h-full z-20 brightness-150 md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
 
   <Image
-    src={item.image}
+    src={item.img}
     alt={item.title}
     fill
     className="rounded-xl object-cover"
@@ -103,12 +94,11 @@ export default function BigCenterCarousel({ items = [] }) {
   <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-8 opacity-100 md:opacity-0
   transition-all duration-500 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
     <h1 className='text-black text-xl font-extrabold'>{item.title}</h1>
-    <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href="/services">تعرف اكثر </Link></button>
+    <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href={`/services/${item.id}`}>تعرف اكثر </Link></button>
 
   </div>
 
 </div>
-
   </SwiperSlide>
 ))}
 
