@@ -1,6 +1,7 @@
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import MyTimeline from "./MyTimeline";
+import AOScroll from "@/app/componets/aos";
 // const Timeline = dynamic(() => import('./MyTimeline'), { ssr: false });
 const Data = [
     {
@@ -29,6 +30,7 @@ const ProfileContent = () => {
         <div className="flex flex-col bg-[#262163] w-full py-20 px-4 sm:px-6 lg:px-8 xl:px-12">
 
             {/* الجزء الاول */}
+            <AOScroll animation= "zoom-out-left" delay={100}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
 { Data.map((item) => (
         <div key={item.id} >
@@ -41,6 +43,7 @@ const ProfileContent = () => {
     ))
 }
             </div>
+            </AOScroll>
 
         <hr className="border-t-2 border-[#DFC96D] w-[90%] m-auto my-8"/>
 

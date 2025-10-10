@@ -1,4 +1,5 @@
 import { IoIosArrowBack } from "react-icons/io";
+import AOScroll from "../componets/aos";
 
 
 
@@ -12,7 +13,7 @@ const AboutContent = () => {
 
             <div className="flex flex-col w-full">
                
-                
+               <AOScroll animation="fade-in" delay={100}> 
                <div className="flex">
                 <div className="flex flex-col gap-2 border-r-[20px] border-b-[20px] border-[#DFC96D] px-1 py-3">
                                     <h1 className="text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold text-[#262163] px-2">من نحن؟</h1>
@@ -39,7 +40,9 @@ const AboutContent = () => {
                     </div>
                     </div>
 </div>
+               </AOScroll>  
             </div>
+           
             <div className="mt-12 sm:mt-10 md:mt-0">  <video src="/tadbeer.mp4" className="w-full h-full" controls></video></div>
           
         </div>
