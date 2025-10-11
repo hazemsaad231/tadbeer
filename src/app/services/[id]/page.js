@@ -15,6 +15,8 @@ export default function ServicePage({ params }) {
 
   const item = data.find((i) => String(i.id) === idParam);
 
+  const parts = item.text.split('*');
+
 return (
      <div className="flex flex-col bg-white">
         {/* الجزء العلوي */}
@@ -36,7 +38,7 @@ return (
       </div>
 
 {/* الجزء السفلي */}
-<div className=" grid grid-cols-1 lg:grid-cols-2  gap-6 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
+<div className=" flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
 {/* الجزء الاول */}
       <div className="relative flex flex-col gap-4">
         <Image
@@ -48,10 +50,19 @@ return (
           priority
         />
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#262163]">{item.title}</h1>
-        <p className="text-lg text-gray-600 w-full h-full p-2">{item.text}</p>
+        <div className="text-xl text-gray-500 w-full h-full p-2">
+           <p className="font-extrabold">{parts[0]}</p>
+      <ul className="list-disc mt-3 space-y-2">
+        {parts.slice(1).map((item, i) => (
+          <p key={i} className="font-medium">{item.trim()}</p>
+        ))}
+      </ul>
+      </div>
+
       </div>
 {/* الجزء الثاني */}
-      <div className="bg-[#262163] w-full m-auto lg:w-max  rounded-xl py-6 p-2 sm:p-2 md:p-12">
+<div className="w-max m-auto md:m-0">
+      <div className="bg-[#262163] w-full m-auto  rounded-xl py-6 p-2 sm:p-2 md:p-8">
         <h1 className="text-2xl md:text-3xl font-extrabold text-[#DFC96D] mb-2"> جميع الخدمات</h1>
         <div className="flex flex-col gap-4 py-6">
 {data.map((item) => (
@@ -60,16 +71,17 @@ return (
     <Image
       src={item.img}
       alt="الخدمات - صورة"
-      width={1600}
-      height={600}
-      className="w-16 md:w-20 object-cover h-16 md:h-20 rounded-xl"
+      width={200}
+      height={200}
+      className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
       priority
     />
-    <h1 className="text-md w-full font-semibold text-white">{item.title}</h1>
+    <h1 className="text-md w-60 font-semibold text-white">{item.title}</h1>
     </Link>
   </div>
 ))}
 </div>
+      </div>
       </div>
       {/**/}
 
