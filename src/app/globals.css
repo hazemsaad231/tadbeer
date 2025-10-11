@@ -31,6 +31,7 @@ body {
   scroll-behavior: smooth;
   direction: rtl;
   text-align: right;
+  overflow-x: hidden;
 
 }
 

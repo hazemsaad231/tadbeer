@@ -52,9 +52,9 @@ export default function Header() {
                 : "text-[#DFC96D] hover:text-white"
             }`}
 >
-    <a href="#about">
+    <Link href="/#about">
   من نحن
-</a>
+</Link>
 </li>
 
             <li onClick={() => setActive('services')} className={`${liBase} ${
@@ -160,9 +160,9 @@ export default function Header() {
                 <Link href="/">الرئيسية</Link></li>
 
                 <li className="border-t border-gray-500 py-4">
-                  <a href="#about" onClick={toggleNavbar} className="block text-center text-white">
+                  <Link href="/#about" onClick={toggleNavbar} className="block text-center text-white">
                     من نحن
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="border-t border-gray-500 py-4">

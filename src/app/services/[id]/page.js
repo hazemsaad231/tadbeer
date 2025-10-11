@@ -36,7 +36,7 @@ return (
       </div>
 
 {/* الجزء السفلي */}
-<div className=" grid grid-cols-1 lg:grid-cols-2 gap-6 py-20 p-4 lg:p-8 xl:p-12">
+<div className=" grid grid-cols-1 lg:grid-cols-2  gap-6 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
 {/* الجزء الاول */}
       <div className="relative flex flex-col gap-4">
         <Image
@@ -51,7 +51,7 @@ return (
         <p className="text-lg text-gray-600 w-full h-full p-2">{item.text}</p>
       </div>
 {/* الجزء الثاني */}
-      <div className="bg-[#262163] w-full lg:w-max m-auto rounded-xl py-6 p-2 sm:p-2 md:p-12">
+      <div className="bg-[#262163] w-full m-auto lg:w-max  rounded-xl py-6 p-2 sm:p-2 md:p-12">
         <h1 className="text-2xl md:text-3xl font-extrabold text-[#DFC96D] mb-2"> جميع الخدمات</h1>
         <div className="flex flex-col gap-4 py-6">
 {data.map((item) => (
