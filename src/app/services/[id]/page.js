@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { data } from "../Data";
 import Link from "next/link";
+import Buttons from "../buttons";
+
+
 
 export async function generateStaticParams() {
   return data.map((item) => ({
@@ -16,6 +19,11 @@ export default function ServicePage({ params }) {
   const item = data.find((i) => String(i.id) === idParam);
 
   const parts = item.text.split('*');
+
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tadbeer-two.vercel.app/';
+  const url = `${siteUrl}/services/${item.id}`;
+  // نفترض item.img هو path ممكن يكون "/uploads/og1.jpg" أو رابط كامل
+  const imageUrl = item.img.startsWith('http') ? item.img : `${siteUrl}${item.img}`;
 
 return (
      <div className="flex flex-col bg-white">
@@ -61,8 +69,8 @@ return (
 
       </div>
 {/* الجزء الثاني */}
-<div className="w-max m-auto md:m-0">
-      <div className="bg-[#262163] w-full m-auto  rounded-xl py-6 p-2 sm:p-2 md:p-8">
+<div className="w-full md:w-max m-auto md:m-0 p-2 md:p-0">
+      <div className="bg-[#262163] w-full m-auto rounded-xl py-6 p-2 sm:p-2 md:p-6">
         <h1 className="text-2xl md:text-3xl font-extrabold text-[#DFC96D] mb-2"> جميع الخدمات</h1>
         <div className="flex flex-col gap-4 py-6">
 {data.map((item) => (
@@ -81,9 +89,14 @@ return (
   </div>
 ))}
 </div>
+<div className="w-full h-[2px] bg-white"></div>
+<div className="py-8">
+  <Buttons url={url} imageUrl={imageUrl} title={item.title}/>
+</div>
       </div>
       </div>
       {/**/}
+
 
 
 
