@@ -20,7 +20,7 @@ const HeroContent = () => {
 const tiltRef = useRef(null);
 
   useEffect(() => {
-    if (tiltRef.current) {
+    if ( window.innerWidth > 768 && tiltRef.current ) {
       VanillaTilt.init(tiltRef.current, { max: 5, speed: 200 });
     }
   }, []);

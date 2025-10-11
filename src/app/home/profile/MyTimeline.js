@@ -41,6 +41,7 @@ export default function MyTimeline() {
             width: 3px !important;
      border-radius: 2px;
      height: 95% !important;
+     top: 29px !important;
           }
 
         
