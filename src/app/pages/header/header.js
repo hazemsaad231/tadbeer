@@ -34,7 +34,7 @@ export default function Header() {
             <Logo />
           </div>
 
-          <ul className="flex gap-2 text-lg font-medium">
+          <ul className="flex gap-2 m-auto text-lg font-medium">
 <li onClick={() => setActive('home')}  className={`${liBase} ${
                 active === 'home'
                 ? "text-white" 

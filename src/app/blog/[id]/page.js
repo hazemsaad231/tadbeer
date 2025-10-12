@@ -62,7 +62,7 @@ return (
            <p className="font-extrabold">{parts[0]}</p>
       <ul className="list-disc mt-3 space-y-2">
         {parts.slice(1).map((item, i) => (
-          <p key={i} className="font-medium">{item.trim()}</p>
+          <p key={i} className="font-semibold text-lg">{item.trim()}</p>
         ))}
       </ul>
       </div>

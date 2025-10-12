@@ -10,6 +10,7 @@ import { FaTelegram } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 import AOSScroll from "../components/aos";
+import Link from "next/link";
 
 
 const HeroContent = () => {
@@ -49,9 +50,11 @@ const tiltRef = useRef(null);
                     <div className="flex justify-between items-center w-full">
                         {/* services */}
                     <div className="flex">
-<h1 className="text-md sm:text-md md:text-xl h-full bg-[#DFC96D] text-gray-900 p-2 md:p-4 px-2 sm:px-4 md:px-8 lg:px-15 cursor-pointer rounded-br-xl">تواصل معنا</h1>
+<h1 className="text-md sm:text-md md:text-xl h-full bg-[#DFC96D] text-gray-900 p-2 md:p-4 px-2 sm:px-4 md:px-8 lg:px-15 cursor-pointer rounded-br-xl">
+  <a href="#contact">تواصل معنا</a></h1>
 <h1 className="text-md sm:text-md md:text-xl h-full bg-white text-gray-900 p-2 px-2 md:p-4 sm:px-4 md:px-8 lg:px-15 cursor-pointer">
-    جميع الخدمات</h1>
+  <Link href="/services">جميع الخدمات</Link>
+    </h1>
                     </div>
                     {/* socials */}
                     <div className="flex gap-2 sm:gap-4 md:gap-6 cursor-pointer p-3">

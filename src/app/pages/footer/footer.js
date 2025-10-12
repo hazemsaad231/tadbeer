@@ -6,7 +6,7 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white text-indigo-900">
+    <footer className="w-full bg-white text-indigo-900" id="contact">
       {/* Newsletter */}
       <div className="w-full bg-[#262163] text-white py-12">
         <div className="max-w-7xl mx-auto px-4 flex flex-col xl:flex-row items-center gap-6 justify-between">
@@ -62,21 +62,21 @@ const Footer = () => {
               <h3 className="mb-3 font-bold text-lg">تابعنا</h3>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCTcIQAUyUEipCP6TybIF0dg"
                   aria-label="YouTube"
                   className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
                 >
                   <IoLogoYoutube size={22} className="text-white" />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/TadbeerSA"
                   aria-label="Twitter"
                   className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
                 >
                   <FaTwitter size={22} className="text-white" />
                 </a>
                 <a
-                  href="#"
+                  href="https://sa.linkedin.com/company/tadbeersa"
                   aria-label="LinkedIn"
                   className="p-3 rounded-lg bg-[#DFC96D] inline-flex items-center justify-center"
                 >
@@ -88,9 +88,11 @@ const Footer = () => {
             {/* Address */}
             <div className="p-4 border-b-2 md:border-b-0 md:border-x-2 border-[#DFC96D]/30 flex flex-col items-center">
               <h3 className="font-bold text-lg mb-2 text-[#262163]">العنوان</h3>
-              <p className="text-md text-gray-600 leading-relaxed text-center">
+              <p className="text-lg font-semibold text-gray-600 leading-relaxed text-center">
+                <a href="https://www.google.com/maps/place/21%C2%B033'26.3%22N+39%C2%B010'38.8%22E/@21.557312,39.177437,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d21.5573125!4d39.1774375?hl=ar-SA">
                 6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
                 السعودية
+                 </a>
               </p>
             </div>
 
@@ -98,7 +100,7 @@ const Footer = () => {
             <div className="p-4 flex flex-col items-center  gap-3">
               <h3 className="font-bold text-lg mb-2">تواصل معنا</h3>
 
-              <a href="tel:0555144382" className="flex items-center gap-3">
+              <a href="tel:+966 55 514 4382" className="flex items-center gap-3">
                 <FaPhone size={20} className="text-[#DFC96D]" />
                 <span className="text-gray-700">0555144382</span>
               </a>
