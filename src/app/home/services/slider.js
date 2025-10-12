@@ -70,7 +70,7 @@ export default function BigCenterCarousel() {
 {data.map((item, idx) => (
   <SwiperSlide key={`${item.id}-${idx}`}>
        
-   <div className="relative w-80 h-full z-20 brightness-150 md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+   <div className="relative w-80 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
 
   <Image
     src={item.img}
@@ -91,9 +91,9 @@ export default function BigCenterCarousel() {
   </div>
 
   {/* النص التاني */}
-  <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-8 opacity-100 md:opacity-0
+  <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-8 opacity-95 md:opacity-0
   transition-all duration-500 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-    <h1 className='text-black drop-shadow-xl tracking-wide text-xl font-extrabold'>{item.title}</h1>
+    <h1 className='text-white drop-shadow-xl tracking-wide text-xl font-extrabold'>{item.title}</h1>
     <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href={`/services/${item.id}`}>تعرف اكثر </Link></button>
 
   </div>

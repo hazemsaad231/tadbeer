@@ -30,6 +30,7 @@ const tiltRef = useRef(null);
 
 
     return (
+      <>
         <div  className="flex flex-col w-screen py-8  bg-[#262163] text-white">
           <AOSScroll animation="fade-up" delay={100}>
             <div  className="flex flex-col gap-4 text-center py-20 w-full">
@@ -71,6 +72,8 @@ const tiltRef = useRef(null);
             </div>
             </AOSScroll>
         </div>
+        
+        </>
     );
 }
 
