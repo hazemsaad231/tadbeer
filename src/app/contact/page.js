@@ -52,13 +52,12 @@ export default function Contact() {
     <div className="flex flex-col bg-white max-w-full">
 
         {/* الجزء العلوي */}
-      <div className="w-full h-[28rem]">
+      <div className="relative w-full h-[28rem]">
         <Image
           src="/contact.webp"
           alt="الخدمات - صورة"
-          width={1600}
-          height={600}
-          className="w-full object-cover h-full"
+          fill
+          className="object-cover"
           priority
         />
       </div>

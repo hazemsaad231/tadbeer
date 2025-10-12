@@ -121,6 +121,7 @@ export default function Header() {
                 alt="logo"
                 width={110}
                 height={110}
+                priority
               />
             </div>
           </div>
@@ -150,7 +151,7 @@ export default function Header() {
                 aria-label="close menu"
                 className="p-2 rounded-md text-[#DFC96D] hover:bg-gray-100"
               >
-                <MdOutlineCancelPresentation className="text-2xl" />
+                <MdOutlineCancelPresentation className="text-2xl" priority />
               </button>
             </div>
 
