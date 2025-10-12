@@ -12,8 +12,12 @@ import 'swiper/css/free-mode';
 import Image from 'next/image';
 import Link from 'next/link';
 import {data} from '../../services/dataServices';
+import { useContext } from 'react';
+import { Context } from '@/Context/context';
 
 export default function BigCenterCarousel() {
+
+  const {setActive} = useContext(Context);
 
   return (
     <div className="w-full flex justify-center items-center py-10  overflow-hidden">
@@ -94,7 +98,8 @@ export default function BigCenterCarousel() {
   <div className="absolute inset-0 z-10 flex flex-col gap-6 items-center justify-end py-8 opacity-95 md:opacity-0
   transition-all duration-500 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
     <h1 className='text-white md:text-black drop-shadow-xl tracking-wide text-xl font-extrabold'>{item.title}</h1>
-    <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"><Link href={`/services/${item.id}`}>تعرف اكثر </Link></button>
+    <button className="bg-[#262163] rounded-md w-fit p-2 px-4 font-bold"
+    onClick={() => setActive('services')}><Link href={`/services/${item.id}`}>تعرف اكثر </Link></button>
 
   </div>
 

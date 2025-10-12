@@ -63,13 +63,8 @@ const {setActive} = useContext(Context);
                       <a href="https://www.instagram.com/tadbeersa/"><IoLogoInstagram size={20} className="text-white" /></a>
                       <a href="https://sa.linkedin.com/company/tadbeersa"><FaLinkedin size={20} className="text-white" /></a>
                       <a href="https://t.me/TadbeerSa"><FaTelegram size={20} className="text-white" /></a>
-
-
-
-
-
-
                     </div>
+                    
 
                     <div className="hidden lg:block"></div>
                     </div>
