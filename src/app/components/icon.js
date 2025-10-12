@@ -1,3 +1,6 @@
+
+'use client';
+
 import { FaWhatsapp } from "react-icons/fa"
 const Icon = () => {
     return (
