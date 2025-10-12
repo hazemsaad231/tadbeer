@@ -3,6 +3,7 @@ import { Tajawal } from "next/font/google";
 import "./globals.css";
 import Header from "./pages/header/header";
 import Footer from "./pages/footer/footer";
+import { ContextProvider } from "@/Context/context";
 
 
 
@@ -40,9 +41,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
       >
+        <ContextProvider>
         <Header />
         {children}
         <Footer />
+        </ContextProvider>
       </body>
     </html>
   );

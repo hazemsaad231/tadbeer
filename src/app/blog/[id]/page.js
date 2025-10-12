@@ -13,6 +13,8 @@ export async function generateStaticParams() {
 }
 
 export default function ServicePage({ params }) {
+
+  
   const idParam = String(params.id); 
   
 

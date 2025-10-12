@@ -6,7 +6,8 @@ import { IoSearch } from "react-icons/io5";
 import { GrContact } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import { IoIosSend } from "react-icons/io";
-  import axios from "axios";
+import axios from "axios";
+
 
 const data = [
     {

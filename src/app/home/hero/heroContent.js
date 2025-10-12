@@ -11,12 +11,10 @@ import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 import AOSScroll from "../../components/aos";
 import Link from "next/link";
-
+import { Context } from "@/Context/context";
+import { useContext } from "react";
 
 const HeroContent = () => {
-
-
-
 
 const tiltRef = useRef(null);
 
@@ -27,7 +25,7 @@ const tiltRef = useRef(null);
   }, []);
 
 
-
+const {setActive} = useContext(Context);
 
 
     return (
@@ -53,7 +51,8 @@ const tiltRef = useRef(null);
 <h1 className="text-md sm:text-md md:text-xl h-full bg-[#DFC96D] text-gray-900 p-2 md:p-4 px-2 sm:px-4 md:px-8 lg:px-15 cursor-pointer rounded-br-xl">
   <a href="#contact">تواصل معنا</a></h1>
 <h1 className="text-md sm:text-md md:text-xl h-full bg-white text-gray-900 p-2 px-2 md:p-4 sm:px-4 md:px-8 lg:px-15 cursor-pointer">
-  <Link href="/services">جميع الخدمات</Link>
+  <Link href="/services"
+  onClick={()=>setActive('services')}>جميع الخدمات</Link>
     </h1>
                     </div>
                     {/* socials */}

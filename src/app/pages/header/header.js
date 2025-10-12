@@ -1,12 +1,13 @@
 
 "use client";
 
-import { useState} from "react";
+import { useContext, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiViewList } from "react-icons/hi";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import Logo, { SmallLogo } from "./logo";
+import { Context } from "@/Context/context";
 
 export default function Header() {
 
@@ -14,15 +15,10 @@ export default function Header() {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
 
   const toggleNavbar = () => setNavbarVisible((s) => !s);
-  const [active, setActive] = useState('');
-  const bg = (i)=>{
-     setActive(i);
-  }
+  const {active, setActive} = useContext(Context);
 
   const liBase =
     "relative px-4 before:content-[''] before:absolute before:left-0 before:top-1/4 before:h-1/2 before:w-px before:bg-gray-400 cursor-pointer";
-
- 
   return (
     <header>
       <div>
@@ -86,7 +82,7 @@ export default function Header() {
             </li>
           </ul>
           <ul>
-            <li> <Link href="/contact" className={`hover:text-indigo-900 hover:bg-white border border-white rounded-full px-4 py-3 text-xl`}>
+            <li onClick={()=>setActive('contact')}> <Link href="/contact" className={`hover:text-indigo-900 hover:bg-white border border-white rounded-full px-4 py-3 text-xl`}>
             انضم إلينا
               </Link></li>
           </ul>
