@@ -11,7 +11,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import Image from 'next/image';
 import Link from 'next/link';
-import {data} from '../../services/Data';
+import {data} from '../../services/dataServices';
 
 export default function BigCenterCarousel() {
 

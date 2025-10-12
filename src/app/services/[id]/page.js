@@ -1,6 +1,6 @@
 // app/services/[id]/page.jsx
 import Image from "next/image";
-import { data } from "../Data";
+import { data } from "../dataServices";
 import Link from "next/link";
 import Buttons from "../buttons";
 

@@ -6,7 +6,7 @@ import AOScroll from "../componets/aos";
 
 const AboutContent = () => {
     return (
-        <section className="bg-white py-24" id="about">
+        <section className="bg-white w-full py-24" id="about">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-3
          p-1 sm:p-3 md:p-4 lg:p-10 xl:p-16">
 

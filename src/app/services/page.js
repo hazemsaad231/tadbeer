@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { data } from "./Data"; 
+import { data } from "./dataServices"; 
 
 export default function Services() {
   return (
