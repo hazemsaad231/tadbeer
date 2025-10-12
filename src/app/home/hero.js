@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
-import AOSScroll from "../componets/aos";
+import AOSScroll from "../components/aos";
 
 
 const HeroContent = () => {

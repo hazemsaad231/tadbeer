@@ -1,5 +1,5 @@
 import { IoIosArrowBack } from "react-icons/io";
-import AOScroll from "../componets/aos";
+import AOScroll from "../components/aos";
 
 
 
