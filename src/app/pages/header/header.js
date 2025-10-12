@@ -8,6 +8,7 @@ import { HiViewList } from "react-icons/hi";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import Logo, { SmallLogo } from "./logo";
 import { Context } from "@/Context/context";
+import AOScroll from "@/app/components/aos";
 
 export default function Header() {
 
@@ -18,7 +19,7 @@ export default function Header() {
   const {active, setActive} = useContext(Context);
 
   const liBase =
-    "relative px-4 before:content-[''] before:absolute before:left-0 before:top-1/4 before:h-1/2 before:w-px before:bg-gray-400 cursor-pointer";
+    "relative px-4 before:content-[''] before:absolute before:left-[-1px] before:top-1/4 before:h-1/2 before:w-px before:bg-gray-400 cursor-pointer";
   return (
     <header>
       <div>
@@ -130,7 +131,9 @@ export default function Header() {
 
       {/* Mobile Navbar*/}
       {isNavbarVisible && (
+        
         <div className="fixed inset-0 z-50">
+          <AOScroll animation= "zoom-out-left" delay={200}>
           <div
             className="absolute inset-0"
             onClick={toggleNavbar}
@@ -147,7 +150,7 @@ export default function Header() {
                 aria-label="close menu"
                 className="p-2 rounded-md text-[#DFC96D] hover:bg-gray-100"
               >
-                <MdOutlineCancelPresentation className="text-2xl" priority />
+                <MdOutlineCancelPresentation className="text-2xl" />
               </button>
             </div>
 
@@ -188,7 +191,9 @@ export default function Header() {
               </ul>
             </nav>
           </div>
+        </AOScroll>
         </div>
+         
       )}
     </header>
   );
