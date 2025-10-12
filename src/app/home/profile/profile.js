@@ -1,7 +1,7 @@
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import MyTimeline from "./MyTimeline";
-import AOScroll from "@/app/components/aos";
+import AOScroll from "../../components/aos";
 // const Timeline = dynamic(() => import('./MyTimeline'), { ssr: false });
 const Data = [
     {

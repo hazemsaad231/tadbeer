@@ -3,7 +3,7 @@ import { Tajawal } from "next/font/google";
 import "./globals.css";
 import Header from "./pages/header/header";
 import Footer from "./pages/footer/footer";
-import Icon from "./components/icon";
+// import Icon from "./components/icon";
 
 
 const geistSans = Geist({
@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
-        <Icon />
+        {/* <Icon /> */}
         <Footer />
       </body>
     </html>

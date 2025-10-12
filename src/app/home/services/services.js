@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Slider from "./slider";
-import AOScroll from "@/app/components/aos";
+import AOScroll from "../../components/aos";
 
 
 
