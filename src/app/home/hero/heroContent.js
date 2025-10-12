@@ -57,12 +57,18 @@ const {setActive} = useContext(Context);
                     </div>
                     {/* socials */}
                     <div className="flex gap-2 sm:gap-4 md:gap-6 cursor-pointer p-3">
-<FaFacebook size={20} className="text-white" />
-<BsTwitterX size={20} className="text-white" />
-<FaYoutube size={20} className="text-white" />
-<IoLogoInstagram size={20} className="text-white" />
-<FaLinkedin size={20} className="text-white" />
-<FaTelegram size={20} className="text-white" />
+                      <a href="https://www.facebook.com/TadbeerSA/"><FaFacebook size={20} className="text-white" /></a>
+                      <a href="https://x.com/TadbeerSA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><BsTwitterX size={20} className="text-white" /></a>
+                      <a href="https://www.youtube.com/channel/UCTcIQAUyUEipCP6TybIF0dg"><FaYoutube size={20} className="text-white" /></a>
+                      <a href="https://www.instagram.com/tadbeersa/"><IoLogoInstagram size={20} className="text-white" /></a>
+                      <a href="https://sa.linkedin.com/company/tadbeersa"><FaLinkedin size={20} className="text-white" /></a>
+                      <a href="https://t.me/TadbeerSa"><FaTelegram size={20} className="text-white" /></a>
+
+
+
+
+
+
                     </div>
 
                     <div className="hidden lg:block"></div>
