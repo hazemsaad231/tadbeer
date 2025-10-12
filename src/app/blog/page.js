@@ -10,9 +10,8 @@ export default function Bolgs() {
         <Image
           src="/img4.png"
           alt="الخدمات - صورة"
-          width={1600}
-          height={600}
-          className="w-full object-cover h-full"
+          fill
+          className="object-cover"
           priority
         />
 

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { data } from "../dataServices";
 import Link from "next/link";
-import Buttons from "../buttons";
+import Buttons from "@/app/components/buttons";
 
 
 
@@ -32,9 +32,8 @@ return (
         <Image
           src={item.img}
           alt="الخدمات - صورة"
-          width={1600}
-          height={600}
-          className="w-full object-cover h-full"
+         fill
+          className="object-cover"
           priority
         />
 

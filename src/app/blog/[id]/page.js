@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { data } from "../dataBlog";
 import Link from "next/link";
-import Buttons from "@/app/services/buttons";
+import Buttons from "@/app/components/buttons";
 
 
 
@@ -48,13 +48,12 @@ return (
 {/* الجزء السفلي */}
 <div className=" flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
 {/* الجزء الاول */}
-      <div className="relative flex flex-col gap-4">
+      <div className="relative w-full flex flex-col gap-4">
         <Image
           src={item.img}
           alt="الخدمات - صورة"
-          width={800}
-          height={800}
-          className="w-full object-cover h-96"
+          fill
+          className="object-cover h-96"
           priority
         />
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#262163]">{item.title}</h1>
