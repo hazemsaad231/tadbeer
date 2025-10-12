@@ -79,7 +79,7 @@ export default function Contact() {
       
       <div className="flex justify-center items-center py-10">
             <form onSubmit={handleSubmit(onSubmit)}>
-             <div className="grid grid-cols-1 place-items-center gap-4 p-2  sm:p-4 md:p-8 lg:p-12 xl:p-14 w-full md:w:[700px] lg:w-[750px] xl:w-[800px]">
+             <div className="grid grid-cols-1 place-items-center gap-4 p-2  md:p-6 lg:p-10 w-full md:w:[700px] lg:w-[750px] xl:w-[800px]">
              
              {/* الاسم */}
                   <div className="flex flex-col w-full text-gray-700">
