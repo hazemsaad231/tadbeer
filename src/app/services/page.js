@@ -1,9 +1,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { data } from "./dataServices"; 
 
-export default function Services() {
+export default async function Services() {
+
+   const data = await fetch('https://68ef82a9b06cc802829db21a.mockapi.io/tadbeer');
+  const services= await data.json()
+
+
+
+
   return (
     <div className="flex flex-col bg-white">
       <div className="relative w-full rounded-b-xl h-72 z-10 transition-all duration-700 ease-in-out group overflow-hidden">
@@ -24,7 +30,7 @@ export default function Services() {
 
       <div className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-content-center place-items-center p-6 md:p-12 gap-6">
-          {data.map((item) => (
+          {services.map((item) => (
             <article key={item.id} className="cursor-pointer w-full flex flex-col gap-2 rounded-xl shadow-md hover:shadow-lg transition-all duration-700 ease-in-out">
               <Link href={`/services/${item.id}`} className="block">
                 <Image
@@ -39,7 +45,7 @@ export default function Services() {
                   {item.title}
                 </h2>
               </Link>
-            </article>
+           </article>
           ))}
         </div>
       </div>
