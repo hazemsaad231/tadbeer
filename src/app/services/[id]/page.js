@@ -9,7 +9,7 @@ import Buttons from "@/app/components/buttons";
   const ServiceDetails = async ({ params }) => {
 
 
-      const response = await fetch(`https://68ef82a9b06cc802829db21a.mockapi.io/tadbeer`)
+      const response = await fetch(`https://68ef82a9b06cc802829db21a.mockapi.io/services`, { cache: 'no-store' });
       console.log(response);
   const Data = await response.json();
 

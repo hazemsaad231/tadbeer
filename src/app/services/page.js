@@ -4,12 +4,13 @@ import Link from "next/link";
 
 export default async function Services() {
 
-   const data = await fetch('https://68ef82a9b06cc802829db21a.mockapi.io/tadbeer');
+   const data = await fetch('https://68ef82a9b06cc802829db21a.mockapi.io/services', { cache: 'no-store' });
+
   const services= await data.json()
 
 
 
-
+console.log(services);
   return (
     <div className="flex flex-col bg-white">
       <div className="relative w-full rounded-b-xl h-72 z-10 transition-all duration-700 ease-in-out group overflow-hidden">
