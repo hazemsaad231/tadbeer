@@ -6,7 +6,8 @@ import "aos/dist/aos.css";
 
 const AOScroll = ({ children, animation = "fade-up", delay = 0 }) => {
   useEffect(() => {
-    AOS.init({ duration: 200, once: true });
+    AOS.init({ duration: 400, once: true });
+    // لو فيه محتوى ديناميكي استخدم AOS.refresh() بعد التحديثات
   }, []);
 
   return (
