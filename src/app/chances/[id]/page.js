@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "@/app/components/slider";
+import bg from "../../../../public/bg.jpg";
 
 
 
@@ -34,8 +35,9 @@ return (
   
       <div className="relative w-full rounded-b-xl py-10 xl:py-0 min-h-[800px] z-0 transition-all duration-700 ease-in-out group overflow-hidden">
         <Image
-          src={'/bg.jpg'}
+          src={bg}
           alt="الخدمات - صورة"
+          placeholder="blur"
         fill
           className="w-full object-cover h-full"
           priority
@@ -47,10 +49,10 @@ return (
 
             <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
             <div className="flex flex-col items-center w-full md:w-[60%] lg:w-[50%] m-auto gap-4 p-2">
-                 <h6 className="font-light text-2xl md:text-3xl lg:text-4xl xl:text-5xl">فرص استثمارية واعدة مع</h6>
-        <h1 className="font-extrabold text-4xl md:text-5xl lg:text-5xl xl:text-7xl">تدبير المتخصصة</h1>
+                 <h6 className="font-light text-3xl md:text-3xl lg:text-4xl xl:text-5xl">فرص استثمارية واعدة مع</h6>
+        <h1 className="font-extrabold text-[2.5rem] md:text-5xl lg:text-5xl xl:text-7xl">تدبير المتخصصة</h1>
         <p className="font-light text-lg text-white my-2 md:my-4 lg:my-6 xl:my-8">شركة متخصصة في تقديم الخدمات المالية والمهنية لدعم نمو وتطور التجارة والأعمال. بفضل خبرتنا العميقة وفريقنا المتخصص، نوفر بيئة استثمارية موثوقة ومبنية على أسس استراتيجية قوية. انضم إلينا واستثمر في مستقبلٍ واعد مليء بالفرص.</p>
-        <button className="bg-[#dbbb39] text-white py-2 px-4 cursor-pointer rounded-full font-semibold my-2"
+        <button className="bg-[#dbbb39] text-white py-3 px-4 cursor-pointer rounded-full font-semibold my-2"
         > <Link
   href="/form"
 >

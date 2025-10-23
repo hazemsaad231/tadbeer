@@ -52,7 +52,9 @@ return (
 <div className=" flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
 {/* الجزء الاول */}
           <div className="relative flex flex-col gap-4">
-                <Image
+            {
+              item.img && (
+                 <Image
                   src={item.img}
                   alt="الخدمات - صورة"
                   width={800}
@@ -60,6 +62,9 @@ return (
                   className="w-full object-cover h-96"
                   priority
                 />
+              )
+            }
+               
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#262163]">{item.title}</h1>
         <div className="text-xl text-gray-500 w-full h-full p-2">
            <p className="font-extrabold">{parts[0]}</p>
@@ -79,6 +84,7 @@ return (
 {items.map((item) => (
   <div key={item.id}>
     <Link href={`/services/${item.id}`} className="flex gap-3 w-full">
+    {item.img && (
     <Image
       src={item.img}
       alt="الخدمات - صورة"
@@ -87,6 +93,7 @@ return (
       className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
       priority
     />
+    )}
     <h1 className="text-md w-60 font-semibold text-white">{item.title}</h1>
     </Link>
   </div>
