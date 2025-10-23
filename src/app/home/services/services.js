@@ -7,6 +7,8 @@ import Slider from "./slider";
 const ServicesContent = () => {
 
 
+    
+
 
 
     return (

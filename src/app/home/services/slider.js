@@ -1,7 +1,3 @@
-
-
-
-
 'use client';
 
 import React from 'react';
@@ -11,13 +7,28 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import Image from 'next/image';
 import Link from 'next/link';
-import {data} from '../../services/dataServices';
-import { useContext } from 'react';
+import { useContext, useState, useEffect} from 'react';
 import { Context } from '@/Context/context';
+
 
 export default function BigCenterCarousel() {
 
+
   const {setActive} = useContext(Context);
+
+  const [data, setData] = useState([]);
+
+ const getData = async () => {
+    const res = await fetch('https://68ef82a9b06cc802829db21a.mockapi.io/services', { cache: 'no-store' });
+    const data = await res.json();
+    setData(data);
+  };
+
+useEffect(() => {
+    getData();
+  }, []);
+
+  console.log(data);
 
   return (
     <div className="w-full flex justify-center items-center py-10  overflow-hidden">
@@ -75,14 +86,16 @@ export default function BigCenterCarousel() {
   <SwiperSlide key={`${item.id}-${idx}`}>
        
    <div className="relative w-80 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
-
-  <Image
+{ item.img && (
+   <Image
     src={item.img}
     alt={item.title}
     fill
     className="rounded-xl object-cover"
     loading="lazy"
   />
+)}
+ 
 
   {/* طبقة تغميق */}
   <div className="absolute inset-0 bg-black/15 group-hover:bg-white/50 transition-all duration-500 z-[5]"></div>
