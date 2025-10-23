@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "./pages/header/header";
 import Footer from "./pages/footer/footer";
 import { ContextProvider } from "@/Context/context";
-
+import { Toaster } from 'react-hot-toast'
 
 
 const geistSans = Geist({
@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
       >
+        <Toaster position="top-center" />
         <ContextProvider>
         <Header />
         {children}
