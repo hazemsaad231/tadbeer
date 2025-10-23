@@ -103,13 +103,13 @@ return (
     <h1 className="text-3xl font-bold text-[#262163]">ابرز المعومات </h1>
     <div className="w-full h-[2px] bg-gray-300 my-4"></div>
     <div className="flex justify-between mt-20">
-        <h4 className="text-xl md:text-2xl text-[#262163] font-medium">نوع الاستثمار</h4>
-        <h1 className="text-lg md:text-2xl text-[#262163] font-extrabold">{item.type}</h1>
+        <h4 className="text-lg md:text-xl text-[#262163] font-medium">نوع الاستثمار</h4>
+        <h1 className="text-md md:text-xl text-[#262163] font-extrabold">{item.type}</h1>
     </div>
     <div className="w-full h-[1px] bg-gray-300 my-4"></div>
      <div className="flex justify-between mt-8 mb-4">
-        <h4 className="text-xl md:text-2xl text-[#262163] font-medium">مبلغ الاستثمار</h4>
-        <h1 className="text-lg md:text-2xl text-[#262163] font-extrabold">{item.price} ر.س</h1>
+        <h4 className="text-lg md:text-xl text-[#262163] font-medium">مبلغ الاستثمار</h4>
+        <h1 className="text-md md:text-xl text-[#262163] font-extrabold">{item.price} ر.س</h1>
     </div>
       <div className="w-full h-[1px] bg-gray-300 my-4"></div>
       <div className="border-2 border-[#262163] p-4 py-8 text-[#262163] bg-[#262163]/15 rounded-4xl my-12">
