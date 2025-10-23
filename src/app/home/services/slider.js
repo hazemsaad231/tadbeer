@@ -28,7 +28,7 @@ useEffect(() => {
     getData();
   }, []);
 
-  console.log(data);
+  const currentData = data.slice(0, 5);
 
   return (
     <div className="w-full flex justify-center items-center py-10  overflow-hidden">
@@ -82,7 +82,7 @@ useEffect(() => {
       }}
         >
 
-{data.map((item, idx) => (
+{currentData.map((item, idx) => (
   <SwiperSlide key={`${item.id}-${idx}`}>
        
    <div className="relative w-80 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">

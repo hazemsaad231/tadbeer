@@ -71,7 +71,7 @@ export default function MyTimeline() {
                 <div className="w-3 h-3 rounded-full bg-transparent border border-[#2a2663]" />
               }
             >
-              <h3 className={`text-${item.color} text-2xl font-bold mb-2`}>
+              <h3 className={`text-[#2a2663] text-2xl font-bold mb-2`}>
                 {item.title}
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed">{item.text}</p>
