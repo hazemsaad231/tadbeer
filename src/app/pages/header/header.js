@@ -188,6 +188,12 @@ export default function Header() {
                   </Link>
                 </li>
 
+                <li className="border-t border-gray-500 py-4">
+                  <Link href="/chances" onClick={toggleNavbar} className="block text-center text-white">
+                    الفرص الاستثمارية
+                  </Link>
+                </li>
+
                 {/* <li className="border-t border-gray-500 py-4">
                   <Link href="/teamWork" onClick={toggleNavbar} className="block text-center text-white">
                     فريق العمل
