@@ -1,7 +1,6 @@
 
 import Image from "next/image";
 import Slider from "./slider";
-import AOScroll from "../../components/aos";
 
 
 
@@ -14,9 +13,7 @@ const ServicesContent = () => {
         <div  className="flex flex-col w-screen py-8  bg-[#DFC96D] text-white">
             <div  className="flex flex-col gap-4 text-center py-20 w-full">
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 w-full px-2 md:w-[80%] lg:w-[80%] m-auto py-8">
-                    <AOScroll animation="fade-in" delay={100}>
                 <h1 className="text-3xl sm:text-3xl md:text-4xl xl:text-5xl font-extrabold text-[#262163]">خدمات تدبير المتخصصة</h1>
-                    </AOScroll>
                 <p className="text-lg sm:text-lg lg:text-xl xl:text-xl text-gray-600 w-full">
                     منشأة احترافية تهدف الى تطوير الاستثمارات والأعمال التجارية والقطاع الخيري، بتقديم استشارات وخدمات مالية وإدارية، بمعايير عالمية، وتقنيات متقدمة ، ملتزمة بقيمها الأصيلة.
                 </p>
