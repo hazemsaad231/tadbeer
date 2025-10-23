@@ -63,16 +63,7 @@ export default function Header() {
                 الخدمات
               </Link>
             </li>
-            {/* <li onClick={() => setActive('teamWork')} className={`${liBase} ${
-                active === 'teamWork'
-                ? "text-white":
-                "text-[#DFC96D] hover:text-white"
-            }`}>
-              <Link href="/teamWork">
-                فريق العمل 
-              </Link>
-            </li> */}
-            <li onClick={() => setActive('blog')} className={`${
+            <li onClick={() => setActive('blog')} className={`${liBase} ${
                 active === 'blog'
                 ? "text-white":
                 "text-[#DFC96D] hover:text-white"
@@ -81,6 +72,26 @@ export default function Header() {
                 مدونة تدبير
               </Link>
             </li>
+
+               <li onClick={() => setActive('chances')} className={`  
+               relative px-4 before:content-['']  before:w-px before:bg-gray-400 cursor-pointer
+                ${ 
+                active === 'chances' ? "text-white":
+                "text-[#DFC96D] hover:text-white"
+            }`}>
+                <Link href="/chances">
+                الفرص الاستثمارية
+              </Link>
+            </li>
+              {/* <li onClick={() => setActive('teamWork')} className={`${
+                active === 'teamWork'
+                ? "text-white":
+                "text-[#DFC96D] hover:text-white"
+            }`}>
+              <Link href="/teamWork">
+                فريق العمل 
+              </Link>
+            </li> */}
           </ul>
           <ul>
             <li onClick={()=>setActive('contact')}> <Link href="/contact" className={`hover:text-indigo-900 hover:bg-white border border-white rounded-full px-4 py-3 text-xl`}>
@@ -96,7 +107,7 @@ export default function Header() {
         {/* mobile bar */}
         <div className="lg:hidden">
 
-          <div className="w-[100vw] flex justify-between items-center p-3">
+          <div className="w-[100vw] bg-[#262163] flex justify-between items-center p-3">
             <div>
               {isNavbarVisible ? (
                 <MdOutlineCancelPresentation

@@ -1,0 +1,113 @@
+
+import Image from "next/image";
+import Link from "next/link";
+import Slider from "@/app/components/slider";
+
+
+
+
+  const ChanceDetails = async ({ params}) => {
+
+
+      const response = await fetch(`https://tadbeer.wj.edu.sa/public/api/invests?type&min_price&max_price&per_page`, { cache: 'no-store' });
+      console.log(response);
+  const Data = await response.json();
+
+  const items = Data.data;
+
+  const item = items.find((i) => String(i.id) === params.id);
+
+const Src = item.gallery.map((i) => i.photo_url);
+
+console.log(Src);
+
+console.log(item.categories);
+
+const categories = item.categories;
+
+
+
+
+return (
+  <>
+       <div className="flex flex-col bg-white">
+  
+      <div className="relative w-full rounded-b-xl py-10 xl:py-0 min-h-[800px] z-0 transition-all duration-700 ease-in-out group overflow-hidden">
+        <Image
+          src={'/bg.jpg'}
+          alt="الخدمات - صورة"
+        fill
+          className="w-full object-cover h-full"
+          priority
+        />
+
+        <div className="absolute inset-0 bg-[#262163]/20"></div>
+
+        <div className="absolute top-28 z-10 text-center m-auto w-full  text-white py-2 px-2 md:px-10 lg:px-20">
+
+            <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
+            <div className="flex flex-col items-center w-full md:w-[60%] lg:w-[50%] m-auto gap-4 p-2">
+                 <h6 className="font-light text-2xl md:text-3xl lg:text-4xl xl:text-5xl">فرص استثمارية واعدة مع</h6>
+        <h1 className="font-extrabold text-4xl md:text-5xl lg:text-5xl xl:text-7xl">تدبير المتخصصة</h1>
+        <p className="font-light text-lg text-white my-2 md:my-4 lg:my-6 xl:my-8">شركة متخصصة في تقديم الخدمات المالية والمهنية لدعم نمو وتطور التجارة والأعمال. بفضل خبرتنا العميقة وفريقنا المتخصص، نوفر بيئة استثمارية موثوقة ومبنية على أسس استراتيجية قوية. انضم إلينا واستثمر في مستقبلٍ واعد مليء بالفرص.</p>
+        <button className="bg-[#dbbb39] text-white py-2 px-4 cursor-pointer rounded-full font-semibold my-2"
+        > <Link
+  href="/form"
+>
+  استثمار الآن
+</Link></button>
+            </div>
+
+         {/* Wrapper للصورة */}
+  <div className="w-full hidden md:w-[40%] m-auto md:flex items-center justify-center p-2">
+    <Image
+      src={'/layer.png'}
+      alt="الخدمات - صورة"
+      width={200}
+      height={200}
+      className="block md:w-60 xl:w-80 h-auto object-center"
+      priority
+    />
+  </div>
+        </div>
+       
+        </div>
+      </div>
+<div className="w-full md:w-2/3 m-auto relative bottom-28 p-4">
+<div className="flex flex-col md:flex-row gap-8">
+    <Slider src={Src} />
+
+    <div className="w-full md:w-96 h-full rounded-4xl bg-white shadow-lg border  p-4 py-10 flex flex-col gap-3">
+<h1 className="text-lg font-extrabold text-[#262163]">استثمر في تدبير</h1>
+<p className="text-md text-gray-500">سجّل الآن للاستثمار في تدبير، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
+        <div className="bg-[#dbbb39] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold"
+        > 
+
+<Link
+  href="/form"
+>
+  استثمار الآن
+</Link>
+</div>
+        <div className="w-full h-[2px] bg-gray-300 my-4"></div>
+        {categories.map((cat, index) => (
+        <ul className="mt-4 space-y-2 text-lg" key={index}>
+            <li className="font-normal text-[#262163]"> <Image src={cat.icon_url} alt="الخدمات - صورة" width={40} height={40} className="inline-block mr-2" /> {cat.name} </li>
+        </ul>
+        ))}
+    </div>
+    </div>
+</div>
+
+<div className=" flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
+
+      </div> 
+
+    </div>
+
+    </>
+)
+
+}
+
+export default ChanceDetails ;
