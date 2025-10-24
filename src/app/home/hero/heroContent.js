@@ -12,6 +12,7 @@ import VanillaTilt from "vanilla-tilt";
 import Link from "next/link";
 import { Context } from "@/Context/context";
 import { useContext } from "react";
+import bg from "../../../../public/hero.webp";
 
 const HeroContent = () => {
 
@@ -41,7 +42,7 @@ const {setActive} = useContext(Context);
 </div>
 {/* hero */}
             <div  className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
-                    <Image src="/hero.webp" alt="logo" width={400} height={400} className="object-cover w-full h-96"  priority />
+                    <Image src={bg} alt="logo" width={400} height={400} placeholder="blur" className="object-cover w-full h-96"  priority />
 {/* buttons */}
                     <div className="flex justify-between items-center w-full">
                         {/* services */}

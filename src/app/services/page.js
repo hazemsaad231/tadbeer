@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import bg from "../../../public/services.webp";
 
 export default async function Services() {
 
@@ -15,9 +16,10 @@ console.log(services);
     <div className="flex flex-col bg-white">
       <div className="relative w-full rounded-b-xl h-72 z-10 transition-all duration-700 ease-in-out group overflow-hidden">
         <Image
-          src="/services.webp"
+          src={bg}
           alt="الخدمات - صورة"
            fill
+           placeholder="blur"
           className="object-cover"
           priority
         />

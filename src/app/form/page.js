@@ -97,7 +97,7 @@ export default function Form() {
               <Button type="button" variant="outline" onClick={() => reset()}>
                 إعادة تعيين
               </Button>
-              <Button type="submit" className="cursor-pointer">
+              <Button type="submit" className="cursor-pointer bg-[#DFC96D] hover:bg-[#c9b25a]">
                 إرسال
               </Button>
             </div>

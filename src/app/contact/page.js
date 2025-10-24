@@ -7,6 +7,7 @@ import { GrContact } from "react-icons/gr";
 import { useForm } from "react-hook-form";
 import { IoIosSend } from "react-icons/io";
 import axios from "axios";
+import bg from "../../../public/contact.webp";
 
 
 const data = [
@@ -55,9 +56,10 @@ export default function Contact() {
         {/* الجزء العلوي */}
       <div className="relative w-full h-[28rem]">
         <Image
-          src="/contact.webp"
+          src={bg}
           alt="الخدمات - صورة"
           fill
+          placeholder="blur"
           className="object-cover"
           priority
         />

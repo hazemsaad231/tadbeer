@@ -33,7 +33,7 @@ return (
   <>
        <div className="flex flex-col bg-white">
   
-      <div className="relative w-full rounded-b-xl py-10 xl:py-0 min-h-[800px] z-0 transition-all duration-700 ease-in-out group overflow-hidden">
+      <div className="relative w-full py-10 xl:py-0 min-h-[800px] z-0 transition-all duration-700 ease-in-out group overflow-hidden">
         <Image
           src={bg}
           alt="الخدمات - صورة"
