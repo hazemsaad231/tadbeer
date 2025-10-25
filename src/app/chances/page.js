@@ -35,7 +35,8 @@ export default async function Chances() {
           {Chances.map((item) => (
             <article key={item.id} className="cursor-pointer w-full flex flex-col gap-2 rounded-xl shadow-md hover:shadow-lg transition-all duration-700 ease-in-out">
               <Link href={`/chances/${item.id}`} className="block">
-           <Image
+              {item.gallery[0]?.photo_url && (
+                 <Image
              src={`${item.gallery[0]?.photo_url}`}
              alt={item.title || "No image"}
              width={800}
@@ -43,7 +44,9 @@ export default async function Chances() {
              className="rounded-t-xl w-full h-60 object-cover opacity-95 hover:opacity-100 transition-all duration-700 ease-in-out"
              loading="lazy"
            />
-=                <h2 className="text-lg font-extrabold text-[#262163] px-4 h-16 flex items-center">
+              )}
+          
+           <h2 className="text-lg font-extrabold text-[#262163] px-4 h-16 flex items-center">
                   {item.name}
                 </h2>
               </Link>
