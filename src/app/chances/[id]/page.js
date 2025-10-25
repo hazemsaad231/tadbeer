@@ -95,7 +95,9 @@ return (
         <div className="w-full h-[2px] bg-gray-300 my-4"></div>
         {categories.map((cat, index) => (
         <ul className="mt-4 space-y-2 text-lg" key={index}>
-            <li className="font-normal text-[#262163]"> <Image src={cat.icon_url} alt="الخدمات - صورة" width={40} height={40} className="inline-block mr-2" /> {cat.name} </li>
+            <li className="font-normal text-[#262163]"> 
+              {cat.icon_url && cat.icon_url.startsWith('http') ? <Image src={cat.icon_url} alt="الخدمات - صورة" width={40} height={40} className="inline-block mr-2" /> : ""}
+               {cat.name} </li>
         </ul>
         ))}
     </div>
@@ -117,13 +119,22 @@ return (
       <div className="border-2 border-[#262163] p-4 py-8 text-[#262163] bg-[#262163]/15 rounded-4xl my-12">
 يقدّم الرئيس التنفيذي لشركة تدبير عرضًا تفصيليًا في فيديو مدته ١٥ دقيقة، يستعرض فيه استراتيجية الشركة، أبرز الإنجازات، والوضع المالي الحالي.
       </div>
-    {categories.map((cat, index) => (
+
+      {categories.length > 0 && (
+        <>
+          {categories.map((cat, index) => (
       <div className="mt-28" key={index}>
-      < h1 className="text-2xl font-bold text-[#262163]"> <Image src={cat.icon_url} alt="الخدمات - صورة" width={40} height={40} className="inline-block mr-2" /> {cat.name} </h1>     
+      <h1 className="text-3xl font-bold text-[#262163]">{cat.name}</h1>
+      {cat.icon_url && (
+        <Image src={cat.icon_url||''} alt="الخدمات - صورة" width={40} height={40} className="inline-block mr-2" />
+      )}
       <div className="w-full h-[2px] bg-gray-300 my-4"></div>
       <p className="text-lg text-[#262163] font-medium">{cat.description}</p>
       </div>
       ))}
+        </>
+      )
+    }
 </div>
 
 </div>
