@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Slider from "@/app/components/slider";
 import bg from "../../../../public/bg.jpg";
+import layer from "../../../../public/Layer.png";
+
 
 
 
@@ -63,10 +65,11 @@ return (
          {/* Wrapper للصورة */}
   <div className="w-full hidden md:w-[40%] m-auto md:flex items-center justify-center p-2">
     <Image
-      src={'/layer.png'}
+      src={layer}
       alt="الخدمات - صورة"
       width={200}
       height={200}
+      placeholder="blur"
       className="block md:w-60 xl:w-80 h-auto object-center"
       priority
     />
