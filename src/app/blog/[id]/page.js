@@ -10,7 +10,7 @@ const BlogDetails = async ({ params }) => {
   const Data = await response.json();
   const items = Array.isArray(Data?.data) ? Data.data : [];
   const item = items.find((i) => String(i.id) === String(params.id));
-  const services = items.filter((it) => it.type === "blogs");
+  const blogs = items.filter((it) => it.type === "blogs");
 
   if (!item) {
     return (
@@ -86,20 +86,20 @@ const BlogDetails = async ({ params }) => {
         <div className="w-full md:w-max m-auto md:m-0 p-2 md:p-0">
           <div className="bg-[#262163] w-full m-auto rounded-xl py-6 p-2 sm:p-2 md:p-6">
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#DFC96D] mb-2">
-              جميع الخدمات
+          جميع المدونات
             </h1>
 
             <div className="flex flex-col gap-4 py-6">
-              {Array.isArray(services) && services.length > 0 ? (
-                services.map((service) => {
-                  const svcImg = getImageUrl(service.image_url);
+              {Array.isArray(blogs) && blogs.length > 0 ? (
+                blogs.map((blog) => {
+                  const svcImg = getImageUrl(blog.image_url);
                   return (
-                    <div key={service.id}>
-                      <Link href={`/services/${service.id}`} className="flex gap-3 w-full items-center">
-                        {service.image_url && (
+                    <div key={blog.id}>
+                      <Link href={`/blog/${service.id}`} className="flex gap-3 w-full items-center">
+                        {blog.image_url && (
                           <Image
                             src={svcImg}
-                            alt={service.title || "خدمة"}
+                            alt={blog.title || "مدونه"}
                             width={200}
                             height={200}
                             className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
@@ -112,7 +112,7 @@ const BlogDetails = async ({ params }) => {
                   );
                 })
               ) : (
-                <p className="text-sm text-gray-300">ما فيش خدمات لعرضها</p>
+                <p className="text-sm text-gray-300">ما فيش مدونات لعرضها</p>
               )}
             </div>
 
