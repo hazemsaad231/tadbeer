@@ -1,0 +1,153 @@
+'use client'
+
+import Image from "next/image";
+import { IoReaderOutline } from "react-icons/io5";
+import { IoSearch } from "react-icons/io5";
+import { GrContact } from "react-icons/gr";
+import { useForm } from "react-hook-form";
+import { IoIosSend } from "react-icons/io";
+import axios from "axios";
+import bg from "../../../public/contact.webp";
+
+
+const data = [
+    {
+        id: 1,
+        title: 'تقديم السيرة الذاتية',
+        text: 'هل أنت مهتم ببناء مسيرة مهنية معنا؟ قدم سيرتك الذاتية الآن',
+        icon: IoReaderOutline 
+    },
+    {
+        id: 2,
+        title: "البحث عن وظيفة",
+        text: 'ابحث عن الفرصة المثالية وتقدم إليها بكبسة زر',
+        icon: IoSearch
+    },
+    {
+        id: 3,
+        title:'التواصل',
+        text: 'نسعد بإنضمامك لنا في حال توفر شواغر لدينا ويمكنك التقدم عبر البوابة في الاسفل',
+        icon: GrContact
+    },
+]
+export default function Contact() {
+
+      const { register, handleSubmit, formState: { errors } } = useForm({});
+
+
+    const onSubmit = async (data) => {
+        try {
+                const response = await axios.post("https://jsonplaceholder.typicode.com/posts", data);
+                console.log(response);
+                setTimeout(() => {
+                    navigate("/book")
+                },2000)
+                       } catch (error) {
+            console.error(error);
+        }
+
+
+      }
+
+
+  return (
+    <div className="flex flex-col bg-white max-w-full">
+
+        {/* الجزء العلوي */}
+      <div className="relative w-full h-[28rem]">
+        <Image
+          src={bg}
+          alt="الخدمات - صورة"
+          fill
+          placeholder="blur"
+          className="object-cover"
+          priority
+        />
+      </div>
+{/* الجزء الاوسط */}
+   <div className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 lg:gap-4 place-content-center place-items-center">
+        {data.map((item) => (
+          <article key={item.id}>
+            <div className="flex flex-col items-center justify-center gap-4 p-4">
+              <item.icon size={50} className="text-[#262163]" />
+                <h1 className="text-2xl font-bold text-[#262163]">{item.title}</h1>
+                <p className="text-lg text-center text-[#262163] w-full lg:w-96 m-auto p-2">{item.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {/* الجزء الاسفل */}
+      
+      <div className="flex justify-center items-center py-10">
+            <form onSubmit={handleSubmit(onSubmit)}>
+             <div className="grid grid-cols-1 place-items-center gap-4 p-2  md:p-6 lg:p-10 w-full md:w:[700px] lg:w-[750px] xl:w-[800px]">
+             
+             {/* الاسم */}
+                  <div className="flex flex-col w-full text-gray-700">
+                    <label htmlFor="name">الاسم</label>
+                     <input type="text" placeholder='اكتب الاسم رباعي ' className="rounded-md w-full p-2 bg-white border border-gray-500" {...register("name", { required: true })} />
+                     {errors.name && <span className="text-red-500 mt-2">⚠ الاسم مطلوب</span>}
+                </div>
+                  {/* البريد الالكتروني */}
+                 <div className="flex flex-col w-full text-gray-700">
+                    <label htmlFor="email">البريد الالكتروني</label>
+                     <input type="text" placeholder="البريد الالكتروني" className="rounded-md w-full p-2 bg-white border border-gray-500" {...register("email", { required: true })} />
+                     {errors.email && <span className="text-red-500 mt-2">   ⚠ البريد الالكتروني مطلوب</span>}
+                </div>
+             
+              {/* الجوال */}
+              <div className="flex flex-col md:flex-row my-2 w-full m-auto gap-6">
+                
+                <div className="flex flex-col w-full text-gray-700">
+                  <label htmlFor="phoneNumber">رقم الجوال</label>
+                     <input type="text" placeholder="رقم الجوال " className="rounded-md  w-full p-2 bg-white border border-gray-500" {...register("phoneNumber", { required: true })} />
+                    {errors.phoneNumber && <span className="text-red-500 mt-2">  ⚠ رقم الجوال مطلوب</span>}
+                </div>
+
+              {/* السيرة الذاتية */}
+                <div className="flex flex-col w-full text-gray-700">
+  <label htmlFor="cv" className="font-medium">ارفع السيرة الذاتية</label>
+
+  <input
+    type="file"
+    id="cv"
+    accept=".pdf,.doc,.docx"
+    className="rounded-md w-full p-2 bg-white border border-gray-500 file:py-1 file:cursor-pointer  file:px-4 file:rounded-md file:border-0 file:text-white file:bg-gray-700 file:mx-2 hover:file:bg-gray-800 transition-all"
+    {...register("cv", { required: true })}
+  />
+
+  {errors.cv && <span className="text-red-500 mt-2">⚠ سيرة ذاتية مطلوبة</span>}
+</div>
+              </div>
+
+            
+
+
+    {/*الصف الخامس */}
+                  <div className="flex flex-col w-full mt-4 text-gray-700">
+                     <label htmlFor="author">حدثنا عن نفسك </label>
+                     <textarea
+  placeholder="حدثنا عن نفسك"
+  className="rounded-md w-full h-32 bg-white border border-gray-500 p-2 resize-none"
+  {...register("author", { required: true })}
+/>
+                     {errors.author && <span className="text-red-500"></span>}
+                </div>
+{/* الزر */}
+                 <div className="flex justify-center w-full">
+                <button className="flex justify-center items-center gap-1 bg-[#DFC96D] text-[#262163] hover:bg-[#262163] hover:text-[#DFC96D] font-bold text-xl cursor-pointer w-full py-3 rounded-md mt-10">
+                  <IoIosSend size={30} />
+                  <h1>ارسال</h1>
+                </button>
+             </div>
+            </div>
+           
+            
+       </form>
+      </div>
+
+
+    </div>
+  );
+}
