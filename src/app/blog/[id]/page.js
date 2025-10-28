@@ -4,8 +4,9 @@ import { Api } from "@/app/components/api/api";
 import Image from "next/image";
 import Description from "@/app/components/description/desc";
 
+
 const BlogDetails = async ({ params }) => {
-  const response = await fetch(`${Api}/services`, { next: { revalidate: 60 } });
+  const response = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
   const Data = await response.json();
   const items = Array.isArray(Data?.data) ? Data.data : [];
   const item = items.find((i) => String(i.id) === String(params.id));
