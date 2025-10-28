@@ -72,16 +72,6 @@ export default function Header() {
               </Link>
             </li>
 
-               {/* <li onClick={() => setActive('chances')} className={`  
-               relative px-4 before:content-['']  before:w-px before:bg-gray-400 cursor-pointer
-                ${ 
-                active === 'chances' ? "text-white":
-                "text-[#DFC96D] hover:text-white"
-            }`}>
-                <Link href="/chances">
-                الفرص الاستثمارية
-              </Link>
-            </li> */}
               {/* <li onClick={() => setActive('teamWork')} className={`${
                 active === 'teamWork'
                 ? "text-white":
@@ -189,11 +179,6 @@ export default function Header() {
                   </Link>
                 </li>
 
-                <li className="border-t border-gray-500 py-4">
-                  <Link href="/chances" onClick={toggleNavbar} className="block text-center text-white">
-                    الفرص الاستثمارية
-                  </Link>
-                </li>
 
                 {/* <li className="border-t border-gray-500 py-4">
                   <Link href="/teamWork" onClick={toggleNavbar} className="block text-center text-white">

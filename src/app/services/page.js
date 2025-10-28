@@ -6,7 +6,7 @@ import { Api } from "../components/api/api";
 
 export default async function Services() {
 
-   const data = await fetch(`${Api}/services?per_page=100`, { cache: 'no-store' });
+   const data = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
 
   const Data= await data.json()
 
@@ -48,7 +48,7 @@ console.log(services);
     alt={item.title || "No image"}
     width={800}
     height={800}
-    className="rounded-t-xl w-full h-60 object-cover opacity-95 hover:opacity-100 transition-all duration-700 ease-in-out"
+    className="rounded-t-xl w-96 h-60 object-cover opacity-95 hover:opacity-100 transition-all duration-700 ease-in-out"
     loading="lazy"
   />
 )}

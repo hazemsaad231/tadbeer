@@ -20,7 +20,7 @@ export default function BigCenterCarousel() {
   const [data, setData] = useState([]);
 
  const getData = async () => {
-    const res = await fetch(`${Api}/services?per_page=100`, { cache: 'no-store' });
+    const res = await fetch(`${Api}/services?per_page=15`);
     const data = await res.json();
     setData(data.data);
 
@@ -34,7 +34,6 @@ console.log(data.map((it) => it.type === 'services'));
 
 const currentData = data.filter((it) => it.type === 'services').slice(0, 5);
 
-  // const currentData = data.slice(0, 5);
 
   return (
     
@@ -92,13 +91,13 @@ const currentData = data.filter((it) => it.type === 'services').slice(0, 5);
       }}
         >
 
-{currentData.map((item, idx) => (
-  <SwiperSlide key={`${item.id}-${idx}`}>
+{currentData.map((item) => (
+  <SwiperSlide key={`${item.id}`}>
        
    <div className="relative w-80 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
 { item.image_url && (
    <Image
-    src={item.image_url}
+    src={item.image_url || ""}
     alt={item.title}
     fill
     className="rounded-xl object-cover"
@@ -137,9 +136,5 @@ const currentData = data.filter((it) => it.type === 'services').slice(0, 5);
     </>
   );
 }
-
-
-
-
 
 

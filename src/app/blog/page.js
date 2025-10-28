@@ -5,7 +5,7 @@ import bg from "../../../public/img4.png";
 import { Api } from "../components/api/api";
 export default async function Bolgs() {
 
-   const data = await fetch(`${Api}/services?per_page=100`, { cache: 'no-store' });
+   const data = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
 
   const Data= await data.json()
 
@@ -48,7 +48,7 @@ const blogs = blog.filter((it) => it.type === 'blogs');
                   alt={item.title}
                   width={800}
                   height={800}
-                  className="rounded-t-xl w-full h-60 object-cover opacity-95 hover:opacity-100 transition-all duration-700 ease-in-out"
+                  className="rounded-t-xl w-96 h-60 object-cover opacity-95 hover:opacity-100 transition-all duration-700 ease-in-out"
                   loading="lazy"
                 />
               )}

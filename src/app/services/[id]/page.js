@@ -5,7 +5,7 @@ import Image from "next/image";
 import Description from "@/app/components/description/desc";
 
 const ServiceDetails = async ({ params }) => {
-  const response = await fetch(`${Api}/services`, { cache: "no-store" });
+  const response = await fetch(`${Api}/services`, { next: { revalidate: 60 } });
   const Data = await response.json();
   const items = Array.isArray(Data?.data) ? Data.data : [];
   const item = items.find((i) => String(i.id) === String(params.id));
