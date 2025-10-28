@@ -95,7 +95,7 @@ const BlogDetails = async ({ params }) => {
                   const svcImg = getImageUrl(blog.image_url);
                   return (
                     <div key={blog.id}>
-                      <Link href={`/blog/${service.id}`} className="flex gap-3 w-full items-center">
+                      <Link href={`/blog/${blog.id}`} className="flex gap-3 w-full items-center">
                         {blog.image_url && (
                           <Image
                             src={svcImg}
@@ -106,7 +106,7 @@ const BlogDetails = async ({ params }) => {
                             // احذف priority هنا لو مش صورة مهمة جداً
                           />
                         )}
-                        <h1 className="text-md w-60 font-semibold text-white">{service.title}</h1>
+                        <h1 className="text-md w-60 font-semibold text-white">{blog.title}</h1>
                       </Link>
                     </div>
                   );
