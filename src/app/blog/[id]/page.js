@@ -12,18 +12,19 @@ const BlogDetails = async ({ params }) => {
   const item = items.find((i) => String(i.id) === String(params.id));
   const blogs = items.filter((it) => it.type === "blogs");
 
+  console.log(item.image_url);
+
   if (!item) {
     return (
       <div className="p-8">
         <h2 className="text-2xl font-bold">الخدمة مش موجودة</h2>
-        <p className="mt-2 text-gray-600">مفيش خدمة بالـ ID ده.</p>
       </div>
     );
   }
 
   const descriptionText = typeof item.description === "string" ? item.description : "";
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-two.vercel.app/";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
   const getImageUrl = (imgPath) =>
     typeof imgPath === "string" && imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath || ""}`;
 
