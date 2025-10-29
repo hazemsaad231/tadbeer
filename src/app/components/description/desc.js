@@ -26,13 +26,13 @@ export default function Description({ text }) {
 
         if (isNumberedList) {
           return (
-            <ol key={idx} className="list-decimal ml-6 mb-4 space-y-2">
+            <ul key={idx} className="list-decimal font-semibold ml-6 mb-4 space-y-2">
               {lines.map((line, i) => (
                 <li key={i} className="text-lg leading-relaxed">
                   {line.replace(/^\d+\.\s+/, "")}
                 </li>
               ))}
-            </ol>
+            </ul>
           );
         }
 

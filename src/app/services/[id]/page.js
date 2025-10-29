@@ -73,11 +73,6 @@ const ServiceDetails = async ({ params }) => {
           </h1>
 
           <div className="text-xl text-gray-500 w-full h-full p-2">
-            {/* لو عايز أول جملة أو سطر يظهر كخلاصة: */}
-            {descriptionText.split(/\n/).filter(Boolean)[0] && (
-              <p className="font-extrabold mb-3">{descriptionText.split(/\n/).filter(Boolean)[0]}</p>
-            )}
-
             {/* المكون اللي بيعرض الوصف بالكامل */}
             <Description text={descriptionText} />
           </div>
