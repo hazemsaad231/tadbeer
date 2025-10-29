@@ -16,7 +16,7 @@ export default function Description({ text }) {
     .filter(Boolean);
 
   return (
-    <div className="description text-gray-700">
+    <div className="description font-semibold text-gray-700">
       {paragraphs.map((para, idx) => {
         // كسور الأسطر داخل الفقرة
         const lines = para.split(/\n/).map((l) => l.trim()).filter(Boolean);
