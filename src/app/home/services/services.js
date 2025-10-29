@@ -1,13 +1,25 @@
 
 import Image from "next/image";
 import Slider from "./slider";
+import { Api } from "../../components/api/api";
 
 
 
-const ServicesContent = () => {
+const ServicesContent = async() => {
 
+const data = await fetch(`${Api}/services?per_page=15`, { next: { revalidate: 60 } });
 
+  const Data= await data.json()
+
+  const service = Data.data
+
+  console.log(service);
+
+const services = service.filter((it) => it.type === 'services').slice(0, 5);
+
+console.log(services);
     
+
 
 
 
@@ -29,7 +41,7 @@ const ServicesContent = () => {
 
 {/* slider */}
    <div className="w-full absolute top-5 z-20">
-    <Slider/>
+    <Slider services={services}/>
     </div> 
 
             <div  className="relative z-10 flex flex-col justify-center items-center mt-4 rounded-xl m-auto">

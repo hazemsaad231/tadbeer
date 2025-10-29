@@ -37,8 +37,8 @@ const {setActive} = useContext(Context);
 <div ref={tiltRef} className="relative w-full" >
     {/* dots */}
     <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
-    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" priority />
-    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block" priority />
+    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px]" />
+    <Image src="/dots.webp" alt="logo" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block"/>
 </div>
 {/* hero */}
             <div  className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
