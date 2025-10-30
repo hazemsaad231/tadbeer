@@ -169,9 +169,8 @@ export default function Contact() {
                 id="about"
                 placeholder="حدثنا عن نفسك"
                 className="rounded-md w-full h-32 bg-white border border-gray-500 p-2 resize-none"
-                {...register('about', { required: true })}
+                {...register('about', { required: false })}
               />
-              {errors.about && <span className="text-red-500 mt-2">⚠ اكتب نبذة عن نفسك</span>}
             </div>
 
             {/* الزر */}
