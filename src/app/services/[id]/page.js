@@ -21,7 +21,7 @@ const ServiceDetails = async ({ params }) => {
     );
   }
 
-  const descriptionText = typeof item.description === "string" ? item.description : "";
+  // const descriptionText = typeof item.description === "string" ? item.description : "";
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
   const getImageUrl = (imgPath) =>
