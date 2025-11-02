@@ -54,7 +54,7 @@ const ServiceDetails = async ({ params }) => {
       {/* الجزء السفلي */}
       <div className="flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
         {/* الجزء الاول */}
-        <div className="relative flex flex-col gap-4">
+        <div className="relative w-full md:w-4/5 lg:w-3/4 flex flex-col gap-4">
           {item.image_url && (
             <Image
               src={imageUrl}
