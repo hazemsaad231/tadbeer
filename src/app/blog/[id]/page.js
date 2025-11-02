@@ -2,7 +2,6 @@ import Link from "next/link";
 import Buttons from "@/app/components/buttons";
 import { Api } from "@/app/components/api/api";
 import Image from "next/image";
-import Description from "@/app/components/description/desc";
 
 
 const BlogDetails = async ({ params }) => {
