@@ -74,7 +74,11 @@ const BlogDetails = async ({ params }) => {
 
           <div className="text-xl text-gray-500 w-full h-full p-2">
             {/* المكون اللي بيعرض الوصف بالكامل */}
-            <Description text={descriptionText} />
+            {/* <Description text={descriptionText} /> */}
+            <div
+  className="text-lg text-[#262163] font-medium leading-relaxed prose prose-blue max-w-none"
+  dangerouslySetInnerHTML={{ __html: item.description || "" }}
+></div>
           </div>
         </div>
 
