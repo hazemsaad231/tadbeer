@@ -14,28 +14,28 @@ const AboutContent = () => {
                
                
                <div className="flex">
-                <div className="flex flex-col gap-2 border-r-[20px] border-b-[20px] border-[#DFC96D] px-1 py-3">
+                <div className="flex flex-col gap-1 border-r-[20px] border-b-[20px] border-[#DFC96D] px-1 py-3">
                                     <h1 className="text-2xl lg:text-3xl xl:text-4xl mb-2 font-bold text-[#262163] px-2">من نحن؟</h1>
- <p className="text-gray-600 text-xl w-full md:w-[300px] lg:w-[350px] xl:w-[400px] mb-2 px-2">منشأة احترافية تهدف الى تطوير الاستثمارات والأعمال التجارية والقطاع الخيري، بتقديم استشارات وخدمات مالية وإدارية، بمعايير عالمية، وتقنيات متقدمة ، ملتزمة بقيمها الأصيلة.</p>
+ <p className="text-gray-600 text-lg w-full md:w-[300px] lg:w-[350px] xl:w-[400px] mb-2 px-2">منشأة احترافية تهدف الى تطوير الاستثمارات والأعمال التجارية والقطاع الخيري، بتقديم استشارات وخدمات مالية وإدارية، بمعايير عالمية، وتقنيات متقدمة ملتزمة بقيمها الأصيلة.</p>
                     <div className="flex gap-[2px]">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
-                    <p className="text-gray-600 text-xl">قيمنا في الامتثال لقيم الشريعة الإسلامية</p>
+                    <p className="text-gray-600 text-lg">قيمنا في الامتثال لقيم الشريعة الإسلامية</p>
                     </div>
                          <div className="flex gap-[2px]">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
-                    <p className="text-gray-600 text-xl">احترافية العمل بروح الفريق الواحد</p>
+                    <p className="text-gray-600 text-lg">احترافية العمل بروح الفريق الواحد</p>
                     </div>
                           <div className="flex gap-[2px]">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
-                    <p className="text-gray-600 text-xl">نتائج عملية</p>
+                    <p className="text-gray-600 text-lg">نتائج عملية</p>
                     </div>
                     <div className="flex gap-[2px]">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
-                    <p className="text-gray-600 text-xl">أفضل أداء لربحية أفضل</p>
+                    <p className="text-gray-600 text-lg">أفضل أداء لربحية أفضل</p>
                     </div>
                     <div className="flex gap-[2px]">
 <IoIosArrowBack size={30} className="text-[#DFC96D]" />
-                    <p className="text-gray-600 text-xl">مستشار العميل</p>
+                    <p className="text-gray-600 text-lg">مستشار العميل</p>
                     </div>
                     </div>
 </div>
