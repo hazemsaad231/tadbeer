@@ -2,27 +2,28 @@ import Link from "next/link";
 import Buttons from "@/app/components/buttons";
 import { Api } from "@/app/components/api/api";
 import Image from "next/image";
-import Description from "@/app/components/description/desc";
+
 
 const BlogDetails = async ({ params }) => {
-  const response = await fetch(`${Api}/services`, { next: { revalidate: 60 } });
+  const response = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
   const Data = await response.json();
   const items = Array.isArray(Data?.data) ? Data.data : [];
   const item = items.find((i) => String(i.id) === String(params.id));
-  const services = items.filter((it) => it.type === "blogs");
+  const blogs = items.filter((it) => it.type === "blogs");
+
+  console.log(item.image_url);
 
   if (!item) {
     return (
       <div className="p-8">
         <h2 className="text-2xl font-bold">الخدمة مش موجودة</h2>
-        <p className="mt-2 text-gray-600">مفيش خدمة بالـ ID ده.</p>
       </div>
     );
   }
 
-  const descriptionText = typeof item.description === "string" ? item.description : "";
+  // const descriptionText = typeof item.description === "string" ? item.description : "";
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-two.vercel.app/";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
   const getImageUrl = (imgPath) =>
     typeof imgPath === "string" && imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath || ""}`;
 
@@ -53,7 +54,7 @@ const BlogDetails = async ({ params }) => {
       {/* الجزء السفلي */}
       <div className="flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
         {/* الجزء الاول */}
-        <div className="relative flex flex-col gap-4">
+        <div className="relative w-full md:w-4/5 lg:w-3/4 flex flex-col gap-4">
           {item.image_url && (
             <Image
               src={imageUrl}
@@ -71,13 +72,12 @@ const BlogDetails = async ({ params }) => {
           </h1>
 
           <div className="text-xl text-gray-500 w-full h-full p-2">
-            {/* لو عايز أول جملة أو سطر يظهر كخلاصة: */}
-            {descriptionText.split(/\n/).filter(Boolean)[0] && (
-              <p className="font-extrabold mb-3">{descriptionText.split(/\n/).filter(Boolean)[0]}</p>
-            )}
-
             {/* المكون اللي بيعرض الوصف بالكامل */}
-            <Description text={descriptionText} />
+            {/* <Description text={descriptionText} /> */}
+            <div
+  className="text-lg text-[#262163] font-medium leading-relaxed prose prose-blue max-w-none"
+  dangerouslySetInnerHTML={{ __html: item.description || "" }}
+></div>
           </div>
         </div>
 
@@ -85,33 +85,33 @@ const BlogDetails = async ({ params }) => {
         <div className="w-full md:w-max m-auto md:m-0 p-2 md:p-0">
           <div className="bg-[#262163] w-full m-auto rounded-xl py-6 p-2 sm:p-2 md:p-6">
             <h1 className="text-2xl md:text-3xl font-extrabold text-[#DFC96D] mb-2">
-              جميع الخدمات
+          جميع المدونات
             </h1>
 
             <div className="flex flex-col gap-4 py-6">
-              {Array.isArray(services) && services.length > 0 ? (
-                services.map((service) => {
-                  const svcImg = getImageUrl(service.image_url);
+              {Array.isArray(blogs) && blogs.length > 0 ? (
+                blogs.map((blog) => {
+                  const svcImg = getImageUrl(blog.image_url);
                   return (
-                    <div key={service.id}>
-                      <Link href={`/services/${service.id}`} className="flex gap-3 w-full items-center">
-                        {service.image_url && (
+                    <div key={blog.id}>
+                      <Link href={`/blog/${blog.id}`} className="flex gap-3 w-full items-center">
+                        {blog.image_url && (
                           <Image
                             src={svcImg}
-                            alt={service.title || "خدمة"}
+                            alt={blog.title || "مدونه"}
                             width={200}
                             height={200}
                             className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
                             // احذف priority هنا لو مش صورة مهمة جداً
                           />
                         )}
-                        <h1 className="text-md w-60 font-semibold text-white">{service.title}</h1>
+                        <h1 className="text-md w-60 font-semibold text-white">{blog.title}</h1>
                       </Link>
                     </div>
                   );
                 })
               ) : (
-                <p className="text-sm text-gray-300">ما فيش خدمات لعرضها</p>
+                <p className="text-sm text-gray-300">ما فيش مدونات لعرضها</p>
               )}
             </div>
 

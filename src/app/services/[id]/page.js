@@ -2,12 +2,13 @@ import Link from "next/link";
 import Buttons from "@/app/components/buttons";
 import { Api } from "@/app/components/api/api";
 import Image from "next/image";
-import Description from "@/app/components/description/desc";
 
 const ServiceDetails = async ({ params }) => {
-  const response = await fetch(`${Api}/services`, { next: { revalidate: 60 } });
+  const response = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
   const Data = await response.json();
-  const items = Array.isArray(Data?.data) ? Data.data : [];
+  console.log(Data);
+  const items = Data.data;
+  console.log(items);
   const item = items.find((i) => String(i.id) === String(params.id));
   const services = items.filter((it) => it.type === "services");
 
@@ -20,9 +21,9 @@ const ServiceDetails = async ({ params }) => {
     );
   }
 
-  const descriptionText = typeof item.description === "string" ? item.description : "";
+  // const descriptionText = typeof item.description === "string" ? item.description : "";
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-two.vercel.app/";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
   const getImageUrl = (imgPath) =>
     typeof imgPath === "string" && imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath || ""}`;
 
@@ -53,7 +54,7 @@ const ServiceDetails = async ({ params }) => {
       {/* الجزء السفلي */}
       <div className="flex flex-col md:flex-row gap-20 py-20 p-4 md:p-8 lg:p-12 xl:p-20">
         {/* الجزء الاول */}
-        <div className="relative flex flex-col gap-4">
+        <div className="relative w-full md:w-4/5 lg:w-3/4 flex flex-col gap-4">
           {item.image_url && (
             <Image
               src={imageUrl}
@@ -71,13 +72,12 @@ const ServiceDetails = async ({ params }) => {
           </h1>
 
           <div className="text-xl text-gray-500 w-full h-full p-2">
-            {/* لو عايز أول جملة أو سطر يظهر كخلاصة: */}
-            {descriptionText.split(/\n/).filter(Boolean)[0] && (
-              <p className="font-extrabold mb-3">{descriptionText.split(/\n/).filter(Boolean)[0]}</p>
-            )}
-
             {/* المكون اللي بيعرض الوصف بالكامل */}
-            <Description text={descriptionText} />
+            {/* <Description text={descriptionText} /> */}
+            <div
+  className="text-lg text-[#262163] font-medium leading-relaxed prose prose-blue max-w-none"
+  dangerouslySetInnerHTML={{ __html: item.description || "" }}
+></div>
           </div>
         </div>
 

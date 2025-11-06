@@ -7,32 +7,17 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext, useState, useEffect} from 'react';
+import { useContext} from 'react';
 import { Context } from '@/Context/context';
-import { Api } from '@/app/components/api/api';
 
 
-export default function BigCenterCarousel() {
+export default function BigCenterCarousel({services}) {
 
 
   const {setActive} = useContext(Context);
 
-  const [data, setData] = useState([]);
-
- const getData = async () => {
-    const res = await fetch(`${Api}/services?per_page=15`);
-    const data = await res.json();
-    setData(data.data);
-
-  };
 
 
-useEffect(() => {
-    getData();
-  }, []);
-console.log(data.map((it) => it.type === 'services'));
-
-const currentData = data.filter((it) => it.type === 'services').slice(0, 5);
 
 
   return (
@@ -91,7 +76,7 @@ const currentData = data.filter((it) => it.type === 'services').slice(0, 5);
       }}
         >
 
-{currentData.map((item) => (
+{services.map((item) => (
   <SwiperSlide key={`${item.id}`}>
        
    <div className="relative w-80 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">

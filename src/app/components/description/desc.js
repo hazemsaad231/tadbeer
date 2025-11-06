@@ -16,7 +16,7 @@ export default function Description({ text }) {
     .filter(Boolean);
 
   return (
-    <div className="description text-gray-700">
+    <div className="description font-semibold text-gray-700">
       {paragraphs.map((para, idx) => {
         // كسور الأسطر داخل الفقرة
         const lines = para.split(/\n/).map((l) => l.trim()).filter(Boolean);
@@ -26,13 +26,13 @@ export default function Description({ text }) {
 
         if (isNumberedList) {
           return (
-            <ol key={idx} className="list-decimal ml-6 mb-4 space-y-2">
+            <ul key={idx} className="list-decimal font-semibold ml-6 mb-4 space-y-2">
               {lines.map((line, i) => (
                 <li key={i} className="text-lg leading-relaxed">
                   {line.replace(/^\d+\.\s+/, "")}
                 </li>
               ))}
-            </ol>
+            </ul>
           );
         }
 
