@@ -1,6 +1,5 @@
 import bg from '../../../../public/bg.jpg'
 import Image from "next/image";
-import Link from "next/link";
 
 
 
@@ -9,7 +8,7 @@ export const Hero = () => {
     
     return (
         <div>
-       <section className="relative w-full h-auto flex justify-center py-40">
+       <section className="relative w-full h-auto flex justify-center pb-40 py-30">
         <Image
           src={bg}
           alt="Hero Background"

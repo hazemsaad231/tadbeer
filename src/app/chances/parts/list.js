@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function CategoriesSidebar({ categories }) {
+export default function CategoriesSidebar({ categories, headerOffset = 0 }) {
   const [activeId, setActiveId] = useState(null);
 
   useEffect(() => {
@@ -12,9 +12,23 @@ export default function CategoriesSidebar({ categories }) {
     }
   }, [categories]);
 
+
+  const scrollToCategory = (id) => {
+    const el = document.getElementById(`cat-detail-${id}`);
+    if (!el) return;
+
+    const top = el.getBoundingClientRect().top + window.pageYOffset ;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
+
   const handleClick = (id) => {
     setActiveId(id);
     window.dispatchEvent(new CustomEvent("categorySelected", { detail: id }));
+    scrollToCategory(id);
   };
 
   return (
