@@ -71,7 +71,7 @@ const pathname = usePathname();
             </div>
 
             {/* Social */}
-            <div className="flex flex-col items-center justify-center p-4 border-b-2 md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
+            <div className="flex flex-col items-center justify-center p-6 border-b-2 md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
               <h3 className="mb-3 font-bold text-lg">تابعنا</h3>
               <div className="flex gap-3">
                 <a
