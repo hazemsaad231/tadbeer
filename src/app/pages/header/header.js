@@ -8,14 +8,30 @@ import { HiViewList } from "react-icons/hi";
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import Logo, { SmallLogo } from "./logo";
 import { Context } from "@/Context/context";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+
+const pathname = usePathname();
+
+
+
+  
 
 
   const [isNavbarVisible, setNavbarVisible] = useState(false);
 
   const toggleNavbar = () => setNavbarVisible((s) => !s);
   const {active, setActive} = useContext(Context);
+
+  const noHeaderRoutes = [
+    '/chances/[id]',
+    '/form/[id]',
+  ];
+    const startsWithList = [ '/chances/', '/form/'];
+  const hideIfStartsWith = startsWithList.some((item) => pathname.startsWith(item));
+
+  if (hideIfStartsWith|| noHeaderRoutes.includes(pathname)) return null;
 
   const liBase =
     "relative px-4 before:content-[''] before:absolute before:right-[-1px] before:top-1/4 before:h-1/2 before:w-px before:bg-gray-400 cursor-pointer";

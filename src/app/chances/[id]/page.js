@@ -5,12 +5,10 @@ import Link from "next/link";
 import CategoriesSidebar from "../parts/list";
 import CategoriesMain from "../parts/details";
 import { Info } from "lucide-react";
+import Footer from "../parts/footer";
+import Header from "../parts/header";
 
 export default async function Home({ params }) {
-
-  
-
-
 
 
   const res = await fetch("https://tadbeer.wj.edu.sa/public/api/invests?type&min_price&max_price&per_page", {
@@ -27,11 +25,13 @@ const {id} = params;
   console.log(item);
 
   return (
+    <>
+    <Header />
     <div>
       <Hero />
-      <div className="pb-28 relative top-[-120px] z-10" id="details">
+      <div className="pb-28 relative top-[-100px] z-10" id="details">
 
-                  <div className="max-w-8xl md:max-w-7xl lg:max-w-6xl xl:max-w-6xl m-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="max-w-8xl md:max-w-7xl lg:max-w-6xl xl:max-w-6xl p-5 m-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="col-span-1 md:col-span-2">
                       <Slider
                         src={(item.gallery || []).map((i) => i.photo_url)}
@@ -82,5 +82,7 @@ const {id} = params;
                   </div>
                 </div>
     </div>
+    <Footer/>
+    </>
   )
 }

@@ -4,7 +4,20 @@ import { IoLogoYoutube, IoLogoLinkedin } from "react-icons/io5";
 import { FaTwitter, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+import { usePathname } from "next/navigation";
+
 const Footer = () => {
+
+const pathname = usePathname();
+
+    const noHeaderRoutes = [
+    '/chances/[id]',
+    '/form/[id]',
+  ];
+  const startsWithList = [ '/chances/', '/form/'];
+  const hideIfStartsWith = startsWithList.some((item) => pathname.startsWith(item));
+
+  if (hideIfStartsWith|| noHeaderRoutes.includes(pathname)) return null;
   return (
     <footer className="w-full bg-white text-indigo-900" id="contact">
       {/* Newsletter */}

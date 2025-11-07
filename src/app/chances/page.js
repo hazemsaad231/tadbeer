@@ -43,9 +43,11 @@ export default async function Chances() {
                         
                     bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
                         
+                       
+                      
                       >
-                        <Link href={`/chances/${item.id}`}>
                         <div className="flex-1">
+                           <Link href={`/chances/${item.id}`}>
                           <div className="relative h-64 overflow-hidden bg-gray-100">
                             {item.gallery?.[0]?.photo_url ? (
                               <Image
@@ -82,13 +84,11 @@ export default async function Chances() {
                            
                               className="bg-[#dbbb39] text-[#262163] group-hover:text-[#dbbb39] group-hover:bg-[#262163] py-2 px-4 w-full cursor-pointer rounded-full font-semibold"
                             >
-                               <Link href={`/chances/${item.id}`}>
-                              تفاصيل الفرصة
-                              </Link>
                             </button>
                           </div>
+                          </Link>
                         </div>
-                        </Link>
+                        
                       </div>
                     ))}
                   </div>

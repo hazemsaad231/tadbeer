@@ -9,7 +9,7 @@ export const Hero = () => {
     
     return (
         <div>
-       <section className="relative w-full h-screen md:h-max md:py-48 lg:h-max lg:py-56 xl:h-screen flex items-center justify-center overflow-hidden">
+       <section className="relative w-full h-auto flex justify-center py-40">
         <Image
           src={bg}
           alt="Hero Background"
@@ -21,7 +21,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-linear-to-bl from-transparent via-[#262163] to-[#262163]/80"></div>
 
         <div className="relative z-10 text-center px-4">
-          <div className="flex flex-col md:flex-row justify-center md:gap-10 lg:gap-12 xl:gap-16 mx-auto">
+          <div className="flex flex-col md:flex-row  justify-center md:gap-10 lg:gap-12 xl:gap-16 mx-auto">
             <div className="flex flex-col justify-center m-auto gap-6 w-full">
               <h6 className="text-white m-auto text-center font-light text-3xl md:text-3xl lg:text-4xl xl:text-5xl">
                 فرص استثمارية واعدة مع
@@ -56,7 +56,7 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-         <div className="absolute bottom-0 w-full h-6 bg-white rounded-t-full"></div>
+         {/* <div className="absolute bottom-0 w-full h-6 bg-white rounded-t-full"></div> */}
       </section>
  
         </div>
