@@ -209,7 +209,7 @@ const pathname = usePathname();
                 </li>
                 
               <li className="border-t border-gray-500 py-4">
-                  <Link href="https://apps-ruddy-nu.vercel.app/" onClick={toggleNavbar} className="block text-center text-white">
+                  <Link href="/chances" onClick={toggleNavbar} className="block text-center text-white">
                     استثمر معانا
                   </Link>
                 </li>
