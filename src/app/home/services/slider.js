@@ -74,6 +74,7 @@ export default function BigCenterCarousel({services}) {
           spaceBetween: 16,
         },
       }}
+      className='small-slider'
         >
 
 {services.map((item) => (

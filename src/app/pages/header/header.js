@@ -86,7 +86,7 @@ export default function Header() {
             <li onClick={()=>setActive('contact')}> <Link href="/contact" className={`hover:text-indigo-900 hover:bg-white border border-white rounded-full px-4 py-3 text-xl`}>
             انضم إلينا
               </Link></li>
-              <li onClick={()=>setActive('contact')}> <Link href="https://apps-ruddy-nu.vercel.app/" className={`bg-[#DFC96D] text-white hover:bg-white border border-white hover:text-indigo-900 rounded-full px-4 py-3 text-xl`}>
+              <li onClick={()=>setActive('contact')}> <Link href="/chances" className={`bg-[#DFC96D] text-white hover:bg-white border border-white hover:text-indigo-900 rounded-full px-4 py-3 text-xl`}>
             استثمر معانا
               </Link></li>
           </ul>

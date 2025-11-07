@@ -171,7 +171,12 @@ body {
   font-weight: bold;
 }
 
-.swiper {
+.big-slider {
+  width: 100%;
+  height: 440px;
+}
+
+.small-slider {
   width: 100%;
   height: 340px;
 }
