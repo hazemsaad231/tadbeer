@@ -71,7 +71,7 @@ const pathname = usePathname();
             </div>
 
             {/* Social */}
-            <div className="flex flex-col items-center justify-center p-6 border-b-2 md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
+            <div className="flex flex-col items-center justify-center p-5 border-b-2 md:border-b-0 md:border-r-2 border-[#DFC96D]/30">
               <h3 className="mb-3 font-bold text-lg">تابعنا</h3>
               <div className="flex gap-3">
                 <a
@@ -118,7 +118,7 @@ const pathname = usePathname();
                 <span className="text-gray-700">0555144382</span>
               </a>
 
-              <a href="tel:0554452877" className="flex items-center gap-3">
+              {/* <a href="tel:0554452877" className="flex items-center gap-3">
                 <FaPhone size={20} className="text-[#DFC96D]" />
                 <span className="text-gray-700">0554452877</span>
               </a>
@@ -126,7 +126,7 @@ const pathname = usePathname();
               <a href="tel:05511800015" className="flex items-center gap-3">
                 <FaPhone size={20} className="text-[#DFC96D]" />
                 <span className="text-gray-700">05511800015</span>
-              </a>
+              </a> */}
 
               <a href="mailto:info@tadbeer.sa" className="flex items-center gap-3">
                 <MdEmail size={20} className="text-[#DFC96D]" />

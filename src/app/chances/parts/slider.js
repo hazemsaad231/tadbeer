@@ -28,7 +28,7 @@ export default function Slider({ src = [] }) {
         <SwiperSlide key={index}>
          
           <Image
-            src={img}
+            src={img||''}
             className="w-full h-full object-center rounded-4xl"
             alt={`slide-${index}`}
            fill
