@@ -39,9 +39,9 @@ export default async function Chances() {
                     {chances.map((item) => (
                       <div
                         key={item.id}
-                        className={`group h-full w-104 flex flex-col rounded-3xl overflow-hidden  cursor-pointer transition-all duration-500
+                        className={`group h-full w-104 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
                         
-                    bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
+                    bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
                         
                        
                       
@@ -67,24 +67,10 @@ export default async function Chances() {
                               {item.type}
                             </div>
                           </div>
-                          <div className="flex-1 p-2 md:p-4 flex flex-col justify-between">
+                          <div className="flex-1 p-2 py-6 flex flex-col justify-between">
                             <h3 className="text-lg text-center md:text-xl font-bold text-[#1a1a4d] line-clamp-2 group-hover:text-[#dbbb39] transition-colors mb-2">
                               {item.name}
                             </h3>
-                            <div className="w-full h-0.5 bg-gray-200 my-3"></div>
-                            <div className="flex justify-between mt-4">
-                              <span className="font-medium text-[#262163]">نوع الاستثمار</span>
-                              <span className="font-extrabold text-[#262163]">{item.type}</span>
-                            </div>
-                            <div className="flex justify-between mt-4 mb-4">
-                              <span className="font-medium text-[#262163]">مبلغ الاستثمار</span>
-                              <span className="font-extrabold text-[#262163]">{item.price} ر.س</span>
-                            </div>
-                            <button
-                           
-                              className="bg-[#dbbb39] text-[#262163] group-hover:text-[#dbbb39] group-hover:bg-[#262163] py-2 px-4 w-full cursor-pointer rounded-full font-semibold"
-                            >
-                            </button>
                           </div>
                           </Link>
                         </div>

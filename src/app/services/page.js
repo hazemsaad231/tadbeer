@@ -39,7 +39,7 @@ console.log(services);
       <div className="py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-content-center place-items-center p-6 md:p-12 gap-6">
           {services.map((item) => (
-            <article key={item.id} className=" overflow-hidden cursor-pointer gap-2 rounded-xl opacity-90 hover:opacity-100  transition-all duration-700 ease-in-out
+            <article key={item.id} className=" group overflow-hidden cursor-pointer gap-2 rounded-xl opacity-90 hover:opacity-100  transition-all duration-700 ease-in-out
             bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:border-[#dbbb39]/30">
               <Link href={`/services/${item.id}`} className="block">
                {item?.image_url && (
@@ -53,7 +53,7 @@ console.log(services);
   />
 )}
 
-                <h2 className="text-lg font-extrabold text-[#262163] px-4 h-28 flex items-center">
+                <h2 className="group-hover:text-[#dbbb39] text-lg font-extrabold text-[#262163] px-4 h-28 flex justify-center items-center">
                   {item.title}
                 </h2>
               </Link>
