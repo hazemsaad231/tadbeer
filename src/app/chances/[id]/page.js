@@ -42,7 +42,7 @@ const {id} = params;
                           <h3 className="text-xl font-extrabold text-[#262163]">استثمر في تدبير</h3>
                           <p className="text-gray-500">سجّل الآن للاستثمار في تدبير، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
                           <div className="bg-[#dbbb39] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold">
-                            <Link href={`/form`}>استثمار الآن</Link>
+                            <Link href={`/form/${item.id}`}>استثمار الآن</Link>
                           </div>
                           <div className="w-full h-0.5 bg-gray-300 my-3"></div>
                           <CategoriesSidebar categories={item.categories || []} />
