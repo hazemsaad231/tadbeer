@@ -34,28 +34,25 @@ export default async function Chances() {
         </div>
       </div>
 
-<div className="py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center p-6 md:p-12 gap-6">
+<div className="py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center p-4 md:p-8 gap-4">
 
                     {chances.map((item) => (
                       <div
                         key={item.id}
-                        className={`group h-full w-full flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
+                        className={`group h-full w-full md:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
                         
                     bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
-                        
-                       
-                      
                       >
                         <div className="flex-1">
                            <Link href={`/chances/${item.id}`}>
-                          <div className="relative h-64 w-full overflow-hidden bg-gray-100">
+                          <div className="relative h-60 w-full overflow-hidden bg-gray-100">
                             {item.gallery?.[0]?.photo_url ? (
                               <Image
                                 src={item.gallery[0].photo_url}
                                 alt={item.name || "فرصة استثمارية"}
                                 fill
-                                className="w-full h-full object-center group-hover:scale-110 transition-transform duration-500"
+                                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                                 loading="lazy"
                                 unoptimized={false}
                               />
