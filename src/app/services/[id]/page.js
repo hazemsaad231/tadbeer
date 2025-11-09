@@ -16,7 +16,6 @@ const ServiceDetails = async ({ params }) => {
     return (
       <div className="p-8">
         <h2 className="text-2xl font-bold">الخدمة مش موجودة</h2>
-        <p className="mt-2 text-gray-600">مفيش خدمة بالـ ID ده.</p>
       </div>
     );
   }
@@ -98,7 +97,6 @@ const ServiceDetails = async ({ params }) => {
                             width={200}
                             height={200}
                             className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
-                            // احذف priority هنا لو مش صورة مهمة جداً
                           />
                         )}
                         <h1 className="text-md w-60 font-semibold text-white">{service.title}</h1>
@@ -107,7 +105,7 @@ const ServiceDetails = async ({ params }) => {
                   );
                 })
               ) : (
-                <p className="text-sm text-gray-300">ما فيش خدمات لعرضها</p>
+                <p className="text-sm text-gray-300">لا يوجد خدمات لعرضها</p>
               )}
             </div>
 

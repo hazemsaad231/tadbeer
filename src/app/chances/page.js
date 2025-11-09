@@ -6,7 +6,7 @@ export default async function Chances() {
 
    const data = await fetch(`https://tadbeer.wj.edu.sa/public/api/invests?type&min_price&max_price&per_page`, { next: { revalidate: 60 } });
 
-  const Data= await data.json()
+  const Data = await data.json()
 
   const chances = Data.data
 
@@ -44,11 +44,9 @@ export default async function Chances() {
     
     bg-white border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:border-[#dbbb39]`} 
 >
-    {/* ... باقي الكود ... */}
     <div className="flex-1">
         <Link href={`/chances/${item.id}`}>
             <div className="relative h-60 w-full overflow-hidden bg-gray-100">
-                {/* ... الصورة ... */}
                         {item.gallery?.[0]?.photo_url ? (
                               <Image
                                 src={item.gallery[0].photo_url}
