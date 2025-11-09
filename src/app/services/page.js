@@ -41,8 +41,8 @@ console.log(services);
           {services.map((item) => (
             
 
-           <article key={item.id} className=" group overflow-hidden cursor-pointer gap-2 rounded-xl opacity-90 hover:opacity-100  transition-all duration-700 ease-in-out
-            bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:border-[#dbbb39]/30">
+           <article key={item.id} className=" group overflow-hidden cursor-pointer gap-2 rounded-xl opacity-90 hover:opacity-100 hover:border-[#dbbb39] transition-all duration-700 ease-in-out
+            bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3">
               <Link href={`/services/${item.id}`} className="block">
                {item?.image_url && (
   <Image

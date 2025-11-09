@@ -38,16 +38,18 @@ export default async function Chances() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center p-4 md:p-8 gap-8">
 
                     {chances.map((item) => (
-                      <div
-                        key={item.id}
-                        className={`group h-full w-full lg:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
-                        
-                    bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
-                      >
-                        <div className="flex-1">
-                           <Link href={`/chances/${item.id}`}>
-                          <div className="relative h-60 w-full overflow-hidden bg-gray-100">
-                            {item.gallery?.[0]?.photo_url ? (
+                    <div
+    key={item.id}
+    className={`group h-full w-full lg:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
+    
+    bg-white border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:border-[#dbbb39]`} 
+>
+    {/* ... باقي الكود ... */}
+    <div className="flex-1">
+        <Link href={`/chances/${item.id}`}>
+            <div className="relative h-60 w-full overflow-hidden bg-gray-100">
+                {/* ... الصورة ... */}
+                        {item.gallery?.[0]?.photo_url ? (
                               <Image
                                 src={item.gallery[0].photo_url}
                                 alt={item.name || "فرصة استثمارية"}
@@ -61,19 +63,19 @@ export default async function Chances() {
                                 <span className="text-gray-400">صورة غير متوفرة</span>
                               </div>
                             )}
-                            <div className="absolute top-4 right-4 bg-linear-to-r from-[#dbbb39] to-[#f5d76e] text-[#1a1a4d] px-3 py-1 rounded-full text-xs font-bold">
-                              {item.type}
-                            </div>
-                          </div>
-                          <div className="flex-1 p-2 py-6 flex flex-col justify-between">
-                            <h3 className="text-lg text-center md:text-xl font-bold text-[#1a1a4d] line-clamp-2 group-hover:text-[#dbbb39] transition-colors mb-2">
-                              {item.name}
-                            </h3>
-                          </div>
-                          </Link>
-                        </div>
-                        
-                      </div>
+
+                <div className="absolute top-4 right-4 bg-linear-to-r from-[#dbbb39] to-[#f5d76e] text-[#1a1a4d] px-3 py-1 rounded-full text-sm font-bold"> 
+                    {item.type}
+                </div>
+            </div>
+            <div className="flex-1 p-4 py-6 flex flex-col justify-between">
+                <h3 className="text-xl text-center font-extrabold text-[#1a1a4d] line-clamp-2 group-hover:text-[#dbbb39] transition-colors mb-2"> 
+                    {item.name}
+                </h3>
+            </div>
+        </Link>
+    </div>
+</div>
                     ))}
                   </div>
                   </div>
