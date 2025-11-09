@@ -9,6 +9,7 @@ import { MdOutlineCancelPresentation } from "react-icons/md";
 import Logo, { SmallLogo } from "./logo";
 import { Context } from "@/Context/context";
 import { usePathname } from "next/navigation";
+import Whats from "./contact";
 
 export default function Header() {
 
@@ -219,6 +220,10 @@ const pathname = usePathname();
         </div>
          
       )}
+      <div className="fixed bottom-4 right-4 z-50">
+ <Whats />
+      </div>
+     
     </header>
   );
 }
