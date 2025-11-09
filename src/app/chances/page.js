@@ -68,8 +68,8 @@ export default async function Chances() {
                     {item.type}
                 </div>
             </div>
-            <div className="flex-1 p-4 py-6 flex flex-col justify-between">
-                <h3 className="text-xl text-center font-extrabold text-[#1a1a4d] line-clamp-2 group-hover:text-[#dbbb39] transition-colors mb-2"> 
+            <div className="flex-1 p-4 py-8 flex flex-col justify-between">
+                <h3 className="text-xl text-center font-extrabold text-[#1a1a4d]   line-clamp-2 group-hover:text-[#dbbb39] transition-colors mb-2"> 
                     {item.name}
                 </h3>
             </div>

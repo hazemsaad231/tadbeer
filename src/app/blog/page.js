@@ -40,7 +40,7 @@ const blogs = blog.filter((it) => it.type === 'blogs');
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-content-center place-items-center p-6 md:p-12 gap-6">
           {blogs.map((item) => (
             <article key={item.id} className="group overflow-hidden cursor-pointer gap-2 rounded-xl opacity-90 hover:opacity-100 hover:border-[#dbbb39]   transition-all duration-700 ease-in-out
-            bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3 hover:border-[#dbbb39]/30">
+            bg-white border border-gray-100 shadow-lg hover:shadow-2xl hover:-translate-y-3">
               <Link href={`/blog/${item.id}`} className="block">
               { item.image_url && (
                                 <Image
