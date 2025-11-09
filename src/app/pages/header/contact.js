@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 const messages = [
   "تواصل معنا الآن!",
-  "هل لديك استفسار ؟ راسلنا!",
+  "هل لديك استفسار ؟",
   "نحن هنا لخدمتك! اضغط للبدء."
 ]; 
 
