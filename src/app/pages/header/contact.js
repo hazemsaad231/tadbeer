@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 
 const messages = [
-  "تواصل معنا عبر واتساب الآن!",
-  "هل لديك استفسار؟ راسلنا!",
+  "تواصل معنا الآن!",
+  "هل لديك استفسار ؟ راسلنا!",
   "نحن هنا لخدمتك! اضغط للبدء."
 ]; 
 
@@ -57,7 +57,7 @@ const Whats = () => {
             
             {/* الرسالة المنبثقة - تظهر فقط عندما تكون isVisible true */}
             {isVisible && (
-                <div className="absolute right-16 bottom-2 p-2 bg-white text-[#322b83] rounded-lg shadow-xl w-52 transition-opacity duration-300 transform scale-100 origin-bottom-right">
+                <div className="absolute right-16 bottom-2 p-2 bg-white text-[#322b83] rounded-lg shadow-xl w-max transition-opacity duration-300 transform scale-100 origin-bottom-right">
                     <p className="text-sm font-semibold">{messages[currentMessageIndex]}</p>
                 </div>
             )}
