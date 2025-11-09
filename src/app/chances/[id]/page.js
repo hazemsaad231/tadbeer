@@ -28,7 +28,7 @@ const {id} = params;
     <>
     <Header />
     <div>
-      <Hero />
+      <Hero item={item} />
       <div className="pb-28 relative top-[-110px] z-10" id="details">
 
                   <div className="max-w-8xl md:max-w-5xl lg:max-w-6xl xl:max-w-6xl p-6 m-auto grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -37,6 +37,7 @@ const {id} = params;
                         src={(item.gallery || []).map((i) => i.photo_url)}
                         typeSrc={(item.gallery || []).map((i) => i.type_photo)}
                       />
+                      {/*sidebar mobile*/}
                       <div className="block md:hidden col-span-1 mt-14">
                         <div className="w-full md:w-60 lg:w-80 h-max rounded-4xl bg-white shadow-lg border border-gray-200 p-4 py-10 flex flex-col gap-3 mb-12">
                           <h3 className="text-xl font-extrabold text-[#262163]">استثمر في تدبير</h3>
@@ -66,7 +67,7 @@ const {id} = params;
                         <CategoriesMain categories={item.categories || []} />
                       </div>
                     </div>
-
+{/* Sidebar desktop */}
                     <div className="hidden md:block col-span-1">
                       <div className="w-full md:w-60 lg:w-80 h-max rounded-4xl bg-white shadow-lg border border-gray-200
                        p-4 py-10 flex flex-col gap-3 sticky top-20">

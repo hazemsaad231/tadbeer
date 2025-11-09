@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Buttons from "@/app/components/buttons";
+import Buttons from "@/app/components/buttons/buttons";
 import { Api } from "@/app/components/api/api";
 import Image from "next/image";
 
@@ -21,7 +21,6 @@ const BlogDetails = async ({ params }) => {
     );
   }
 
-  // const descriptionText = typeof item.description === "string" ? item.description : "";
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
   const getImageUrl = (imgPath) =>
@@ -63,7 +62,6 @@ const BlogDetails = async ({ params }) => {
               height={800}
               className="w-full object-cover h-96"
               priority
-              // خلي الصور الكبيرة priority لو هى hero بس، الباقي ممكن يكون lazy افتراضياً
             />
           )}
 
@@ -72,8 +70,6 @@ const BlogDetails = async ({ params }) => {
           </h1>
 
           <div className="text-xl text-gray-500 w-full h-full p-2">
-            {/* المكون اللي بيعرض الوصف بالكامل */}
-            {/* <Description text={descriptionText} /> */}
             <div
   className="text-lg text-[#262163] font-medium leading-relaxed prose prose-blue max-w-none"
   dangerouslySetInnerHTML={{ __html: item.description || "" }}
@@ -102,7 +98,6 @@ const BlogDetails = async ({ params }) => {
                             width={200}
                             height={200}
                             className="w-12 h-12 md:w-14 md:h-14 object-cover rounded-xl"
-                            // احذف priority هنا لو مش صورة مهمة جداً
                           />
                         )}
                         <h1 className="text-md w-60 font-semibold text-white">{blog.title}</h1>

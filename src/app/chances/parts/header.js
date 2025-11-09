@@ -24,7 +24,7 @@ export default function Header() {
           </div>
         
           <ul>
-            <li className={`bg-[#f5d76e] border border-white text-white px-2 md:px-4 lg:px-6 py-1.5 rounded-full text-sm md:text-md lg:text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all`}> <Link href="#footer" >
+            <li className={`bg-[#dbbb39]  border border-white text-white px-2 md:px-4 lg:px-6 py-1.5 rounded-full text-sm md:text-md lg:text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all`}> <Link href="#footer" >
               تواصل معنا
               </Link></li>
           </ul>
