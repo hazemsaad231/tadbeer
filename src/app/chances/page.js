@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import bg from "../../../public/chances.jpg";
+import bg from "../../../public/chances.jpeg";
 import Link from "next/link";
 export default async function Chances() {
 
@@ -23,7 +23,7 @@ export default async function Chances() {
           alt="الخدمات - صورة"
           fill
           placeholder="blur"
-          className="object-resize object-cover"
+          className="object-cover"
           priority
         />
 
@@ -35,12 +35,12 @@ export default async function Chances() {
       </div>
 
 <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center p-4 md:p-8 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 place-content-center place-items-center p-4 md:p-8 gap-8">
 
                     {chances.map((item) => (
                       <div
                         key={item.id}
-                        className={`group h-full w-full md:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
+                        className={`group h-full w-full lg:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
                         
                     bg-white border border-gray-100 shadow-lg hover:shadow-xl hover:-translate-y-3 hover:border-[#dbbb39]/30`}
                       >
