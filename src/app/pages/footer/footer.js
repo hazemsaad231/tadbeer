@@ -3,12 +3,40 @@ import Image from "next/image";
 import { IoLogoYoutube, IoLogoLinkedin } from "react-icons/io5";
 import { FaTwitter, FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-
 import { usePathname } from "next/navigation";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { Api } from "@/app/components/api/api";
 
 const Footer = () => {
 
 const pathname = usePathname();
+
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const [submitting, setSubmitting] = useState(false);
+
+const onSubmit = async (formData) => {
+    try {
+      setSubmitting(true);
+
+      const fd = new FormData();
+      fd.append('email', formData.email || '');
+
+
+      const response = await axios.post(
+        `${Api}/newsletter-subscribers`,fd);
+      console.log('response', response.data || response);
+      toast.success('تم الارسال بنجاح');
+      reset();
+    } catch (error) {
+      console.error('submit error', error.response?.data || error);
+      toast.error('هذا البريد الإلكتروني موجود بالفعل');
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
     const noHeaderRoutes = [
     '/chances/[id]',
@@ -29,7 +57,7 @@ const pathname = usePathname();
 
           <form
             className="w-full md:w-auto flex flex-col sm:flex-row gap-3 items-stretch"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit(onSubmit)}
             aria-label="newsletter form"
           >
             <label htmlFor="email" className="sr-only">
@@ -40,16 +68,22 @@ const pathname = usePathname();
               id="email"
               type="email"
               placeholder="البريد الإلكتروني"
-              className="w-full md:w-80 h-12 px-4 rounded-xl outline-none bg-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#DFC96D]"
+              className="w-full md:w-80 h-12 px-4 rounded-xl outline-none text-gray-700 bg-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#DFC96D]"
               required
+              {...register('email')
+  //             {
+  //               required: true,
+  //               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+  // }
+}
             />
-
-            <button
-              type="submit"
-              className="w-full sm:w-44 h-12 rounded-xl bg-[#DFC96D] text-[#262163] font-bold hover:bg-[#c9b25a] transition-colors duration-200"
-            >
-              اشتراك
-            </button>
+                <button
+                            type="submit"
+                            disabled={submitting}
+                            className={`cursor-pointer w-full sm:w-44 h-12 rounded-xl bg-[#DFC96D] text-[#262163] font-bold hover:bg-[#c9b25a] transition-colors duration-200 ${submitting ? 'opacity-60 cursor-not-allowed' : ''}`}
+                          >
+                            <h1>اشتراك</h1>
+                          </button>
           </form>
         </div>
       </div>
