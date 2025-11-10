@@ -8,10 +8,7 @@ const AboutContent = () => {
         <section className="bg-white w-full py-24" id="about">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4
          p-1 sm:p-3 md:p-4 lg:p-6 xl:p-12">
-
-
-            <div className="flex flex-col w-full">
-               
+  <div className="flex flex-col w-full">
                
                <div className="flex">
                 <div className="flex flex-col gap-1 border-r-[20px] border-b-[20px] border-[#DFC96D] px-1 py-3">
