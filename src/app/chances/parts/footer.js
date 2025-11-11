@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react"
+import Logo from "./logo"; 
 
 
 export default function Footer() {
@@ -7,17 +8,15 @@ export default function Footer() {
 
   return (
     <footer className="w-full text-white bg-[#262163] clip-slant-top relative overflow-hidden p-4" id="footer">
-        {/* Background Image */}
-
-
-        {/* Overlay */}
 
         {/* Main Footer Content */}
         <div className="px-4 sm:px-4 py-10 max-w-6xl mx-auto">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8 text-sm">
             {/* Company Info */}
             <div className="space-y-2 lg:col-span-2">
-              <h3 className="text-lg font-bold text-white mb-10">شركتنا</h3>
+  <div className="mb-4">
+              <Logo color="white" /> 
+            </div>
               <p className="leading-relaxed">
                 حلول مبتكرة وموثوقة لتحقيق أهدافك بكفاءة واحترافية.
               </p>
@@ -37,7 +36,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="space-y-2">
-              <h3 className="text-md font-bold text-white">روابط سريعة</h3>
+              <h3 className="text-md font-extrabold text-white">روابط سريعة</h3>
               <ul className="space-y-1">
                 {["الرئيسية", "عن الشركة", "الخدمات", "المشاريع", "المدونة"].map((link) => (
                   <li key={link}>
@@ -51,7 +50,7 @@ export default function Footer() {
 
             {/* Support */}
             <div className="space-y-2">
-              <h3 className="text-md font-bold text-white">الدعم</h3>
+              <h3 className="text-md font-extrabold text-white">الدعم</h3>
               <ul className="space-y-1">
                 {["مركز المساعدة", "الأسئلة الشائعة", "سياسة الخصوصية", "شروط الخدمة", "اتصل بنا"].map((link) => (
                   <li key={link}>
@@ -65,7 +64,7 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-2">
-              <h3 className="text-md font-bold text-white">تواصل معنا</h3>
+              <h3 className="text-md font-extrabold text-white">تواصل معنا</h3>
               <div className="space-y-2">
                 <div className="flex gap-2 items-center">
                   <Mail size={16} className="mt-1 shrink-0" />
@@ -82,7 +81,8 @@ export default function Footer() {
                 <div className="flex gap-2 items-center">
                   <MapPin size={16} className="mt-1 shrink-0" />
                   <p className="text-xs">
-                <a href="https://www.google.com/maps/place/21%C2%B033'26.3%22N+39%C2%B010'38.8%22E/@21.557312,39.177437,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d21.5573125!4d39.1774375?hl=ar-SA">
+                <a href="https://www.google.com/maps/place/21%C2%B033'26.3%22N+39%C2%B010'38.8%22E/@21.557312,39.177437,17z/data=!4m5!3m4!1s0x0:0x0!8m2!3d21.5573125!4d39.1774375?hl=ar-SA"
+                  className="hover:text-indigo-300 text-xs">
                 6174 محمد بن عبدالعزيز، 3264 Al Amir، جدة 23441، المملكة العربية
                 السعودية
                  </a>

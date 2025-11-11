@@ -2,54 +2,46 @@
 "use client";
 
 import Link from "next/link";
-
 import Logo from "./logo";
 
-
 export default function Header() {
-
-
-
-
   return (
-    <header>
+    // نستخدم fixed top-0 w-full z-50 لجعل الـ Header ثابتاً، وهو تحسين بصري ووظيفي.
+    <header className="w-full z-50">
       <div>
-  {/* desktop navbar */}
-      <div className="bg-[#262163]  p-2 md:p-0.5 shadow-md h-16 md:h-20">
-        <nav className="relative flex justify-between items-center px-1 md:px-4 xl:px-6">
-
+        {/* desktop navbar */}
+        
+        {/* نزيد من قوة الظل (shadow-xl) لإضفاء فخامة. */}
+        <div className="bg-[#262163] p-2 md:p-0.5 shadow-xl h-16 md:h-20">
           
-  <div className="flex">
-            <Logo />
-          </div>
-        
-          <ul>
-            <li className={`bg-[#dbbb39]  border border-white text-white px-2 md:px-4 lg:px-6 py-1.5 rounded-full text-sm md:text-md lg:text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all`}> <Link href="#footer" >
-              تواصل معنا
-              </Link></li>
-          </ul>
+          {/* نستخدم max-w-7xl mx-auto لتحديد عرض الـ Header ليتوسط الشاشة بشكل جيد. */}
+          <nav className="relative max-w-7xl mx-auto flex justify-between items-center px-1 xl:px-6 h-full">
+            
+            {/* الشعار */}
+            <div className="flex items-center">
+              <Logo />
+            </div>
+          
+            <ul>
+              <li>
+                <Link href="#footer" passHref legacyBehavior>
+                    <a className={`
+                        bg-[#f0cc3b] text-white font-bold border border-white/50
+                        px-2 md:px-4 lg:px-6 py-2.5 rounded-full 
+                        text-sm md:text-md lg:text-lg whitespace-nowrap
+                        shadow-lg shadow-[#dbbb39]/60 
+                        hover:shadow-xl hover:scale-[1.05] 
+                        transition-all duration-300 transform
+                    `}>
+                      تواصل معنا
+                    </a>
+                </Link>
+              </li>
+            </ul>
 
-        
-
-
-        </nav>
+          </nav>
+        </div>
       </div>
-
-
-
-
-      
-
-
-
-
-
-
-      </div>
-
-    
-
-     
     </header>
   );
 }
