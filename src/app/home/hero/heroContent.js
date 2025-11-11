@@ -42,7 +42,7 @@ const {setActive} = useContext(Context);
 </div>
 {/* hero */}
             <div  className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
-                    <Image src={bg} alt="logo" width={400} height={400} placeholder="blur" className=" object-cover w-full h-96" priority />
+                    <Image src={bg} alt="logo" width={800} height={800} placeholder="blur" className=" object-cover w-full h-96" priority />
 {/* buttons */}
                     <div className="flex justify-between items-center w-full">
                         {/* services */}
