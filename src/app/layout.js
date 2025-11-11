@@ -40,8 +40,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-     <link rel="preload" as="image" href="/hero.webp" type="image/webp" />
-<link rel="preload" as="image" href="/logo.webp" type="image/webp" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tajawal.variable} antialiased`}
