@@ -28,7 +28,7 @@ const onSubmit = async (formData) => {
       const response = await axios.post(
         `${Api}/newsletter-subscribers`,fd);
       console.log('response', response.data || response);
-      toast.success('تم الارسال بنجاح');
+      toast.success('تم الاشتراك بنجاح');
       reset();
     } catch (error) {
       console.error('submit error', error.response?.data || error);
