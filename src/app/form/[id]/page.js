@@ -123,14 +123,14 @@ export default function Form() {
                 variant="outline"
                 onClick={() => reset({ invest_id: id ?? "", number_of_arrows: 1 , name: "", notes: "", phone: ""})}
                 disabled={loading}
-                className="cursor-pointer border-[#DFC96D] hover:bg-[#c9b25a]"
+                className="cursor-pointer border-[#DFC96D] hover:bg-[#c9b25a] hover:text-white"
               >
                 إعادة تعيين
               </Button>
 
               <Button
                 type="submit"
-                className="cursor-pointer bg-[#DFC96D] hover:bg-[#c9b25a]"
+                className="cursor-pointer bg-[#DFC96D] hover:bg-[#c9b25a] "
                 disabled={loading}
               >
                 {loading ? "جاري الإرسال..." : "إرسال"}
