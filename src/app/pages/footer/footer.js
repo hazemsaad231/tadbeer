@@ -71,10 +71,7 @@ const onSubmit = async (formData) => {
               className="w-full md:w-80 h-12 px-4 rounded-xl outline-none text-gray-700 bg-white placeholder:text-gray-500 focus:ring-2 focus:ring-[#DFC96D]"
               required
               {...register('email')
-  //             {
-  //               required: true,
-  //               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-  // }
+
 }
             />
                 <button

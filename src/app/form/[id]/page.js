@@ -121,7 +121,7 @@ export default function Form() {
               <Button
                 type="button"
                 variant="outline"
-                onClick={() => reset({ invest_id: id ?? "", number_of_arrows: 1 })}
+                onClick={() => reset({ invest_id: id ?? "", number_of_arrows: 1 , name: "", notes: "", phone: ""})}
                 disabled={loading}
                 className="cursor-pointer border-[#DFC96D] hover:bg-[#c9b25a]"
               >
