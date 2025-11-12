@@ -1,4 +1,4 @@
-// HeroInteractions.js (Client Component)
+//  (Client Component)
 'use client';
 
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { Context } from "@/Context/context";
 import { useContext, useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 
-// استيراد الأيقونات (يتم استيرادها هنا حيث يتواجد 'use client')
+// استيراد الأيقونات
 import { FaFacebook } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
@@ -22,7 +22,6 @@ const HeroInteractions = ({ bgImage }) => {
     const {setActive} = useContext(Context);
 
     useEffect(() => {
-        // تم نقل منطق VanillaTilt إلى هنا
         if ( typeof window !== 'undefined' && window.innerWidth > 768 && tiltRef.current ) {
             VanillaTilt.init(tiltRef.current, { max: 5, speed: 200 });
         }

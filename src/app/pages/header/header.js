@@ -158,9 +158,9 @@ const pathname = usePathname();
             onClick={toggleNavbar}
           />
 
-          <div className="absolute right-0 top-0 z-50 w-full bg-[#262163] shadow-2xl overflow-y-auto transform transition-transform">
-            <div className="flex items-center justify-between p-4">
-              <div className="flex items-center gap-3">
+          <div className="absolute right-0 top-0 z-50 w-full bg-[#262163] shadow-xl overflow-y-auto transform transition-transform">
+            <div className="flex items-center justify-between p-2">
+              <div className="flex items-center gap-2">
                <SmallLogo/>
               </div>
 
@@ -169,7 +169,7 @@ const pathname = usePathname();
                 aria-label="close menu"
                 className="p-2 rounded-md text-[#DFC96D] hover:bg-gray-100"
               >
-                <MdOutlineCancelPresentation className="text-2xl" />
+                <MdOutlineCancelPresentation className="text-xl" />
               </button>
             </div>
 
