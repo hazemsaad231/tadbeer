@@ -16,10 +16,6 @@ export default function Header() {
 const pathname = usePathname();
 
 
-
-  
-
-
   const [isNavbarVisible, setNavbarVisible] = useState(false);
 
   const toggleNavbar = () => setNavbarVisible((s) => !s);
