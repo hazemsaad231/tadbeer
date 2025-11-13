@@ -23,18 +23,18 @@ const HeroWrapper = () => {
     );
 
     const socialLinks = [
-        { Icon: FaFacebook, href: "https://www.facebook.com/TadbeerSA/", name: 'فيسبوك' },
-        { Icon: BsTwitterX, href: "https://x.com/TadbeerSA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor", name:'تويتر' },
-        { Icon: FaYoutube, href: "https://www.youtube.com/channel/UCTcIQAUyUEipCP6TybIF0dg", name:"يوتيوب" },
-        { Icon: IoLogoInstagram, href: "https://www.instagram.com/tadbeersa/", name:"انستقرام" },
-        { Icon: FaLinkedin, href: "https://sa.linkedin.com/company/tadbeersa", name:"لينكدين" },
-        { Icon: FaTelegram, href: "https://t.me/TadbeerSa", name:"تيليجرام" },
+        { Icon: FaFacebook, href: "https://www.facebook.com/TadbeerSA/" },
+        { Icon: BsTwitterX, href: "https://x.com/TadbeerSA?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" },
+        { Icon: FaYoutube, href: "https://www.youtube.com/channel/UCTcIQAUyUEipCP6TybIF0dg"},
+        { Icon: IoLogoInstagram, href: "https://www.instagram.com/tadbeersa/"},
+        { Icon: FaLinkedin, href: "https://sa.linkedin.com/company/tadbeersa"},
+        { Icon: FaTelegram, href: "https://t.me/TadbeerSa" },
     ];
     
     const Socials = (
         <div className="flex gap-2 sm:gap-4 md:gap-6 cursor-pointer p-3">
-            {socialLinks.map(({ Icon, href, name }, index) => (
-                <a key={index} href={href} target="_blank" rel="noopener noreferrer" aria-label={name}>
+            {socialLinks.map(({ Icon, href }, index) => (
+                <a key={index} href={href}  target="_blank" rel="noopener noreferrer" >
                     <Icon size={20} className="text-white hover:text-[#DFC96D] transition-colors" />
                 </a>
             ))}
