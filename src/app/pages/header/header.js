@@ -132,8 +132,8 @@ const pathname = usePathname();
               <Image
                 src="/logo.webp"
                 alt="logo"
-                width={110}
-                height={110}
+                width={100}
+                height={100}
                 priority
               />
             </div>

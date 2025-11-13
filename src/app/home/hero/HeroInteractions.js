@@ -1,19 +1,17 @@
 // HeroInteractions.js (Client Component)
 'use client';
 
-import Image from "next/image"; // نحتاج Image لاستخدامه مع الـ dots
-import { Context } from "@/Context/context";
-import { useContext, useRef, useEffect } from "react";
+import Image from "next/image";
+// import { Context } from "@/Context/context";
+import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
 
 const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticButtons }) => { 
-    // تم استقبال HeroImageContent
 
-    // Hooks ومنطق التفاعل (يبقى في العميل)
     const tiltRef = useRef(null);
-    const {setActive} = useContext(Context); 
+    // const {setActive} = useContext(Context); 
     
-    // منطق الـ VanillaTilt (يبقى في العميل)
+    // منطق الـ VanillaTilt 
     useEffect(() => {
         if ( typeof window !== 'undefined' && window.innerWidth > 768 && tiltRef.current ) {
             VanillaTilt.init(tiltRef.current, { max: 5, speed: 200 });
