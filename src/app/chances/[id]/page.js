@@ -33,12 +33,8 @@ const {id} = params;
 
                   <div className="max-w-8xl md:max-w-5xl lg:max-w-6xl xl:max-w-6xl p-6 m-auto grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="col-span-1 md:col-span-2">
-                      <Slider
-                        src={(item.gallery || []).map((i) => i.photo_url)}
-                        typeSrc={(item.gallery || []).map((i) => i.type_photo)}
-                      />
-                      {/*sidebar mobile*/}
-                      <div className="block md:hidden col-span-1 mt-14">
+                         {/*sidebar mobile*/}
+                      <div className="block md:hidden col-span-1 my-10">
                         <div className="w-full md:w-60 lg:w-80 h-max rounded-4xl bg-white shadow-lg border border-gray-200 p-4 py-10 flex flex-col gap-3 mb-12">
                           <h3 className="text-xl font-extrabold text-[#262163]">استثمر في تدبير</h3>
                           <p className="text-gray-500">سجّل الآن للاستثمار في تدبير، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
@@ -49,6 +45,12 @@ const {id} = params;
                           <CategoriesSidebar categories={item.categories || []} />
                         </div>
                       </div>
+
+                      <Slider
+                        src={(item.gallery || []).map((i) => i.photo_url)}
+                        typeSrc={(item.gallery || []).map((i) => i.type_photo)}
+                      />
+                   
 
                       <div className="py-12">
                         <h3 className="text-2xl md:text-3xl font-bold text-[#262163] mb-6 flex items-center gap-2">

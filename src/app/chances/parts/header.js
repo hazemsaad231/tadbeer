@@ -6,12 +6,11 @@ import Logo from "./logo";
 
 export default function Header() {
   return (
-    // نستخدم fixed top-0 w-full z-50 لجعل الـ Header ثابتاً، وهو تحسين بصري ووظيفي.
+  
     <header className="w-full z-50">
       <div>
         {/* desktop navbar */}
         
-        {/* نزيد من قوة الظل (shadow-xl) لإضفاء فخامة. */}
         <div className="bg-[#262163] p-2 md:p-0.5 shadow-xl h-16 md:h-20">
           
           {/* نستخدم max-w-7xl mx-auto لتحديد عرض الـ Header ليتوسط الشاشة بشكل جيد. */}
@@ -24,17 +23,17 @@ export default function Header() {
           
             <ul>
               <li>
-                <Link href="#footer" passHref legacyBehavior>
-                    <a className={`
+                <Link href="#footer"
+                     className={`
                         bg-[#f0cc3b] text-white font-bold border border-white/50
                         px-2 md:px-4 lg:px-6 py-2.5 rounded-full 
-                        text-sm md:text-md lg:text-lg whitespace-nowrap
+                        text-sm md:text-md lg:text-lg
                         shadow-lg shadow-[#dbbb39]/60 
                         hover:shadow-xl hover:scale-[1.05] 
                         transition-all duration-300 transform
                     `}>
                       تواصل معنا
-                    </a>
+                    
                 </Link>
               </li>
             </ul>
