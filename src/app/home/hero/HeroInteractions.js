@@ -1,17 +1,20 @@
+
+
+
 // HeroInteractions.js (Client Component)
 'use client';
 
 import Image from "next/image";
-// import { Context } from "@/Context/context";
 import { useRef, useEffect } from "react";
 import VanillaTilt from "vanilla-tilt";
+// ⭐️ استيراد Framer Motion ⭐️
+import { motion } from "framer-motion"; 
 
 const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticButtons }) => { 
 
     const tiltRef = useRef(null);
-    // const {setActive} = useContext(Context); 
     
-    // منطق الـ VanillaTilt 
+    // منطق الـ VanillaTilt (يظل كما هو)
     useEffect(() => {
         if ( typeof window !== 'undefined' && window.innerWidth > 768 && tiltRef.current ) {
             VanillaTilt.init(tiltRef.current, { max: 5, speed: 200 });
@@ -23,34 +26,53 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
         };
     }, []);
 
-    return (
-        <div ref={tiltRef} className="relative w-full" >
-            
-            {/* dots - تستخدم Image لأنها ما زالت تحتاج إلى بيانات الصورة (dotsImage) */}
-            <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
-                <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px]" />
-                <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block"/>
-            </div>
-            
-            {/* hero */}
-            <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
-                
-                {/* ⭐️ الصورة الرئيسية - تم تمريرها كـ prop جاهز من الخادم ⭐️ */}
-                {HeroImageContent}
-                
-                {/* buttons & socials - تم تمريرها كمحتوى ثابت */}
-                <div className="flex justify-between items-center w-full">
-                    
-                    {/* الأزرار - تمرير المحتوى الثابت من الخادم */}
-                    {StaticButtons}
-                    
-                    {/* الروابط الاجتماعية - تمرير المحتوى الثابت من الخادم */}
-                    {SocialsContent}
+    // ⭐️ تعريف حركة Framer Motion (Fade/Zoom In) ⭐️
+    const aosFadeZoomVariants = {
+      hidden: { opacity: 0, scale: 0.95 }, // مخفي وتصغير بنسبة 95%
+      visible: { opacity: 1, scale: 1 } // ظاهر وبحجمه الطبيعي
+    };
 
-                    <div className="hidden lg:block"></div>
+    return (
+        // ⭐️ تغليف المكون بـ motion.div وتطبيق AOS عليه ⭐️
+        <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={aosFadeZoomVariants}
+            transition={{ duration: 1.0, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }} // يبدأ عند رؤية 20% من المكون
+        >
+            <div>
+                <div className="flex flex-col gap-8 justify-center items-center mb-8">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[950]">شركة تدبير المتخصصة</h1>
+ <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-gray-400 w-full px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
                 </div>
+ 
+            {/* ⭐️ هذا هو المكون الذي يحمل تأثير VanillaTilt ⭐️ */}
+            <div ref={tiltRef} className="relative w-full" >
+                
+                {/* dots - تستخدم Image لأنها ما زالت تحتاج إلى بيانات الصورة (dotsImage) */}
+                <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
+                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px]" />
+                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block"/>
+                </div>
+                
+                {/* hero */}
+                <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
+                    
+                    {/* الصورة الرئيسية */}
+                    {HeroImageContent}
+                    
+                    {/* buttons & socials */}
+                    <div className="flex justify-between items-center w-full">
+                        {StaticButtons}
+                        {SocialsContent}
+                        <div className="hidden lg:block"></div>
+                    </div>
+                </div>
+                            </div>
+
             </div>
-        </div>
+        </motion.div>
     );
 }
 

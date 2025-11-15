@@ -38,7 +38,7 @@ const AboutContent = () => {
 </div>
             </div>
            
-            <div className="mt-12 sm:mt-10 md:mt-0">  <video src="/tadbeer.mp4" className="w-full h-full" controls></video></div>
+            <div className="mt-12 sm:mt-10 md:mt-0">  <video src="/tadbeer.mp4" className="w-full h-full rounded-xl" controls></video></div>
           
         </div>
         </section>
