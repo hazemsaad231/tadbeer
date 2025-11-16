@@ -29,7 +29,7 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
     // ⭐️ تعريف حركة Framer Motion (Fade/Zoom In) ⭐️
     const aosFadeZoomVariants = {
       hidden: { opacity: 0, scale: 0.95 }, // مخفي وتصغير بنسبة 95%
-      visible: { opacity: 1, scale: 1 } // ظاهر وبحجمه الطبيعي
+      visible: { opacity: 1, scale: 1 }, // ظاهر وبحجمه الطبيعي
     };
 
     return (

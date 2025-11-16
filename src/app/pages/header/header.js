@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiViewList } from "react-icons/hi";
 import { MdOutlineCancelPresentation } from "react-icons/md";
-import Logo, { SmallLogo } from "./logo";
+import Logo from "./logo";
 import { Context } from "@/Context/context";
 import { usePathname } from "next/navigation";
 import Whats from "./contact";
@@ -156,16 +156,13 @@ const pathname = usePathname();
 
           <div className="absolute right-0 top-0 z-50 w-full bg-[#262163] shadow-xl overflow-y-auto transform transition-transform">
             <div className="flex items-center justify-between p-2">
-              <div className="flex items-center gap-2">
-               <SmallLogo/>
-              </div>
 
               <button
                 onClick={toggleNavbar}
                 aria-label="close menu"
                 className="p-2 rounded-md text-[#DFC96D] hover:bg-gray-100"
               >
-                <MdOutlineCancelPresentation className="text-xl" />
+                <MdOutlineCancelPresentation className="text-2xl" />
               </button>
             </div>
 

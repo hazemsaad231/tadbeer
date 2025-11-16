@@ -42,7 +42,7 @@ export default async function Chances() {
     key={item.id}
     className={`group h-full w-full lg:w-96 flex flex-col rounded-2xl overflow-hidden cursor-pointer transition-all duration-500
     
-    bg-white border border-gray-100 shadow-xl hover:shadow-2xl hover:-translate-y-2 hover:border-[#dbbb39]`} 
+    bg-white border border-gray-100 shadow-md hover:shadow-lg hover:-translate-y-2 hover:border-[#dbbb39]`} 
 >
     <div className="flex-1">
         <Link href={`/chances/${item.id}`}>

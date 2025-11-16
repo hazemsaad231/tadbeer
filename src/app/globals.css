@@ -57,18 +57,7 @@ body {
 
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 
 
@@ -152,7 +141,20 @@ body {
   }
 }
 
-   .swiper-button-prev,
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev,
 .swiper-button-next {
   color: white !important; /* غيّر اللون */
   width: 40px !important; /* عرض الزر */

@@ -28,7 +28,6 @@ export default function BigCenterCarousel({services}) {
 
   return (
     
-    // ⭐️ 3. تطبيق motion.div على الحاوية الخارجية ⭐️
     <motion.div
         initial="hidden"
         whileInView="visible"
@@ -39,11 +38,6 @@ export default function BigCenterCarousel({services}) {
         className="w-full flex justify-center items-center py-10 overflow-hidden"
     >
         
-        {/*
-          ملاحظة: لقد قمنا بنقل الكلاسات التي كانت على الـ div الخارجي 
-          (w-full flex justify-center items-center py-10 overflow-hidden) 
-          إلى الـ motion.div الجديد.
-        */}
 
         <div className=" w-full max-w-8xl">
           <Swiper
@@ -59,20 +53,20 @@ export default function BigCenterCarousel({services}) {
             breakpoints={{
               // ... (إعدادات Breakpoints تظل كما هي) ...
               320: { slidesPerView: 1, spaceBetween: 3 },
-              480: { slidesPerView: 2, spaceBetween: 5 },
+              480: { slidesPerView: 2, spaceBetween: 3 },
               640: { slidesPerView: 2, spaceBetween: 5 },
               768: { slidesPerView: 2.5, spaceBetween: 6 },
-              1024: { slidesPerView: 3, spaceBetween: 12 },
-              1280: { slidesPerView: 4, spaceBetween: 14 },
-              1600: { slidesPerView: 5, spaceBetween: 16 },
+              1024: { slidesPerView: 3, spaceBetween: 6 },
+              1280: { slidesPerView: 4, spaceBetween: 8 },
+              1600: { slidesPerView: 5, spaceBetween: 8 },
             }}
-            className='small-slider'
+            className='small-slider '
           >
 
             {services.map((item) => (
               <SwiperSlide key={`${item.id}`}>
                 {/* ... (محتوى الشريحة يظل كما هو) ... */}
-                <div className="relative w-72 h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+                <div className="relative w-[19rem] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
                   { item.image_url && (
                     <Image
                       src={item.image_url || ""}
