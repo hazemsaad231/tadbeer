@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram } from "lucide-react"
+import Image from "next/image"
 import Logo from "./logo"; 
 
 
@@ -7,15 +8,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full text-white bg-[#262163] clip-slant-top relative overflow-hidden p-4" id="footer">
+    <footer className="w-full text-white bg-[#030352] clip-slant-top relative overflow-hidden p-4" id="footer">
 
         {/* Main Footer Content */}
-        <div className="px-4 sm:px-4 py-10 max-w-6xl mx-auto">
+        <div className="px-4 sm:px-4 py-20 max-w-6xl mx-auto">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8 text-sm">
             {/* Company Info */}
             <div className="space-y-2 lg:col-span-2">
   <div className="mb-4">
-              <Logo color="white" /> 
+              <Image src="/logo.webp" alt="logo" width={150} height={150} className="object-contain" priority /> 
             </div>
               <p className="leading-relaxed">
                 حلول مبتكرة وموثوقة لتحقيق أهدافك بكفاءة واحترافية.

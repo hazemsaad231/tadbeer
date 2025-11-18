@@ -22,14 +22,14 @@ export default function Slider({ src = [] }) {
       navigation={true}
       pagination={false}
       modules={[EffectFade, Navigation]}
-      className="big-slider w-full h-full rounded-4xl"
+      className="big-slider w-full h-full rounded-3xl"
     >
       {src.map((img, index) => (
         <SwiperSlide key={index}>
          
           <Image
             src={img||''}
-            className="w-full h-full object-center rounded-4xl"
+            className="w-full h-full object-center rounded-3xl"
             alt={`slide-${index}`}
            fill
            priority

@@ -1,57 +1,74 @@
-import bg from '../../../../public/bg.jpg'
-import Image from "next/image";
 import Link from "next/link";
-
+import Image from "next/image";
+import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaTiktok,FaWhatsapp} from "react-icons/fa";
 
 
 
 export const Hero = ({item}) => {
+
+
+  const socials = item.socials
+
     
     return (
-        <div>
-       <section className="relative w-full h-auto flex justify-center pb-40 py-30">
-        <Image
-          src={bg}
-          alt="Hero Background"
-          fill
-          placeholder="blur"
-          className="object-cover w-full h-full"
-          priority
-        />
-        <div className="absolute inset-0 bg-linear-to-bl from-transparent via-[#262163]/90 to-[#262163]/10"></div>
-
-        <div className="relative z-10 text-center px-4">
-          <div className="flex flex-col md:flex-row  justify-center md:gap-10 lg:gap-12 xl:gap-16 mx-auto">
-            <div className="flex flex-col justify-center m-auto gap-6 w-full">
-              <h6 className="text-white m-auto text-center font-light text-3xl md:text-3xl lg:text-4xl xl:text-5xl">
-                فرص استثمارية واعدة مع
-              </h6>
-              <h1 className="text-white text-center m-auto font-bold text-[2.6rem] md:text-5xl lg:text-6xl xl:text-7xl">
-                تدبير المتخصصة
+        <div className="w-full clip-slant-bottom">
+       <section className="relative w-full h-auto pb-52 pt-24">
+        <div className="absolute inset-0 bg-[#030352]"></div>
+        <div className="relative z-10">
+          <div className="w-full max-w-2xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl m-auto">
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-start  md:justify-start gap-3 px-6 md:px-2">
+                <Image src="/logo3.webp" alt="logo" width={80} height={80} className="object-contain border-2 text-md md:text-lg lg:text-xl xl:text-2xl border-white rounded-2xl" />
+               <h1 className="text-white font-bold text-xl md:text-4xl">
+                {item.name || ''}
               </h1>
-              <p className="text-white m-auto font-light text-base md:text-md lg:text-lg max-w-lg leading-relaxed">
-               شركة متخصصة في تقديم الخدمات المالية والمهنية لدعم نمو وتطور التجارة والأعمال. بفضل خبرتنا العميقة وفريقنا المتخصص، نوفر بيئة استثمارية موثوقة ومبنية على أسس استراتيجية قوية. انضم إلينا واستثمر في مستقبلٍ واعد مليء بالفرص
-              </p>
-              <div className="text-center m-auto mt-4">
-                <Link
-                  href={`/form/${item.id}` }
-                  className="bg-[#dbbb39]  text-white px-5 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all"
-                >
-              استثمار الان
-                </Link>
               </div>
-            </div>
+             
+              <p className="text-white font-bold 
+              text-base md:text-md lg:text-lg md:leading-relaxed lg:leading-relaxed p-3 w-full max-w-xl md:max-w-xl lg:max-w-2xl xl:max-w-2xl text-center md:text-right leading-relaxed">
+                {item.description || ''}
+              </p>
 
-            <div className="hidden md:flex justify-center relative">
-              <div className="relative md:w-60 md:h-60 lg:w-80 lg:h-80 ">
-                <Image
-                  src={"/Layer.png"}
-                  alt="Layer Image"
-                  width={320}
-                  height={320}
-                  className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
-                  priority
-                />
+              <div className="flex justify-between items-center max-w-2xl m-2">
+               
+{socials.length > 0 ? (
+
+<div className="flex gap-1 md:gap-3">
+                    {socials.map((social) => (
+                      <div key={social.id}>
+                        {social.name === 'facebook' && <a href={social.url} className="cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="Facebook">
+                      <FaFacebook size={28} />
+                    </a>}
+                    {social.name === 'instagram' && <a href={social.url} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="Instagram">
+                      <FaInstagram size={28} />
+                    </a>}
+                    {social.name === 'youtube' && <a href={social.url} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="WhatsApp">
+                      <FaYoutube size={28} />
+                    </a>}
+                    {social.name === 'twitter' && <a href={social.url} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="Twitter">
+                      <FaTwitter size={28} />
+                    </a>}
+                    {social.name === 'tiktok' && <a href={social.url} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="Tiktok">
+                      <FaTiktok size={28} />
+                    </a>}
+                    {social.name === 'whatsapp' && <a href={`${social.url}`} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="WhatsApp">
+                      <FaWhatsapp size={28} />
+                    </a>}
+                    {social.name === 'linkedin' && <a href={social.url} className=" cursor-pointer text-white/80 hover:text-indigo-400 transition-colors" aria-label="Linkedin">
+                      <FaLinkedin size={28} />
+                    </a>}
+                    </div>
+                    ))}
+                </div>
+                    ): (
+  <div className="text-white/80 underline font-semibold text-md md:text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all">
+  {item.site_link || ''}
+ </div>
+)}
+                  
+                 <Link href={`${item.site_link}`} className="text-white/80 underline font-semibold text-md md:text-lg shadow-lg hover:shadow-[#dbbb39]/50 hover:scale-105 transition-all">
+                 {item.site_link || ''}
+                </Link>
               </div>
             </div>
           </div>
