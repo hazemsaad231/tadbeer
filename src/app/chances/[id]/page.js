@@ -39,7 +39,10 @@ const {id} = params;
                         <div className="w-full md:w-60 lg:w-80 h-max rounded-4xl bg-white shadow-lg border border-gray-200 p-4 py-10 flex flex-col gap-3 mb-12">
                           <h3 className="text-xl font-extrabold text-[#262163]">استثمر معنا</h3>
                           <p className="text-gray-500">سجّل الآن للاستثمار معنا، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
-                          <div className="bg-[##030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold">
+                          <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold
+                          shadow shadow-[#030352]/60 
+                        hover:shadow-xl hover:scale-[1.05] 
+                        transition-all duration-300 transform">
                             <Link href={`/form/${item.id}`}>استثمار الآن</Link>
                           </div>
                           <div className="w-full h-0.5 bg-gray-300 my-3"></div>
@@ -76,7 +79,10 @@ const {id} = params;
                        p-4 py-10 flex flex-col gap-3 sticky top-20">
                         <h3 className="text-xl font-extrabold text-[#262163]">استثمر معنا</h3>
                         <p className="text-gray-500">سجّل الآن للاستثمار معنا، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
-                        <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold">
+                        <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold
+                        shadow shadow-[#030352]/60 
+                        hover:shadow-xl hover:scale-[1.05] 
+                        transition-all duration-300 transform">
                           <Link href={`/form/${item.id}`}>استثمار الآن</Link>
                         </div>
                         <div className="w-full h-0.5 bg-gray-300 my-3"></div>

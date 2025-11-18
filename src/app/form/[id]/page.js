@@ -172,7 +172,11 @@ export default function Form() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full cursor-pointer bg-[#12128d] hover:bg-[#050568] text-white font-semibold py-3 rounded-full transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full cursor-pointer bg-[#030352] py-2 px-4 rounded-full font-semibold
+                        shadow shadow-[#030352]/60 
+                        hover:shadow-xl hover:scale-[1.05] 
+                        hover:bg-[#030352]
+                        transition-all duration-300 transform text-white disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <span className="flex items-center justify-center gap-2">
