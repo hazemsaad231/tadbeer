@@ -9,6 +9,8 @@ export const Hero = ({item}) => {
 
   const socials = item.socials
 
+  console.log(item.icon);
+
     
     return (
         <div className="w-full clip-slant-bottom">
@@ -18,7 +20,7 @@ export const Hero = ({item}) => {
           <div className="w-full max-w-2xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl m-auto">
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-start  md:justify-start gap-3 px-3 md:px-2">
-                <Image src="/logo3.webp" alt="logo" width={80} height={80} className="object-contain border-2 text-md md:text-lg lg:text-xl xl:text-2xl border-white rounded-xl" priority />
+                <Image src={item.icon} alt="logo" width={80} height={80} className="object-contain border-2 text-md md:text-lg lg:text-xl xl:text-2xl border-white rounded-xl" priority />
                <h1 className="text-white font-extrabold text-2xl md:text-4xl">
                 {item.name || ''}
               </h1>
