@@ -8,10 +8,12 @@ import { Input } from "@/components/ui/input"
 import axios from "axios"
 import toast from "react-hot-toast"
 import { useParams} from "next/navigation"
+import { useRouter } from "next/navigation"
 
 
 export default function Form() {
   const params = useParams()
+  const router = useRouter()
   
   const id = params?.id
 
@@ -50,7 +52,11 @@ export default function Form() {
       )
 
       reset({ invest_id: id ?? "", number_of_arrows: 1, name: "", notes: "", phone: "" })
-      toast.success("تم الارسال بنجاح")
+       toast.success("تم الارسال بنجاح")
+      setTimeout(() => {
+        router.push(`/chances/${id}`)
+      }, 1000)
+     
       
     } catch (err) {
       console.error("submit error", err)
