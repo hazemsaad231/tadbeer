@@ -204,12 +204,10 @@ export default function Form() {
       </div>
 
       {/* Bottom Footer */}
-      <div className="bg-white border-t border-gray-200 px-6 py-6 text-center">
-        <div className="flex flex-wrap justify-center gap-4 text-xs text-gray-600">
+      <div className="bg-white border-t border-gray-200 px-4 py-6 text-center">
+        <div className="flex flex-wrap justify-center gap-5 text-xs text-gray-600">
           <a href="#" className="hover:text-[#030352]">تحذير المخاطر</a>
           <a href="#" className="hover:text-[#030352]">الشروط والأحكام</a>
-          <a href="#" className="hover:text-[#030352]">ملفات تعريف الارتباط</a>
-          <a href="#" className="hover:text-[#030352]">الإفصاح</a>
           <a href="#" className="hover:text-[#030352]">سياسة الخصوصية</a>
         </div>
       </div>
