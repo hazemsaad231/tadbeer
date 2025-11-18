@@ -17,19 +17,19 @@ export const Hero = ({item}) => {
         <div className="relative z-10">
           <div className="w-full max-w-2xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl m-auto">
             <div className="flex flex-col gap-4">
-              <div className="flex items-center justify-start  md:justify-start gap-3 px-6 md:px-2">
-                <Image src="/logo3.webp" alt="logo" width={80} height={80} className="object-contain border-2 text-md md:text-lg lg:text-xl xl:text-2xl border-white rounded-2xl" priority />
-               <h1 className="text-white font-bold text-xl md:text-4xl">
+              <div className="flex items-center justify-start  md:justify-start gap-3 px-3 md:px-2">
+                <Image src="/logo3.webp" alt="logo" width={80} height={80} className="object-contain border-2 text-md md:text-lg lg:text-xl xl:text-2xl border-white rounded-xl" priority />
+               <h1 className="text-white font-extrabold text-2xl md:text-4xl">
                 {item.name || ''}
               </h1>
               </div>
              
               <p className="text-white font-bold 
-              text-base md:text-md lg:text-lg md:leading-relaxed lg:leading-relaxed p-3 w-full max-w-xl md:max-w-xl lg:max-w-2xl xl:max-w-2xl text-center md:text-right leading-relaxed">
+              text-base md:text-md lg:text-lg md:leading-relaxed lg:leading-relaxed p-3 md:p-2 w-full max-w-xl md:max-w-xl lg:max-w-2xl xl:max-w-2xl text-right leading-relaxed">
                 {item.description || ''}
               </p>
 
-              <div className="flex justify-between items-center max-w-2xl m-2">
+              <div className="flex justify-between items-center max-w-2xl px-3 md:px-2">
                
 {socials.length > 0 ? (
 
