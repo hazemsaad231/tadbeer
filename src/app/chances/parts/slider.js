@@ -34,7 +34,7 @@ export default function Slider({ src = [], typeSrc = []}) {
       navigation={true}
       pagination={false}
       modules={[EffectFade, Navigation]}
-      className="big-slider w-full rounded-2xl"
+      className="big-slider w-full rounded-3xl"
     >
       {src.map((mediaUrl, index) => {
         // 👈 فحص نوع العنصر الحالي (صورة أو فيديو) لكل شريحة
@@ -46,7 +46,7 @@ export default function Slider({ src = [], typeSrc = []}) {
             {isVideo ? (
               // 📹 إذا كان فيديو
               <video
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-3xl"
                 controls
                 autoPlay
                 muted
@@ -58,7 +58,7 @@ export default function Slider({ src = [], typeSrc = []}) {
               // 🖼️ إذا كانت صورة
               <Image
                 src={mediaUrl || ''}
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-3xl"
                 alt={`slide-${index}`}
                 width={1000}
                 height={1000}

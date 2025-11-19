@@ -30,13 +30,13 @@ const {id} = params;
     <Header />
     <div>
       <Hero item={item} />
-      <div className="pb-28 relative top-[-200px] z-10" id="details">
+      <div className="pb-6 relative top-[-210px] z-10" id="details">
 
-                  <div className="max-w-8xl md:max-w-5xl lg:max-w-6xl xl:max-w-6xl p-6 m-auto grid grid-cols-1 md:grid-cols-3 md:gap-3 lg:gap-4 xl:gap-10">
+                  <div className="max-w-8xl md:max-w-5xl lg:max-w-6xl xl:max-w-6xl p-3 md:p-6 m-auto grid grid-cols-1 md:grid-cols-3 md:gap-3 lg:gap-4 xl:gap-10">
                     <div className="col-span-1 md:col-span-2">
                          {/*sidebar mobile*/}
                       <div className="block md:hidden col-span-1 my-10">
-                        <div className="w-full md:w-60 lg:w-80 h-max rounded-4xl bg-white shadow-lg border border-gray-200 p-4 py-10 flex flex-col gap-3 mb-12">
+                        <div className="w-full md:w-60 lg:w-80 h-max rounded-3xl bg-white shadow-lg border border-gray-200 p-4 py-10 flex flex-col gap-3 mb-12">
                           <h3 className="text-xl font-extrabold text-[#262163]">استثمر معنا</h3>
                           <p className="text-gray-500">سجّل الآن للاستثمار معنا، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
                           <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold
@@ -75,8 +75,8 @@ const {id} = params;
                     </div>
 {/* Sidebar desktop */}
                     <div className="hidden md:block col-span-1">
-                      <div className="w-full md:w-60 lg:w-80 h-max rounded-3xl bg-white shadow-lg border border-gray-200
-                       p-4 py-10 flex flex-col gap-3 sticky top-20">
+                      <div className="w-full md:w-64 lg:w-80 h-max rounded-3xl bg-white shadow-lg border border-gray-200
+                       p-4 py-8 mt-8 flex flex-col gap-3 sticky top-20">
                         <h3 className="text-xl font-extrabold text-[#262163]">استثمر معنا</h3>
                         <p className="text-gray-500">سجّل الآن للاستثمار معنا، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
                         <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold
