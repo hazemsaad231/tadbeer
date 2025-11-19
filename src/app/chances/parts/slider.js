@@ -46,7 +46,7 @@ export default function Slider({ src = [], typeSrc = []}) {
             {isVideo ? (
               // 📹 إذا كان فيديو
               <video
-                className="w-full h-full object-cover rounded-3xl"
+                className="w-full h-full object-center md:object-cover rounded-3xl"
                 controls
                 autoPlay
                 muted
@@ -58,7 +58,7 @@ export default function Slider({ src = [], typeSrc = []}) {
               // 🖼️ إذا كانت صورة
               <Image
                 src={mediaUrl || ''}
-                className="w-full h-full object-cover rounded-3xl"
+                className="w-full h-full object-center md:object-cover rounded-3xl"
                 alt={`slide-${index}`}
                 width={1000}
                 height={1000}
