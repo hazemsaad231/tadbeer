@@ -7,9 +7,11 @@ import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaYoutube, FaTiktok,FaW
 export const Hero = ({item}) => {
 
 
+  console.log(item);
+
   const socials = item.socials
 
-  console.log(item.icon);
+
 
     
     return (

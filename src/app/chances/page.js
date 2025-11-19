@@ -12,6 +12,15 @@ export default async function Chances() {
 
   console.log(chances);
 
+  const galleries = chances.map((item) => item.gallery);
+
+  console.log(galleries);
+
+  const image = galleries.map((gallery) => gallery.find((item) => item.type_photo === 'default'));
+
+  console.log(image);
+
+
 
 
   return (
@@ -47,6 +56,8 @@ export default async function Chances() {
     <div className="flex-1">
         <Link href={`/chances/${item.id}`}>
             <div className="relative h-60 w-full overflow-hidden bg-gray-100">
+{item.gallery[0].type_photo === 'default' ? (
+  <>
                         {item.gallery?.[0]?.photo_url ? (
                               <Image
                                 src={item.gallery[0].photo_url}
@@ -60,7 +71,26 @@ export default async function Chances() {
                               <div className="w-full h-full flex items-center justify-center bg-gray-200">
                                 <span className="text-gray-400">صورة غير متوفرة</span>
                               </div>
-                            )}
+                            )} </>
+                          ):
+                          (
+  <>
+                        {item.gallery?.[1]?.photo_url ? (
+                              <Image
+                                src={item.gallery[1].photo_url}
+                                alt={item.name || "فرصة استثمارية"}
+                                fill
+                                className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                                loading="lazy"
+                                unoptimized={false}
+                              />
+                            ) : (
+                              <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                                <span className="text-gray-400">صورة غير متوفرة</span>
+                              </div>
+                            )} </>
+                          )
+                          }
 
                 <div className="absolute top-4 right-4 bg-linear-to-r from-[#dbbb39] to-[#f5d76e] text-[#1a1a4d] px-3 py-1 rounded-full text-sm font-bold"> 
                     {item.type}
