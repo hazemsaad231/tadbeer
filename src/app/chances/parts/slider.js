@@ -19,8 +19,6 @@ export default function Slider({ src = [], typeSrc = []}) {
 
   console.log(typeSrc);
 
-
-
   // يجب أن يكون طول مصفوفة src مساوياً لطول مصفوفة typeSrc
   if (src.length !== typeSrc.length) {
     console.error("Slider Error: src and typeSrc arrays must have the same length.");
