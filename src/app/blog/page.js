@@ -12,7 +12,7 @@ export default async function Bolgs() {
   const blog = Data.data
 
 
-const blogs = blog.filter((it) => it.type === 'blogs');
+const blogs = blog.filter((it) => it.type === 'blogs')
 
 
 
