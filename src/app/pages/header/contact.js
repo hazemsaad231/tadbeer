@@ -177,7 +177,7 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen }) => {
                     <div 
                         className="mt-4 p-4 pt-6 bg-white border-4 rounded-3xl shadow-2xl transition-opacity duration-300 origin-bottom-left w-[280px]"
                         style={{ 
-                            borderColor: '#5C33F6', 
+                            borderColor: '#2d3561', 
                             boxShadow: '0 10px 15px -3px rgba(92, 51, 246, 0.4), 0 4px 6px -2px rgba(92, 51, 246, 0.1), 0 0 0 4px rgba(92, 51, 246, 0.1)'
                         }}
                     >
