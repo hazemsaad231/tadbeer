@@ -11,7 +11,6 @@ export default async function Bolgs() {
 
   const blog = Data.data
 
-  console.log(blog);
 
 const blogs = blog.filter((it) => it.type === 'blogs');
 
