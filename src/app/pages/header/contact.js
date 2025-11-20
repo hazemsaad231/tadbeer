@@ -163,7 +163,6 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen }) => {
 
 
     return (
-        // يتم تثبيت المكون في أسفل اليمين (Positioning handled by inner div/button)
         <div className="font-['Cairo',sans-serif]" dir="rtl">
 
             {isVisible && !isOpen && (
@@ -204,7 +203,7 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen }) => {
             )}
 
             {isOpen && (
-                <div className="fixed bottom-6 right-3 w-full max-w-[400px] h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden border border-gray-200">
+                <div className="fixed bottom-6 right-3 w-full max-w-[300px] md:max-w-[400px] h-[500px] md:h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden border border-gray-200">
                     
                     {/* Header */}
                     <div className="bg-gradient-to-r from-[#2d3561] to-[#1a1f3a] text-white p-4 flex items-center justify-between rounded-t-2xl">
