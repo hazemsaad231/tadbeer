@@ -5,7 +5,7 @@ import bg from "../../../public/img4.png";
 import { Api } from "../components/api/api";
 export default async function Bolgs() {
 
-   const data = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 60 } });
+   const data = await fetch(`${Api}/services?per_page=100`, { next: { revalidate: 100 } });
 
   const Data= await data.json()
 
