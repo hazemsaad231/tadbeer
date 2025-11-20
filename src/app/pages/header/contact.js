@@ -1,7 +1,11 @@
+
+'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
 import { TiMessages } from "react-icons/ti";
 import {Send, X } from "lucide-react";
+import Image from 'next/image';
 
 const WhatsComponent = () => {
     const messages = [
@@ -48,7 +52,7 @@ const WhatsComponent = () => {
                     <p className="text-sm font-semibold">{messages[currentMessageIndex]}</p>
                 </div>
             )}
-            <div className="bg-[#322b83] w-14 h-14 rounded-full flex justify-center items-center">
+            <div className="bg-[#322b83] w-14 h-14 rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300">
                 <a href="https://wa.me/966555144382" target="_blank" rel="noopener noreferrer">
                   
                     <FaWhatsapp className="text-white cursor-pointer text-3xl md:text-4xl lg:text-4xl font-bold"/>
@@ -208,8 +212,8 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen }) => {
                     {/* Header */}
                     <div className="bg-gradient-to-r from-[#2d3561] to-[#1a1f3a] text-white p-4 flex items-center justify-between rounded-t-2xl">
                         <div className="flex items-center gap-3">
-                            <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                                ت
+                            <div className=" bg-[#2d3561] rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
+                                <Image src="/logo2.jpeg" width={50} height={50} alt="Logo" className="object-center rounded-full" />
                             </div>
                             <div>
                                 <h3 className="font-bold text-lg">شركة تدبير المتخصصة</h3>
