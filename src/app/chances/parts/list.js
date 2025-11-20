@@ -32,12 +32,12 @@ export default function CategoriesSidebar({ categories, headerOffset = 0 }) {
   };
 
   return (
-    <ul className="space-y-1 text-lg cursor-pointer">
+    <ul className="custom-scrollbar space-y-1 text-lg cursor-pointer h-40 overflow-y-auto">
       {categories.map((cat) => (
         <li
           key={cat.id}
           onClick={() => handleClick(cat.id)}
-          className={`flex items-center gap-2 font-normal py-2 px-3 rounded-full transition-colors
+          className={`flex items-center gap-2 font-normal py-2 px-4 rounded-full w-max transition-colors
             ${
               activeId === cat.id
                 ? "border border-[#262163] text-[#262163] bg-[#262163]/10 "

@@ -76,7 +76,7 @@ const {id} = params;
 {/* Sidebar desktop */}
                     <div className="hidden md:block col-span-1">
                       <div className="w-full md:w-64 lg:w-80 h-max rounded-3xl bg-white shadow-lg border border-gray-200
-                       p-4 py-8 mt-8 flex flex-col gap-3 sticky top-20">
+                       p-3 py-8 mt-7 flex flex-col gap-3 sticky top-20">
                         <h3 className="text-xl font-extrabold text-[#262163]">استثمر معنا</h3>
                         <p className="text-gray-500">سجّل الآن للاستثمار معنا، وابدأ بمتابعة مستجدات الشركة وفرص نموها بشكل تلقائي.</p>
                         <div className="bg-[#030352] text-white py-2 px-4 w-max cursor-pointer rounded-full font-semibold

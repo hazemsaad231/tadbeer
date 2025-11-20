@@ -195,3 +195,45 @@ body {
 .clip-slant-form {
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
 }
+
+
+
+/* scrollbars for Chromium */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e0e0e0 !important; /* لون رمادي فاتح */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #030352;
+  border-radius: 8px; /* خليه دائري شوية مش 0 */
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1a1a6b;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button,
+::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #030352 transparent;
+}
