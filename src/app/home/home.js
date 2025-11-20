@@ -10,7 +10,7 @@ const HomePage = () => {
         <HeroContent/>
         <AboutContent/>
         <ServicesContent/>
-        <ProfileContent/>            
+        <ProfileContent/>  
         </div>
     );
 }

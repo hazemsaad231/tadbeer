@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import bg from "../../../public/img4.png";
-
 import { Api } from "../components/api/api";
 
 export default async function Services() {
