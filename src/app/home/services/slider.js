@@ -66,7 +66,7 @@ export default function BigCenterCarousel({services}) {
             {services.map((item) => (
               <SwiperSlide key={`${item.id}`}>
                 {/* ... (محتوى الشريحة يظل كما هو) ... */}
-                <div className="relative w-[19rem] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+                <div className="relative w-[80%] md:w-[18rem] lg:w-[19rem] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
                   { item.image_url && (
                     <Image
                       src={item.image_url || ""}

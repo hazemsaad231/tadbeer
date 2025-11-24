@@ -168,10 +168,10 @@ const WhatsComponent = () => {
                     <p className="text-sm font-semibold">{messages[currentMessageIndex]}</p>
                 </div>
             )}
-            <div className="bg-[#322b83] w-14 h-14 rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300">
+            <div className="bg-[#322b83] p-3 rounded-full flex justify-center items-center hover:scale-110 transition-all duration-300">
                 <a href="https://wa.me/966555144382" target="_blank" rel="noopener noreferrer">
                     
-                    <FaWhatsapp className="text-white cursor-pointer text-3xl md:text-4xl lg:text-4xl font-bold"/>
+                    <FaWhatsapp className="text-white cursor-pointer text-2xl md:text-3xl lg:text-3xl font-bold"/>
                 </a>
             </div>
         </div>
@@ -284,7 +284,7 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen, setIsShowingWhats }) => {
 
 
     return (
-        <div className="font-['Cairo',sans-serif]" dir="rtl">
+        <div>
 
             {isVisible && !isOpen && (
                 <div 
@@ -292,17 +292,13 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen, setIsShowingWhats }) => {
                     dir="rtl"
                 >
                     <div 
-                        className="mt-4 p-4 pt-6 bg-white border-4 rounded-3xl shadow-2xl transition-opacity duration-300 origin-bottom-left w-[280px]"
-                        style={{ 
-                            borderColor: '#2d3561', 
-                            boxShadow: '0 10px 15px -3px rgba(92, 51, 246, 0.4), 0 4px 6px -2px rgba(92, 51, 246, 0.1), 0 0 0 4px rgba(92, 51, 246, 0.1)'
-                        }}
+                        className="p-3 bg-white border-4 rounded-3xl shadow-2xl transition-opacity duration-300 origin-bottom-left"
                     >
                         <p className="text-sm text-center font-medium text-gray-800 leading-relaxed">
                             <span className="ml-1">👋</span> <span className="inline font-bold text-[#322b83]">{message[currentMessageIndex]}</span>
                             <br />
-                            <span className="text-xs text-gray-500 mt-2 block pt-2 border-t border-gray-100">
-                                أنا مساعد تدبير الذكي، هنا لمساعدتك في العثور على طريقك.
+                            <span className="text-sm text-gray-500 m-1 block p-1 border-t border-gray-100">
+                                أنا مساعد تدبير الذكي.
                             </span>
                         </p>
                     </div>
@@ -316,10 +312,10 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen, setIsShowingWhats }) => {
                         setIsOpen(true);
                         setIsShowingWhats(false);
                     }}
-                    className="fixed bottom-6 right-6 bg-gradient-to-br from-[#2d3561] to-[#1a1f3a] text-white rounded-full p-4 shadow-2xl hover:scale-110 transition-all duration-300 z-50 group"
+                    className="fixed bottom-6 right-6 bg-gradient-to-br from-[#2d3561] to-[#1a1f3a] text-white rounded-full p-3 shadow-2xl hover:scale-110 transition-all duration-300 z-50 group"
                     aria-label="فتح المحادثة"
                 >
-                    <TiMessages size={28} className="group-hover:rotate-12 transition-transform" />
+                    <TiMessages className="group-hover:rotate-12 transition-transform text-white cursor-pointer text-2xl md:text-3xl lg:text-3xl font-bold" />
                     <span className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-yellow-600 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
                         1
                     </span>
