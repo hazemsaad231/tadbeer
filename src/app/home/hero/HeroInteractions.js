@@ -42,9 +42,9 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
             viewport={{ once: true, amount: 0.2 }} // يبدأ عند رؤية 20% من المكون
         >
             <div>
-                <div className="flex flex-col gap-y-6 justify-center items-center mb-8">
+                <div className="flex flex-col gap-y-4 justify-center items-center mb-8">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[5.25rem] font-[950] w-full">شركة تدبير المتخصصة</h1>
- <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-[2rem] text-gray-400 w-full pt-2 px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
+ <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-[2rem] text-gray-400 w-full pt-6 px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
                 </div>
  
             {/* ⭐️ هذا هو المكون الذي يحمل تأثير VanillaTilt ⭐️ */}
@@ -52,12 +52,12 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
                 
                 {/* dots - تستخدم Image لأنها ما زالت تحتاج إلى بيانات الصورة (dotsImage) */}
                 <div className="absolute flex flex-col sm:flex-col md:flex-row justify-between items-end w-full">
-                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px]" />
-                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-96 h-[600px] hidden md:block"/>
+                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-[28rem] h-[600px]" />
+                    <Image src={dotsImage} alt="dots" width={800} height={800} className="object-contain w-[28rem] h-[600px] hidden md:block"/>
                 </div>
                 
                 {/* hero */}
-                <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-xl bg-gray-600 w-[95%] m-auto">
+                <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-xl bg-gray-600 w-[94%] m-auto">
                     
                     {/* الصورة الرئيسية */}
                     {HeroImageContent}
