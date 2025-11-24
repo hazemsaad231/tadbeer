@@ -67,13 +67,15 @@ export default function Form() {
   }
 
   return (
+
+    <>
     <div className="relative overflow-hidden">
       {/* Warning Banner */}
   
 
 
       {/* Main Container with Slant Background */}
-      <div className="relative flex items-center justify-center py-16 md:py-24 px-4 bg-white">
+      <div className="relative flex items-center justify-center py-28 px-3 bg-white">
         {/* Slanted Background Effect */}
         <div 
           className="absolute inset-0 bg-gradient-to-br from-[#030352] to-[#262163]  pointer-events-none"
@@ -203,15 +205,18 @@ export default function Form() {
         </Card>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="bg-white border-t border-gray-200 px-4 py-6 text-center">
-        <div className="flex flex-wrap justify-center gap-5 text-xs text-gray-600">
+ 
+    </div>
+         {/* Bottom Footer */}
+      <div className="bg-white border-t border-gray-200 px-4 py-3 text-center">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-6 lg:gap-8 text-xs md:text-md text-gray-600">
           <a href="#" className="hover:text-[#030352]">تحذير المخاطر</a>
           <a href="#" className="hover:text-[#030352]">الشروط والأحكام</a>
           <a href="#" className="hover:text-[#030352]">سياسة الخصوصية</a>
+          <a href="#" className="hover:text-[#030352]">اتصل بنا</a>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
