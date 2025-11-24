@@ -9,7 +9,7 @@ export const Context = createContext(null);
 
 export const ContextProvider = (props) => {
 
-     const [active, setActive] = useState('');
+     const [active, setActive] = useState('home');
 
 
     return(

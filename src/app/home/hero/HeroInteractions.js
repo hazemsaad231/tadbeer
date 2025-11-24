@@ -44,7 +44,7 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
             <div>
                 <div className="flex flex-col gap-y-4 justify-center items-center mb-8">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[5.25rem] font-[950] w-full">شركة تدبير المتخصصة</h1>
- <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-[2rem] text-gray-400 w-full pt-6 px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
+ <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-[2.2rem] text-gray-300 w-full pt-6 px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
                 </div>
  
             {/* ⭐️ هذا هو المكون الذي يحمل تأثير VanillaTilt ⭐️ */}
