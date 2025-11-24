@@ -19,7 +19,7 @@ const HeroWrapper = () => {
             alt="Hero Image" 
             width={800} 
             height={800} 
-            className=" object-cover w-full h-96" 
+            className=" object-center md:object-cover w-full h-96 rounded-t-xl" 
             priority 
         />
     );
@@ -37,7 +37,7 @@ const HeroWrapper = () => {
         <div className="flex gap-2 sm:gap-4 md:gap-6 cursor-pointer p-3">
             {socialLinks.map(({ Icon, href }, index) => (
                 <a key={index} href={href}  target="_blank" rel="noopener noreferrer" >
-                    <Icon size={20} className="text-white hover:text-[#DFC96D] transition-colors" />
+                    <Icon  className="text-white hover:text-[#DFC96D] transition-colors text-md sm:text-lg md:text-2xl" />
                 </a>
             ))}
         </div>

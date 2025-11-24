@@ -42,9 +42,9 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
             viewport={{ once: true, amount: 0.2 }} // يبدأ عند رؤية 20% من المكون
         >
             <div>
-                <div className="flex flex-col gap-y-8 justify-center items-center mb-8">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-[950]">شركة تدبير المتخصصة</h1>
- <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl text-gray-400 w-full px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
+                <div className="flex flex-col gap-y-6 justify-center items-center mb-8">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[5.25rem] font-[950] w-full">شركة تدبير المتخصصة</h1>
+ <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-[2rem] text-gray-400 w-full pt-2 px-4">شركة متخصصة تقدم خدمات مالية ومهنية واستشارات مهنية متقدمة لتطوير التجارة والأعمال</p>
                 </div>
  
             {/* ⭐️ هذا هو المكون الذي يحمل تأثير VanillaTilt ⭐️ */}
@@ -57,7 +57,7 @@ const HeroInteractions = ({ HeroImageContent, dotsImage, SocialsContent, StaticB
                 </div>
                 
                 {/* hero */}
-                <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-b-xl bg-gray-600 w-[95%] m-auto">
+                <div className="relative z-40 flex flex-col justify-center items-center mt-4 rounded-xl bg-gray-600 w-[95%] m-auto">
                     
                     {/* الصورة الرئيسية */}
                     {HeroImageContent}
