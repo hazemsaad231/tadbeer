@@ -167,9 +167,9 @@ const onSubmit = async (formData) => {
           </div>
 
           {/* bottom note */}
-          <div className="mt-6 border-t pt-4 flex flex-col md:flex-row items-center justify-between text-center gap-3">
+          <div className="mt-3 border-t pt-3 flex flex-col md:flex-row items-center justify-center text-center gap-3">
+             <p className="text-gray-500 text-sm">جميع الحقوق محفوظة</p>
             <p className="text-gray-600 text-sm">2025 © Tadbeer</p>
-            <p className="text-gray-500 text-sm">جميع الحقوق محفوظة</p>
           </div>
         </div>
       </div>
