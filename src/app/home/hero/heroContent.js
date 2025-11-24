@@ -37,7 +37,7 @@ const HeroWrapper = () => {
         <div className="flex gap-2 sm:gap-4 md:gap-6 cursor-pointer p-3">
             {socialLinks.map(({ Icon, href }, index) => (
                 <a key={index} href={href}  target="_blank" rel="noopener noreferrer" >
-                    <Icon  className="text-white hover:text-[#DFC96D] transition-colors text-md sm:text-lg md:text-2xl" />
+                    <Icon  className="text-white hover:text-[#DFC96D] transition-colors text-md sm:text-lg md:text-2xl xl:text-[1.6rem]" />
                 </a>
             ))}
         </div>
@@ -46,10 +46,10 @@ const HeroWrapper = () => {
     // الأزرار - ثابتة في الخادم
     const StaticButtons = (
         <div className="flex">
-            <h1 className="text-md sm:text-md md:text-xl h-full bg-[#DFC96D] text-gray-900 p-2 md:p-4 px-2 sm:px-4 md:px-8 lg:px-15 cursor-pointer rounded-br-xl">
+            <h1 className="text-md sm:text-md md:text-xl font-bold h-full bg-[#DFC96D] text-gray-900 p-2 md:p-4 px-2 sm:px-4 md:px-8 lg:px-15 cursor-pointer rounded-br-xl">
                 <a href="#contact">تواصل معنا</a>
             </h1>
-            <h1 className="text-md sm:text-md md:text-xl h-full bg-white text-gray-900 p-2 px-2 md:p-4 sm:px-4 md:px-8 lg:px-15 cursor-pointer">
+            <h1 className="text-md sm:text-md md:text-xl font-bold h-full bg-white text-gray-900 p-2 px-2 md:p-4 sm:px-4 md:px-8 lg:px-15 cursor-pointer">
                 {/* هنا يفضل أن يكون Link بدون استخدام Context في الخادم */}
                 <Link href="/services">جميع الخدمات</Link> 
             </h1>
@@ -58,7 +58,7 @@ const HeroWrapper = () => {
 
     return (
       <div className="flex flex-col w-screen py-8 bg-[#262163] text-white">
-        <div className="flex flex-col gap-4 text-center py-20 w-full">
+        <div className="flex flex-col gap-4 text-center py-16 w-full">
             {/* ⭐️ مكون العميل ⭐️ */}
             <HeroInteractions 
                 HeroImageContent={HeroImageContent}
