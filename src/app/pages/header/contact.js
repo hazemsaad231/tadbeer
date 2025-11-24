@@ -162,9 +162,9 @@ const WhatsComponent = () => {
 
     return (
         
-        <div className="fixed bottom-5 right-5 z-50"> 
+        <div className="fixed bottom-5 left-5 z-50"> 
             {isVisible && (
-                <div className="absolute right-16 bottom-2 p-2 bg-white text-[#322b83] rounded-lg shadow-xl w-max transition-opacity duration-300 transform scale-100 origin-bottom-right">
+                <div className="absolute left-16 bottom-2 p-2 bg-white text-[#322b83] rounded-lg shadow-xl w-max transition-opacity duration-300 transform scale-100 origin-bottom-right">
                     <p className="text-sm font-semibold">{messages[currentMessageIndex]}</p>
                 </div>
             )}
@@ -419,10 +419,10 @@ const TadbeerChatbotComponent = ({ isOpen, setIsOpen, setIsShowingWhats }) => {
 
 
 // --- 4. مكون التبديل بين الواتساب والشات بوت (App Wrapper) ---
-const SWITCH_INTERVAL = 5000;
+const SWITCH_INTERVAL = 10000;
 
 const App = () => {
-    const [isShowingWhats, setIsShowingWhats] = useState(true);
+    const [isShowingWhats, setIsShowingWhats] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
