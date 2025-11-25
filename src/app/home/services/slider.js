@@ -39,11 +39,11 @@ export default function BigCenterCarousel({services}) {
     >
         
 
-        <div className=" w-full max-w-8xl">
+        <div className="w-full max-w-8xl ">
           <Swiper
             modules={[FreeMode]}
             slidesPerView={4}
-            spaceBetween={4}
+            spaceBetween={20}
             loop
             allowTouchMove={true}
             freeMode={{
@@ -51,11 +51,10 @@ export default function BigCenterCarousel({services}) {
               momentum: false,
             }}
             breakpoints={{
-              // ... (إعدادات Breakpoints تظل كما هي) ...
-              320: { slidesPerView: 1, spaceBetween: 3 },
-              480: { slidesPerView: 2, spaceBetween: 3 },
-              640: { slidesPerView: 2, spaceBetween: 5 },
-              768: { slidesPerView: 2.5, spaceBetween: 6 },
+              320: { slidesPerView: 1, spaceBetween: 10 },
+              480: { slidesPerView: 2, spaceBetween: 10 },
+              640: { slidesPerView: 2, spaceBetween: 10 },
+              768: { slidesPerView: 2.5, spaceBetween: 10 },
               1024: { slidesPerView: 3, spaceBetween: 6 },
               1280: { slidesPerView: 4, spaceBetween: 8 },
               1600: { slidesPerView: 5, spaceBetween: 8 },
@@ -66,7 +65,7 @@ export default function BigCenterCarousel({services}) {
             {services.map((item) => (
               <SwiperSlide key={`${item.id}`}>
                 {/* ... (محتوى الشريحة يظل كما هو) ... */}
-                <div className="relative w-[80%] md:w-[18rem] lg:w-[19rem] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+                <div className="relative w-[80%] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
                   { item.image_url && (
                     <Image
                       src={item.image_url || ""}
