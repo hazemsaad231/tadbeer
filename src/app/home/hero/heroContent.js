@@ -17,11 +17,12 @@ const HeroWrapper = () => {
         <Image 
             src={bg} 
             alt="Hero Image" 
-            width={800} 
-            height={800} 
+            height={400}
+            width={400}
             className=" object-center md:object-cover w-full h-96 rounded-t-xl" 
             priority 
         />
+
     );
 
     const socialLinks = [
