@@ -33,17 +33,16 @@ export default function BigCenterCarousel({services}) {
         whileInView="visible"
         variants={fadeFromBottomVariants}
         transition={{ duration: 1, ease: "easeOut" }}
-        // تشغيل الحركة عند رؤية 20% من الكاروسيل (Carousel)
         viewport={{ once: true, amount: 0.2 }} 
-        className="w-full flex justify-center items-center py-10 overflow-hidden"
+        className="w-full flex justify-end items-center py-10 overflow-hidden"
     >
         
 
-        <div className="w-full max-w-8xl ">
+        <div className="w-full max-w-7xl ">
           <Swiper
             modules={[FreeMode]}
             slidesPerView={4}
-            spaceBetween={20}
+            spaceBetween={10}
             loop
             allowTouchMove={true}
             freeMode={{
@@ -65,7 +64,7 @@ export default function BigCenterCarousel({services}) {
             {services.map((item) => (
               <SwiperSlide key={`${item.id}`}>
                 {/* ... (محتوى الشريحة يظل كما هو) ... */}
-                <div className="relative w-[80%] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-xl overflow-hidden">
+                <div className="relative w-[85%] h-full md:brightness-95 hover:brightness-125 transition-all duration-700 ease-in-out group rounded-lg overflow-hidden">
                   { item.image_url && (
                     <Image
                       src={item.image_url || ""}
