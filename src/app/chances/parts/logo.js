@@ -4,7 +4,7 @@ const Logo = () => {
 
 
        <div className="w-28 sm:w-32 md:w-40 lg:w-44 xl:w-48">
-        <a href="https://tadbeer-nine.vercel.app/">
+        <a href="https://tadbeer.sa/">
   <Image
     src="/logo2.png"
     alt="logo"
