@@ -22,7 +22,7 @@ const BlogDetails = async ({ params }) => {
   }
 
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer-nine.vercel.app/";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://tadbeer.sa";
   const getImageUrl = (imgPath) =>
     typeof imgPath === "string" && imgPath.startsWith("http") ? imgPath : `${siteUrl}${imgPath || ""}`;
 
